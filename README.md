@@ -11,4 +11,4 @@
 ## Referencias
 - **SPLASH** https://www.splashmixers.com/ <br/> Buena home page y menu, si bien es muy estatica. <br/>
 - **SOM** https://www.somcordial.com/ <br/> Muy linda carta y bien estilizada, si la carta la estilizamos de este modo creo que sería un golazo. <br/>
-- **KIMBERLY** https://www.upstairsnyc.com/ Buena home page, me gusta como tiene el video. El menu tiene secciones. Si bien la carta es limitada, podriamos ver si esta bueno dividirla. <br/>
+- **KIMBERLY** https://www.upstairsnyc.com/ <br> Buena home page, me gusta como tiene el video. El menu tiene secciones. Si bien la carta es limitada, podriamos ver si esta bueno dividirla. <br/>
