@@ -1,7 +1,7 @@
 # Rusty nail
 **Inicio del proyecto**
 
-**Referencias**
+## **Referencias**
 
 **SPLASH** https://www.splashmixers.com/classic-recipes <br/> Buena home page y menu, si bien es muy estatica. <br/>
 **SOM** https://www.somcordial.com/cocktails <br/> Muy linda carta y bien estilizada, si la carta la estilizamos de este modo creo que sería un golazo. <br/>
