@@ -1,6 +1,6 @@
 # Rusty nail
 **Inicio del proyecto**
 
-Alt-H1 **Referencias**
+**Referencias**
 
 Splash https://www.splashmixers.com/classic-recipes
