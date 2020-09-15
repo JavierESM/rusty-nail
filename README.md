@@ -14,3 +14,5 @@
 - **KIMBERLY** https://www.upstairsnyc.com/ <br> Buena home page, me gusta como tiene el video. El menu tiene secciones. Si bien la carta es limitada, podriamos ver si esta bueno dividirla. <br/>
 - **APPBAR** https://www.appbar.com.ar/ <br> Web sencilla y funcional. Buena idea el cartel emergente que valida la edad antes de permitir visualizar el sitio.
 - **NESPRESSO** https://www.nespresso.com/ar/es/nuevo-coffee-selector <br> Podríamos basarnos en el selector de cápsulas para crear nuestro bartender virtual.
+- **MONA EN CASA** https://monaencasa.com/ Tanto el banner como la home page y sobre todo el catalogo y el carrito estan muy bien hechos. <br/>
+- **ABSOLUT** https://www.absolut.com/ar/ El cartel de validacion esta bueno. <br/>
