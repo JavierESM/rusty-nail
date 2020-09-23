@@ -16,3 +16,6 @@
 - **NESPRESSO** https://www.nespresso.com/ar/es/nuevo-coffee-selector <br> Podríamos basarnos en el selector de cápsulas para crear nuestro bartender virtual.
 - **MONA EN CASA** https://monaencasa.com/ Tanto el banner como la home page y sobre todo el catalogo y el carrito estan muy bien hechos. <br/>
 - **ABSOLUT** https://www.absolut.com/ar/ El cartel de validacion esta bueno. <br/>
+
+## Wireframe
+https://marvelapp.com/project/5179750
