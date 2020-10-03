@@ -1,7 +1,5 @@
 # Rusty nail
 
-Link al tablero de Trello: https://trello.com/b/U8TklA4M/rusty-nail
-
 ## Índice
 - [Servicio ofrecido por el sitio](#Servicio-ofrecido-por-el-sitio)
 - [Referencias](#Referencias)
@@ -21,3 +19,6 @@ Link al tablero de Trello: https://trello.com/b/U8TklA4M/rusty-nail
 
 ## Wireframe
 https://marvelapp.com/project/5179750
+
+## Trello
+https://trello.com/b/U8TklA4M/rusty-nail
