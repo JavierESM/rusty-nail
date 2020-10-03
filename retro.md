@@ -10,7 +10,7 @@ Tuvimos una weekly en la hicimos puesta en común sobre la retrospectiva, cuyo r
 ###Hacer más
 Interactuar con la plataforma de Trello.
 
-##Continuar haciendo
+###Continuar haciendo
 Acatar los plazos convenidos con el equipo y mantener la buena comunicación.
 
 ###Hacer menos
