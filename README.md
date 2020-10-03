@@ -1,5 +1,7 @@
 # Rusty nail
 
+Link al tablero de Trello: https://trello.com/b/U8TklA4M/rusty-nail
+
 ## Índice
 - [Servicio ofrecido por el sitio](#Servicio-ofrecido-por-el-sitio)
 - [Referencias](#Referencias)
