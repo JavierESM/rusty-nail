@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Registrate en Rusty Nail</title>
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
     <nav class="navigation">
-        barra de navegacion
+        <i class="fas fa-bars hamburger"></i>
+        <span id="nav-title">RUSTY NAIL</span>
+        <i class="fas fa-user right-icons"></i>
+        <i class="fas fa-shopping-bag right-icons"></i>
     </nav>
-    <form class="form-registro" action="register.html" Method="POST">
-        <div class=inputs>
-            <p><label for="email">E-MAIL</label>
-            <input type="email" id="email" name="email"></p>
-            <p><label for="password">CONTRASEÑA</label>
-            <input type="password" id="password" name="password"></p>
-            <p><label for="confirm-password">REINGRESAR CONTRASEÑA</label>
-            <input type="password" id="confirm-password" name="confirm-password"></p>
-            <p><label for="name">NOMBRE</label>
-            <input type="text" id="name" name="name"></p>
-            <p><label for="surname">APELLIDOS</label>
-            <input type="text" id="surname" name="surname"></p>
-        </div>
-        <div class="checkboxes">
-            <p><input type="checkbox" name="age-validator" value="over-18"> Declaro que soy mayor de 18 años.</p>
-            <p><input type="checkbox" name="accept-TOS" value="TOS-accepted"> He leído y acepto los Términos y Condiciones del servicio.</p>
-            <p><input type="checkbox" name="subscribe" value="subscribe" checked> Quiero recibir ofertas y promociones de Rusty Nail en mi e-mail.</p>
-        </div>
-        <p><input type="submit" value="REGISTRAR"></p>    
-    </form>
+    <div class="grey-background">
+        <div id="register-title">Registro</div>
+        <form class="form-registro" action="register.html" Method="POST">
+            <div class=inputs>
+                <input type="email" id="email" name="email" placeholder=" E-MAIL" class="input input-email"></p>
+                <div class="paired-inputs">
+                    <div class="pass-and-confirm">
+                        <input type="password" id="password" name="password" placeholder=" CONTRASEÑA" class="input"></p>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder=" REINGRESAR CONTRASEÑA" class="input"></p>
+                    </div>
+                    <div class="name-and-surname">
+                        <input type="text" id="name" name="name" placeholder=" NOMBRE" class="input"></p>
+                        <input type="text" id="surname" name="surname" placeholder=" APELLIDOS" class="input"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="checkboxes">
+                <p><input type="checkbox" name="age-validator" value="over-18"> Declaro que soy mayor de 18 años.</p>
+                <br>
+                <p><input type="checkbox" name="accept-TOS" value="TOS-accepted"> He leído y acepto los Términos y Condiciones del servicio.</p>
+                <br>
+                <p><input type="checkbox" name="subscribe" value="subscribe" checked> Quiero recibir ofertas y promociones de Rusty Nail en mi e-mail.</p>
+            </div>
+            <div id=register-container><input type="submit" value="REGISTRAR" id="register-button"></div>    
+        </form>
+    </div>
     <footer class="footer">
         footer
     </footer>
