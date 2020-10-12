@@ -19,12 +19,16 @@
 .central-box {
     width: 20%;
     background-color: grey;
-    /* height: 260vh; */
 }
 
 .h-boxes-container .central-box .logo-img { 
-    /* height: 37.6vh; */
-    background-color: grey;
+    background-color: black;
+    height: 40vh;
+}
+
+.h-boxes-container .central-box .logo-img .logo-image { 
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -37,8 +41,8 @@
     font-weight: bold;
 }
 
-.header-box .grey-box {
-    /* background-color: #42474F; */
+.header-box .black-stripe:hover {
+    background-color: #252525;
 }
 
 .header-box .grey-box .gb-menu-1 {
@@ -48,6 +52,25 @@
     padding: 2vh 8%;
     margin: 0 10%;
     border-bottom: #DDDDDD 1.5px solid;
+}
+
+.header-box .grey-box .gb-menu-1 .regular-customer {
+    padding: 1vh 1.5% 0;
+    text-align: center;
+}
+
+.header-box .grey-box .gb-menu-1 .regular-customer:hover{
+    background-color: #5e6b7a;
+}
+
+.header-box .grey-box .gb-menu-1 .cart-icons {
+    width: 40%;
+    padding-top: 1vh;
+    text-align: right;
+}
+
+.hover-lit:hover {
+    color: #afb9c5;
 }
 
 .header-box .grey-box .white-line {
@@ -67,11 +90,9 @@
 }
 
 
-
 .header-box .grey-box .gb-menu-1 .right-icons {
     font-size: 6vh;
 }
-
 
 .header-box .grey-box .gb-menu-2 {
     display: flex;
@@ -84,21 +105,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2vh;
+    padding: 1vh 0;
+    width:35%; 
 }
 
+.header-box .grey-box .gb-menu-2 .nav-link:hover {
+    background-color: #5e6b7a;
+}
 
 .header-box .grey-box .nav-link {
-    font-size: 1.2em;
+    font-size: 0.85em;
     color: whitesmoke;
 }
-
 
 .header-box .grey-box .nav-icon {
     font-size: 11vh;
     color: black;
-    margin-bottom: 1vh;
-
+    margin: 1% 2% 4%;
 }
 
 .second-container {
@@ -108,6 +131,7 @@
 
 .second-container .invisible-box {
     width: 40%;
+    background-color: transparent;
 }
 
 .second-container .bartender-button {
@@ -118,4 +142,8 @@
     text-align: center;
     padding: 4vh 0;
     font-weight: bold;
+}
+
+.second-container .bartender-button:hover {
+    background-color: #485564;
 }

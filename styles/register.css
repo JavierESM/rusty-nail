@@ -5,10 +5,10 @@
     font-family: Serif;
 }
 
-.grey-background {
+
+body {
     background-color: #969FAA;
 }
-
 
 .navigation {
     display:flex;
@@ -34,9 +34,9 @@
 }
 
 #register-title {
-    padding: 25px;
+    padding: 50px 0;
     text-align: center; 
-    font-size: 38px;
+    font-size: 58px;
     font-weight: bold;
     color: #3F3F3F;
 }
@@ -48,6 +48,7 @@
 
 .form-registro .inputs {
     padding: auto 5%;
+    margin-bottom: 25px;
 }
 
 .form-registro .inputs .input {
@@ -56,25 +57,32 @@
     margin: 10px auto;
     border: 1.5px solid #5A6978;
     background-color: #969FAA;
+    font-size: 1em;
+    color: #3F3F3F;
+}
+
+.form-registro .inputs .input:focus{
+    background-color: #acb5be;
 }
 
 ::placeholder {
     color: #3F3F3F;
 }
 
+
+.form-registro .inputs .input[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.3s 0.3s ease; 
+    opacity: 0;
+  }
+
 .form-registro .checkboxes {
     font-size: 0.88em;
     color: #343F4B;
     text-align: left;
-    padding: 20px 0 ;
 }
 
 .form-registro input[type="checkbox"] {
     vertical-align: text-top;
-}
-
-.form-registro input[type="checkbox"]:checked {
-    background-color: red;
 }
 
 .form-registro #register-container {
@@ -85,11 +93,15 @@
     border-radius: 0px;
     border: solid 0px;
     padding: 3% 8%;
-    margin: 5%;
+    margin: 3%;
     background-color: #47525E;
     color: #FDFDFD;
     font-size: 15px;
     font-weight: bold;
+}
+
+.form-registro #register-button:hover {
+    background-color: #485564;
 }
 
 .footer {
@@ -97,7 +109,7 @@
 }
 
 @media (min-width: 769px){
-     
+
     .form-registro .paired-inputs {
         display:flex;
         flex-direction: column;
@@ -135,5 +147,5 @@
         align-content: left;
     }
 
-    
+   
 }
