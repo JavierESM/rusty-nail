@@ -1,0 +1,23 @@
+{
+  "name": "rusty-nail",
+  "version": "1.0.0",
+  "description": "- [Servicio ofrecido por el sitio](#Servicio-ofrecido-por-el-sitio)\r - [Referencias](#Referencias)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierESM/rusty-nail.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierESM/rusty-nail/issues"
+  },
+  "homepage": "https://github.com/JavierESM/rusty-nail#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
