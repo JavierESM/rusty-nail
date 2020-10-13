@@ -17,6 +17,8 @@
 
 
 
+
+
 body{ 
 
     background-color:none;
@@ -25,6 +27,7 @@ body{
     justify-content: center;
     width: 100%;                                                                                                                                                                                                                                                                                                                                        
     align-items: center;
+    
     
 }                                                                                                                                                                           
 
@@ -99,17 +102,27 @@ body{
 
  .articles{ 
     margin-right: 5px;
-    margin-left: 30px;
+    margin-left: 40px;
     color:  #42474f;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-right: #42474f solid 2px;
     padding-right: 10px;
+    font-size: 15px;
+    width: 25%;
  }
+
+#description { 
+    margin: 2vh 1%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline solid #42474f;
+}
 
  .art-image{ 
      height: 90%;
      width: 90%;
-     margin: 5%;
+     margin: 2%;
      
  }
 
@@ -207,6 +220,7 @@ body{
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
+
  .novedades{
 
     margin-left: 0px;
@@ -269,3 +283,111 @@ body{
      height: 40px;
      padding: 1%;
  }
+
+ .i-resp{ 
+    height: 100vh; 
+    width: 70%; 
+    margin-top: 10px"
+
+ }
+
+ @media (min-width:425px){ 
+     .product-sec {
+        width: 100%;
+        font-size: 13px;
+        height: 8vh;
+    }
+      
+ }
+
+ @media (max-width:425px){ 
+     .articles {       
+            margin-right: 5px;
+            margin-left: 15px;
+            height: 6vh;
+            color: #42474f;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-right: #42474f solid 2px;
+            padding-right: 10px;
+            font-size: 12px;
+ }
+ }
+
+ @media (max-width:425px){ 
+    #detail{
+        width: 35%;
+        text-align: left;
+        padding-left: 2%;
+        color: rgb(95, 206, 130);
+        font-weight: bold;
+        font-size: 15px;
+        left: 5%;
+        height: 20vh;
+        position: relative;
+    }
+   }
+   @media (max-width:425px){   
+    #icons-social {
+        color: rgb(95, 206, 130);
+        position: relative;
+        top: 26vh;
+        right: 25%;
+        align-items: left;
+        width: 45%;
+        height: 10vh;
+        font-size: 25px;
+}
+}
+
+@media (max-width:425px){   
+    .precio-details-2 {
+        border-top: rgb(95, 206, 130) solid 3px;
+        border-bottom: rgb(95, 206, 130) solid 3px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 2%;
+        width: 60%;
+    }
+}
+
+@media (max-width:425px){
+    .i-resp{
+        height: 80vh;
+        width: 98%;
+        margin-top: 2px;
+    }
+}
+@media (max-width:425px){
+    .imag-relacion {
+        display: flex;
+        width: 98%;
+        flex-direction: column;
+        margin: 2% 2%;
+        align-items: center;
+}
+}
+
+@media (max-width: 375px){
+ #icons-social {
+    color: rgb(95, 206, 130);
+    position: relative;
+    top: 19vh;
+    right: 3%;
+    align-items: left;
+    width: 13%;
+    height: 10vh;
+    font-size: 26px;
+}}
+
+@media (max-width: 375px){  
+.novedades {
+    margin-left: 0px;
+    margin-top: 5%;
+    background-color: #969faa;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px;
+    width: 105%;
+}
