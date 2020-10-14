@@ -10,6 +10,17 @@ app.get('/registro', (req, res) => {
     let file = path.resolve('register.html')
     res.sendFile(file)
 })
+
+app.get('/login', function(req,res){ 
+    let file= path.resolve('./login.html')
+    res.sendFile(file)
+})
+
+app.get('/product', function(req,res){ 
+    let file= path.resolve('\product.html')
+    res.sendFile(file)
+})
+
 app.get('/menu', (req, res) => {
     let file = path.resolve('menu.html')
     res.sendFile(file)
