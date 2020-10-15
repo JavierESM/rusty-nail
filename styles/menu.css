@@ -1,0 +1,259 @@
+body{
+    margin: 0;
+    background-color: #969FAA
+}
+#desk-nav{
+    display: none;
+    width: 100%;
+}
+#logo{
+    font-size: 1.4em;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#mobi-banner{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: white;
+    background-color: black;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+#nav-menu{
+    display: none;
+}
+
+#bars-cont:hover > #nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 8%;
+    padding: 0;
+    background-color: #000000;
+    width: 100%;
+    margin: 0;
+    left: 0%;
+    height: 92vh;
+    -webkit-box-shadow: inset -1px -5px 71px 42px rgba(38,38,38,0.75);
+    -moz-box-shadow: inset -1px -5px 71px 42px rgba(38,38,38,0.75);
+    box-shadow: inset -1px -5px 71px 42px rgba(38,38,38,0.75);
+    transition-delay: 180s;
+}
+
+.nav-link{
+    
+    text-decoration: none;
+    margin: 0%;
+    color: white;
+    font-size: 1.8em;
+}
+
+#bars-cont{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#lista-cont{
+    display: none;
+}
+.bars{
+    font-size: 2em;
+    border-radius: 7px;
+    padding: 1%;
+    background-color: black;
+}
+
+#bars-l{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: center;
+}
+#i-cont{
+    font-size: 1.8em;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+#i-cont > i{
+    color: white;
+}
+.user{
+    margin: 5%;
+}
+.bag{
+    margin: 0% 8% 0% 0%;
+}
+#desk-cont{
+    height: 100vh;
+    position: relative;
+}
+#title{
+    margin-top: 30%;
+    font-size: 4em;
+    text-align: center;
+}
+#secciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+.selector{
+    border-style: solid;
+    border-width: thin;
+    padding: 2%;
+    width: 80%;
+    margin: 1%;
+    height: 26%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4em;
+}
+.shape{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin: 10%;
+}
+.prod-img{
+    height: 40vh;
+    width: 100%;
+    border-top-right-radius: 1%;
+    border-top-right-radius: 1%;
+}
+.trago{
+    width: 82%;
+    font-size: 2em;
+    border-width: thin;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 1% 0% 5% 0%;
+    align-content: flex-start;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+}
+.counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.counter-n{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+    font-size: 1.5em;
+    border-left: solid thin black;
+    border-right: solid thin black;
+    padding: 1% 4% 1% 4%;
+    flex-grow: 0.5;
+}
+.s{
+    font-size: 1.5em;
+    font-stretch: extra-condensed;
+    font-family: sans-serif;
+    text-align: center;
+    width: 30%;
+    
+}
+.grid{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.tag{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: black solid thin;
+    background-color: white;
+}
+.cart{
+    align-content: center;
+    text-align: center;
+    width: 25%;
+}
+@media screen and (min-width:600px){
+    .shape{
+        width: 60%;
+    }
+}
+@media screen and (min-width:1024px){
+    .shape{
+        width: 35%;
+        margin: 10% 0 10% 0;
+        flex-grow: 1 0 25%;
+    }
+    .grid{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 250vh;
+        flex-wrap: wrap;
+    }
+    #desk-nav{
+        display: block;
+        position: fixed;
+        top: 0;
+    }
+    #outis{
+        display: block;
+    }
+    #mobi-nav{
+        display: none;
+    }
+    #title{
+        margin-top: 35%;
+        margin-bottom: 10%;
+    }
+}
+@media screen and (max-width:700px) and (orientation: landscape){
+    #logo{
+        font-size: 1em;
+    }
+    .bars{
+        font-size: 1em;
+    }
+    #i-cont{
+        font-size: 1em;
+    }
+    #title {
+        margin-top: 15%;
+        margin-bottom: 10%;
+        font-size: 4em;
+        text-align: center;
+    }
+}

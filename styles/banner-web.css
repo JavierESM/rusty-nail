@@ -142,8 +142,17 @@
     text-align: center;
     padding: 4vh 0;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .second-container .bartender-button:hover {
     background-color: #485564;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+i{
+  color: black;
 }

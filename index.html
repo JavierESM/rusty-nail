@@ -4,17 +4,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="banner-web.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 </head>
 <body>
-    <header>
+    <header id="desk-nav">
+        <div class="h-boxes-container">
+            <div class="header-box">
+                <div class="black-stripe">¿Todavía no sos regular?</div>
+                <nav class="grey-box">
+                    <div class="gb-menu-1">
+                        <div>
+                            <i class="fab fa-whatsapp-square social-icon"></i>
+                            <span class="white-text-nav">11-4030-3456</span>
+                        </div>
+                        <div class="social-networks">
+                            <i class="fab fa-twitter social-icon hover-lit"></i>
+                            <i class="fab fa-facebook social-icon hover-lit"></i>
+                            <i class="fab fa-instagram social-icon hover-lit"></i>
+                        </div>
+                    </div>
+                    <div class="gb-menu-2">
+                        <div class="nav-link">
+                           <a href="menu"><i class="fas fa-glass-martini-alt nav-icon"></i></a>
+                            <span class="white-text-nav">Nuestra carta</span>
+                        </div>
+                        <div class="nav-link">
+                            <i class="fas fa-glass-cheers nav-icon"></i>
+                            <span>Nuestra historia</span>
+                        </div>
+                    </div>   
+                </nav>
+            </div>
+            <div class="central-box">
+                <div class="logo-img">
+                    <img src="dark-martini-glass-logo.jpeg" alt="Rusty Nail Logo" class="logo-image">
+                </div>
+            </div>
+            <div class="header-box">
+                <div class="black-stripe">Sumate y conseguí todos estos beneficios</div>
+                <nav class="grey-box">
+                    <div class="gb-menu-1">
+                        <div class="regular-customer">
+                            <a href=register><i class="fas fa-user right-icons user-icon"></i></a> 
+                            <a href=register><span class="white-text-nav">Soy regular</span></a>
+                        </div>
+                        <div class="cart-icons">
+                            <a href=""><i class="fas fa-wine-bottle right-icons"></i></a>
+                            <i class="far fa-comment right-icons"></i>
+                        </div>
+                    </div>
+                    <div class="gb-menu-2">
+                        <div class="nav-link">
+                            <i class="fas fa-wine-glass-alt nav-icon"></i>
+                            <span>¿Cómo comprar?</span>
+                        </div>
+                        <div class="nav-link">
+                            <i class="fas fa-glass-whiskey nav-icon"></i>
+                            <a href="#"><span>Contactate</span></a>
+                        </div>
+                    </div>   
+                </nav>
+            </div>
+        </div>
+            <div class="second-container">
+                <div class="invisible-box"></div>
+                <div class="bartender-button">
+                    <a href=bartender>Llamá al bartender</a>
+                </div>
+                <div class="invisible-box"></div>
+            </div>
+    </header>
+    <header id="mobi-nav">
         <nav id="mobi-banner">
             <div id="bars-l">
                 <div id="bars-cont">
-                    <i class="fas fa-bars bars"></i>
+                    <i class="fas fa-bars bars" style="color: white;"></i>
                     <div id="nav-menu">
-                    <ul id="lista-cont"></ul>
-                </div>
+                        <a href="menu" class="nav-link">CARTA</a>
+                        <a href="#" class="nav-link">CONTACTO</a>
+                        <a href="bartender" class="nav-link">BARTENDER VIRTUAL</a>
+                        <a href="register" class="nav-link">REGISTRATE</a>
+                        <a href="historia" class="nav-link">NUESTRA HISTORIA</a>
+                    </div>
                 </div>
                 <p id="logo">RUSTY NAIL</p>
             </div>
@@ -25,6 +97,9 @@
         </nav>
     </header>
     <main>   
+        <div id="outis">
+
+        </div>
         <div id="desk-cont">
             <img src="mobi-gif.gif" id="mobi-gif">
             <h3 id="alta">ALTA COCTELERÍA EN TU CASA</h3>

@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     let file = path.resolve('index.html')
     res.sendFile(file)
 })
-app.get('/registro', (req, res) => {
+app.get('/register', (req, res) => {
     let file = path.resolve('register.html')
     res.sendFile(file)
 })
@@ -18,8 +18,8 @@ app.get('/bartender', (req, res) => {
     let file = path.resolve('bartender.html')
     res.sendFile(file)
 })
-app.get('/ejemplo', (req, res) => {
-    let file = path.resolve('ejemplo.html')
+app.get('/historia', (req, res) => {
+    let file = path.resolve('historia.html')
     res.sendFile(file)
 })
 app.get(`*`, (req, res) => {

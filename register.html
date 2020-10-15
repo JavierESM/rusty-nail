@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header id="desk-nav">
         <div class="h-boxes-container">
             <div class="header-box">
                 <div class="black-stripe">¿Todavía no sos regular?</div>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="gb-menu-2">
                         <div class="nav-link">
-                            <i class="fas fa-glass-martini-alt nav-icon"></i>
+                           <a href="menu"><i class="fas fa-glass-martini-alt nav-icon"></i></a>
                             <span class="white-text-nav">Nuestra carta</span>
                         </div>
                         <div class="nav-link">
@@ -39,7 +39,7 @@
             </div>
             <div class="central-box">
                 <div class="logo-img">
-                    <img src="dark-martini-glass-logo.jpeg" alt="Rusty Nail Logo" class="logo-image">
+                   <a href="/"><img src="dark-martini-glass-logo.jpeg" alt="Rusty Nail Logo" class="logo-image"></a>
                 </div>
             </div>
             <div class="header-box">
@@ -47,11 +47,11 @@
                 <nav class="grey-box">
                     <div class="gb-menu-1">
                         <div class="regular-customer">
-                            <i class="fas fa-user right-icons user-icon"></i>
-                            <span class="white-text-nav">Soy regular</span>
+                            <a href=register><i class="fas fa-user right-icons user-icon"></i></a> 
+                            <a href=register><span class="white-text-nav">Soy regular</span></a>
                         </div>
                         <div class="cart-icons">
-                            <i class="fas fa-wine-bottle right-icons"></i>
+                            <a href=""><i class="fas fa-wine-bottle right-icons"></i></a>
                             <i class="far fa-comment right-icons"></i>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="nav-link">
                             <i class="fas fa-glass-whiskey nav-icon"></i>
-                            <span>Contactate</span>
+                            <a href="#"><span>Contactate</span></a>
                         </div>
                     </div>   
                 </nav>
@@ -71,10 +71,31 @@
             <div class="second-container">
                 <div class="invisible-box"></div>
                 <div class="bartender-button">
-                    Llamá al bartender
+                    <a href=bartender>Llamá al bartender</a>
                 </div>
                 <div class="invisible-box"></div>
             </div>
+    </header>
+    <header id="mobi-nav">
+        <nav id="mobi-banner">
+            <div id="bars-l">
+                <div id="bars-cont">
+                    <i class="fas fa-bars bars" style="color: white;"></i>
+                    <div id="nav-menu">
+                        <a href="menu" class="nav-link">CARTA</a>
+                        <a href="#" class="nav-link">CONTACTO</a>
+                        <a href="bartender" class="nav-link">BARTENDER VIRTUAL</a>
+                        <a href="register" class="nav-link">REGISTRATE</a>
+                        <a href="historia" class="nav-link">NUESTRA HISTORIA</a>
+                    </div>
+                </div>
+                <p id="logo">RUSTY NAIL</p>
+            </div>
+            <div id="i-cont">
+                <i class="fas fa-user-alt user"></i>
+                <i class="fas fa-shopping-bag bag"></i>
+            </div>
+        </nav>
     </header>
             <div id="register-title">Registro</div>
         <form class="form-registro" action="register.html" Method="POST">
@@ -100,7 +121,4 @@
             </div>
             <div id=register-container><input type="submit" value="REGISTRAR" id="register-button"></div>    
         </form>
-    <footer class="footer">
-        footer
-    </footer>
 </body>
