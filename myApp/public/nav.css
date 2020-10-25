@@ -216,9 +216,9 @@
         font-weight: bold;
     }
     
-    .header-box .grey-box {
-        /* background-color: #42474F; */
-    }
+    /*.header-box .grey-box {
+        /* background-color: #42474F; 
+    }*/
     
     .header-box .grey-box .gb-menu-1 {
         display: flex;
@@ -346,9 +346,9 @@
         font-weight: bold;
     }
     
-    .header-box .grey-box {
-        /* background-color: #42474F; */
-    }
+    /*.header-box .grey-box {
+        /* background-color: #42474F; 
+    }*/
     
     .header-box .grey-box .gb-menu-1 {
         display: flex;
