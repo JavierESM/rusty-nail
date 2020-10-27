@@ -1,0 +1,42 @@
+[ 
+    { 
+        "id":1,
+        "name": "Cinamon Simón" ,
+        "description": "Manzana Clarificada - Cordial de Canela - Extracto Cítrico" ,
+        "category":"Cocktail" ,
+        "precio":"$320"
+    },
+    { 
+
+
+        "id":2,
+        "name":"El iluminado" ,
+        "description": "Cocktail con The Glenrothes 10 Years / Miel de Haba Tonka / Vermouth Dry / Limón  / Hoja de limonero",
+        "category":"Cocktail",
+        "precio": "$720"
+
+    },
+    { 
+        "id":3,
+        "name":"Hot rother" ,
+        "description":"Un cocktail con The Glendrothers 12 años / Nectar de Lychee / Jarabe de Chilli. Jugo de Lima y Limón",
+        "category": "Cocktail",
+        "precio": "$950"
+    },
+    { 
+        "id":4,
+        "name": "Delicious death",
+        "description":"Un cocktail con The Gledrothes Marker´s Cut / Óleo Saccharum Naranja /" ,
+        "category": "Cocktail",
+        "precio": "$1950"
+    },
+
+    { 
+        "id":5,
+        "name":"Cosmo patagónico" ,
+        "description":"Un exquisito cocktail que contiene: Vodka- Jugo de lima- Cordial de frutos rojos- Cerezas patagónicas Se decora con el garnish de cerezas." ,
+        "category":"Cocktail" ,
+        "precio":"$380" 
+    }
+
+]
