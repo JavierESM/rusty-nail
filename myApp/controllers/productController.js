@@ -20,7 +20,7 @@ vista: function(req, res,) {
        return res.send (resultado)
         }   
 
-        /* res.send ("No se encuentran productos")*/
+        res.send ("No se encuentran productos")
 
     }
 }

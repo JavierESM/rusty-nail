@@ -12,7 +12,9 @@
     <ul>
         <% listado.forEach(function (listado) { %> 
                
-         <li><a href="/product/id"> <%= listado.name %> </a>
+         <li>
+             
+            <a href="/product/<%=listado.id%>"> <%= listado.name   %> </a>
         
          </li>
 

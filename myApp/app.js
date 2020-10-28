@@ -8,6 +8,7 @@ var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var productRouter = require('./routes/product');
+var registerRouter = require ('./routes/register');
 var bartenderRouter = require("./routes/bartender")
 
 var app = express(); 
@@ -28,6 +29,7 @@ app.use("/", homeRouter)
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/product', productRouter);
+app.use('/register',registerRouter);
 app.use("/bartender", bartenderRouter); 
 
 
