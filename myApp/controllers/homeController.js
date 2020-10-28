@@ -2,7 +2,7 @@
 const homeController = {
 
     show : (req, res) => {
-        res.render("index")
+        res.render("home")
     } 
 
 }

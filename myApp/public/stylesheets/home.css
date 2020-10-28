@@ -688,125 +688,126 @@ color: black;}
   }
 }
 @media screen and (min-width:1440px){
-  
-  .h-boxes-container {
-     display: flex;
-      flex-direction: row;
-      height: 40vh;
-      justify-content: stretch;
-  }
-  
-  .header-box {
-      width: 40%;
-      background-color: #42474F;
-  }
-  
-  .central-box {
-      width: 20%;
-      background-color: grey;
-      /* height: 260vh; */
-  }
-  
-  .h-boxes-container .central-box .logo-img { 
-      /* height: 37.6vh; */
-      background-color: grey;
-  }
-  
-  
-  .header-box .black-stripe {
-      background-color: Black;
-      color: #DDDDDD;
-      text-align: center;
-      padding: 1%;
-      font-size: 14px;
-      font-weight: bold;
-  }
-  
-
-  
-  .header-box .grey-box .gb-menu-1 {
-      display: flex;
-      justify-content: space-between;
-      height: 12vh;
-      padding: 2vh 8%;
-      margin: 0 10%;
-      border-bottom: #DDDDDD 1.5px solid;
-  }
-  
-  .header-box .grey-box .white-line {
-      padding: 0 20%;
-      color:white;
-      height: 3px;
-  }
-  
-  .header-box .grey-box .gb-menu-1 {
-      font-size: 4vh;
-  }
-  
-  .header-box .grey-box .gb-menu-1 .white-text-nav {
-      color: whitesmoke;
-      font-weight: bold;
-      font-size: 12pt;
-  }
-  
-  
-  
-  .header-box .grey-box .gb-menu-1 .right-icons {
-      font-size: 6vh;
-  }
-  
-  
-  .header-box .grey-box .gb-menu-2 {
-      display: flex;
-      justify-content: space-around;
-      flex-direction: row;
-      margin: 3vh;
-  }
-  
-  .header-box .grey-box .gb-menu-2 .nav-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 2vh;
-  }
-  
-  
-  .header-box .grey-box .nav-link {
-      font-size: 1.1em;
-      color: whitesmoke;
-  }
-  
-  
-  .header-box .grey-box .nav-icon {
-      font-size: 11vh;
-      color: black;
-      margin-bottom: 1vh;
-  
-  }
-  
-  .second-container {
-      display: flex;
-      flex-direction: row;
-  }
-  
-  .second-container .invisible-box {
-      width: 40%;
-  }
-  
-  .second-container .bartender-button {
-      width: 20%; 
-      background-color: #343F4B;
-      color: #DDDDDD;
-      font-size: 1.1em;
-      text-align: center;
-      padding: 4vh 0;
-      font-weight: bold;
-  }
   #desk-nav{
       position: fixed;
       z-index: 2;
       display: block;
-  } 
+  }
+  
+  .h-boxes-container {
+    display: flex;
+     flex-direction: row;
+     height: 40vh;
+     justify-content: stretch;
+ }
+ 
+ .header-box {
+     width: 40%;
+     background-color: #42474F;
+ }
+ 
+ .central-box {
+     width: 20%;
+     background-color: grey;
+     /* height: 260vh; */
+ }
+ 
+ .h-boxes-container .central-box .logo-img { 
+     /* height: 37.6vh; */
+     background-color: grey;
+ }
+ 
+ 
+ .header-box .black-stripe {
+     background-color: Black;
+     color: #DDDDDD;
+     text-align: center;
+     padding: 1%;
+     font-size: 14px;
+     font-weight: bold;
+ }
+ 
+
+ 
+ .header-box .grey-box .gb-menu-1 {
+     display: flex;
+     justify-content: space-between;
+     height: 12vh;
+     padding: 2vh 8%;
+     margin: 0 10%;
+     border-bottom: #DDDDDD 1.5px solid;
+ }
+ 
+ .header-box .grey-box .white-line {
+     padding: 0 20%;
+     color:white;
+     height: 3px;
+ }
+ 
+ .header-box .grey-box .gb-menu-1 {
+     font-size: 4vh;
+ }
+ 
+ .header-box .grey-box .gb-menu-1 .white-text-nav {
+     color: whitesmoke;
+     font-weight: bold;
+     font-size: 12pt;
+ }
+ 
+ 
+ 
+ .header-box .grey-box .gb-menu-1 .right-icons {
+     font-size: 6vh;
+ }
+ 
+ 
+ .header-box .grey-box .gb-menu-2 {
+     display: flex;
+     justify-content: space-around;
+     flex-direction: row;
+     margin: 3vh;
+ }
+ 
+ .header-box .grey-box .gb-menu-2 .nav-link {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-bottom: 2vh;
+ }
+ 
+ 
+ .header-box .grey-box .nav-link {
+     font-size: 1.1em;
+     color: whitesmoke;
+ }
+ 
+ 
+ .header-box .grey-box .nav-icon {
+     font-size: 11vh;
+     color: black;
+     margin-bottom: 1vh;
+ 
+ }
+ 
+ .second-container {
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .second-container .invisible-box {
+     width: 40%;
+ }
+ 
+ .second-container .bartender-button {
+     width: 20%; 
+     background-color: #343F4B;
+     color: #DDDDDD;
+     font-size: 1.1em;
+     text-align: center;
+     padding: 4vh 0;
+     font-weight: bold;
+ }
+  
   #outis{
       background-color: #42474F;
       height: 40vh;
