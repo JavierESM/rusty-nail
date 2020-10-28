@@ -7,4 +7,4 @@ router.get('/', productController.vista );
 router.get('/listado', productController.list);
 router.get('/:id',productController.detalle );
   
-  module.exports = router;
+  module.exports = router;  

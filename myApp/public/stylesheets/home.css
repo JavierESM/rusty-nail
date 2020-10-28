@@ -1,0 +1,944 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+#desk-cont{
+  height: 100vh;
+  position: relative;
+}
+
+#alta{
+  position: absolute;
+  top: 22%;
+  left: 9%;
+  right: 50%;
+  width: 82%;
+  font-family: serif;
+  color: white;
+  font-size: 2.4em;
+  text-align: center;
+  margin: 0;
+}
+#cta{
+  position: absolute;
+  top: 78%;
+  left: 6.3%;
+  right: 50%;
+  width: 80%;
+  height: 4.5%;
+  font-family: serif;
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+  transition: all 0.2s;
+  padding: 4%;
+  background: black;
+  text-decoration: none;
+  font-family: serif;
+}
+#cta:active{
+  color: black;
+  background-color: white;
+}
+#copa-cont{
+  height: 85vh;
+}
+img{
+  width:100%;
+  height: 100vh;
+}
+#medida{
+  position: absolute;
+  top: 110%;
+  left: 12.5%;
+  right: 50%;
+  width: 76%;
+  font-family: serif;
+  color: #4a4848;
+  font-size: 2.4em;
+  text-align: center;
+  margin: 0;
+}
+#sabes{
+  position: absolute;
+  top: 138%;
+  left: 12.5%;
+  right: 50%;
+  width: 76%;
+  font-family: ui-serif;
+  color: #4a4848;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+}
+#facil{
+  position: absolute;
+  top: 150%;
+  left: 12.5%;
+  right: 50%;
+  width: 76%;
+  font-family: ui-serif;
+  color: #4a4848;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+}
+#cta2{
+  position: absolute;
+  top: 170%;
+  left: 6.3%;
+  right: 50%;
+  width: 80%;
+  height: 4.5%;
+  font-family: serif;
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+  transition: all 0.2s;
+  padding: 4%;
+  background: black;
+  text-decoration: none;
+  font-family: serif;
+}
+#feed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #343F4B;
+  height: 122vh;
+}
+#img-feed{
+  width: 87%;
+  height: 85vh;
+}
+.img-feed{
+  display: none;
+  width: 75%;
+  height: 75vh;
+}
+#feed-txt{
+  margin: 15% 0% 9% 11%;
+  font-size: 1.3em;
+  color: white;
+  align-self: end;
+  font-weight: 700;
+}
+#feed-cont{
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin-bottom: 3%;
+}
+
+.header-box {
+width: 40%;
+background-color: #42474F;
+}
+
+.central-box {
+width: 20%;
+background-color: grey;
+}
+
+.h-boxes-container .central-box .logo-img { 
+background-color: black;
+height: 40vh;
+}
+
+.h-boxes-container .central-box .logo-img .logo-image { 
+width: 100%;
+height: 100%;
+}
+
+
+.header-box .black-stripe {
+background-color: Black;
+color: #DDDDDD;
+text-align: center;
+padding: 1%;
+font-size: 14px;
+font-weight: bold;
+}
+
+.header-box .black-stripe:hover {
+background-color: #252525;
+}
+
+.header-box .grey-box .gb-menu-1 {
+display: flex;
+justify-content: space-between;
+height: 12vh;
+padding: 2vh 8%;
+margin: 0 10%;
+border-bottom: #DDDDDD 1.5px solid;
+}
+
+.header-box .grey-box .gb-menu-1 .regular-customer {
+padding: 1vh 1.5% 0;
+text-align: center;
+}
+
+.header-box .grey-box .gb-menu-1 .regular-customer:hover{
+background-color: #5e6b7a;
+}
+
+.header-box .grey-box .gb-menu-1 .cart-icons {
+width: 40%;
+padding-top: 1vh;
+text-align: right;
+}
+
+.hover-lit:hover {
+color: #afb9c5;
+}
+
+.header-box .grey-box .white-line {
+padding: 0 20%;
+color:white;
+height: 3px;
+}
+
+.header-box .grey-box .gb-menu-1 {
+font-size: 4vh;
+}
+
+.header-box .grey-box .gb-menu-1 .white-text-nav {
+color: whitesmoke;
+font-weight: bold;
+font-size: 12pt;
+}
+
+
+.header-box .grey-box .gb-menu-1 .right-icons {
+font-size: 6vh;
+}
+
+.header-box .grey-box .gb-menu-2 {
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+margin: 3vh;
+}
+
+.header-box .grey-box .gb-menu-2 .nav-link {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1vh 0;
+width:35%; 
+}
+
+.header-box .grey-box .gb-menu-2 .nav-link:hover {
+background-color: #5e6b7a;
+}
+
+.header-box .grey-box .nav-link {
+font-size: 0.85em;
+color: whitesmoke;
+}
+
+.header-box .grey-box .nav-icon {
+font-size: 11vh;
+color: black;
+margin: 1% 2% 4%;
+}
+
+.second-container {
+display: flex;
+flex-direction: row;
+}
+
+.second-container .invisible-box {
+width: 40%;
+background-color: transparent;
+}
+
+.second-container .bartender-button {
+width: 20%; 
+background-color: #343F4B;
+color: #DDDDDD;
+font-size: 1.1em;
+text-align: center;
+padding: 4vh 0;
+font-weight: bold;
+text-decoration: none;
+}
+
+.second-container .bartender-button:hover {
+background-color: #485564;
+text-decoration: none;
+}
+a{
+text-decoration: none;
+color: white;
+}
+i{
+color: black;}
+@media screen and (min-width: 646px) and (orientation: portrait){
+  #desk-nav{
+      display: none;
+  }
+  #mobi-gif{
+      display: none;
+  }
+  .bars{
+      font-size: 1em;
+  }
+  #logo{
+      font-size: 1em;
+  }
+  #i-cont{
+      font-size: 1.2em;
+  }
+  #alta{
+      font-size: 2em;
+  }
+  #desk-gif{
+      display: block;
+      height: 112vh;
+      display: none;
+  }
+  #copa-cont{
+      height: 130vh;
+  }
+  img{
+      height: 130vh;
+  }
+}
+@media screen and (max-width:700px) and (max-height: 426px){
+  #alta{
+      font-size: 2em;
+  }
+  #cta{
+      position: absolute;
+      top: 77%;
+      left: 22.5%;
+      right: 50%;
+      width: 56%;
+      height: 15%;
+      font-family: serif;
+      color: white;
+      font-size: 1.9em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 2% 0% 6% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #copa-cont{
+      height: 110vh;
+  }
+  img{
+      height: 110vh;
+  }
+  #cta2{
+      position: absolute;
+      top: 180%;
+      left: 23.5%;
+      right: 50%;
+      width: 56%;
+      height: 15%;
+      font-family: serif;
+      color: white;
+      font-size: 1.9em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 2% 0% 6% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #sabes{
+      top: 135%;
+  }
+  #facil{
+      top: 156%;
+      font-size: 2.4em;
+  }
+  #feed{
+      height: 250vh;
+  }
+  #feed-txt{
+      margin: 0% 0% 4% 10%;
+      font-size: 1.8em;
+  }
+  #img-feed{
+      display: none;
+  }
+  .img-feed{
+      display: block;
+      width: 40%;
+      height: 195vh;
+  }
+}
+@media screen and (min-width: 701) and (max-width:1023) and (orientation: landscape)
+{
+  #alta{
+      font-size: 3em;
+  }
+  #cta{
+      position: absolute;
+      top: 77%;
+      left: 18%;
+      right: 50%;
+      width: 67%;
+      height: 3.5%;
+      font-family: serif;
+      color: white;
+      font-size: 2.3em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 2% 0% 7% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #medida{
+      font-size: 3em;
+      
+  }
+  #sabes{
+      position: absolute;
+      top: 130%;
+      left: 12.5%;
+      right: 50%;
+      width: 76%;
+      font-family: ui-serif;
+      color: #4a4848;
+      font-size: 2em;
+      text-align: center;
+      margin: 0;
+  }
+  #facil{
+      position: absolute;
+      top: 149%;
+      left: 12.5%;
+      right: 50%;
+      width: 76%;
+      font-family: ui-serif;
+      color: #4a4848;
+      font-size: 2em;
+      text-align: center;
+      margin: 0;
+  }
+  #copa-cont{
+      height: 92vh;
+  }
+  img{
+      height: 92vh;
+  }
+  #cta2{
+      position: absolute;
+      left: 18%;
+      right: 50%;
+      width: 67%;
+      height: 3.5%;
+      font-family: serif;
+      color: white;
+      font-size: 2.3em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 2% 0% 7% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+      top: 170%;
+      
+  }
+  #feed-txt{
+      margin: 5% 0% 5% 9%;
+      font-size: 2em;
+      color: white;
+      align-self: end;
+      font-weight: 700;
+  }
+  #img-feed{
+      display: none;
+  }
+  .img-feed{
+      display: block;
+      width: 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:1024px) and (orientation: landscape){
+  #alta{
+      font-size: 3.4em;
+  }
+  #cta{
+      position: absolute;
+      top: 75%;
+      left: 18.5%;
+      right: 50%;
+      width: 62%;
+      height: 6.5%;
+      font-family: serif;
+      color: white;
+      font-size: 2.4em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 2% 0% 4% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #copa-cont{
+      height: 100vh;
+  }
+  img{
+      height: 100vh;
+  }
+  #sabes{
+      top: 130%;
+      font-size: 1.8em;
+  }
+  #facil{
+      font-size: 2.8em;
+  }
+  #medida{
+      top: 105%;
+      font-size: 3.4em;
+  }
+  #cta2 {
+      position: absolute;
+      top: 170%;
+      left: 18.5%;
+      right: 50%;
+      width: 62%;
+      height: 6.5%;
+      font-family: serif;
+      color: white;
+      font-size: 2.4em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 2% 0% 4% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #feed{
+      height: 191vh
+  }
+  #feed-txt{
+      margin: 0% 0% 4% 10%;
+      font-size: 3.1em;
+  }
+  #img-feed{
+      display: none;
+  }
+  .img-feed{
+      display: block;
+      width: 40%;
+      height: 150vh;
+  }
+}
+@media screen and (min-width: 426px) and (max-width:769px) and (orientation: portrait)
+{
+  #alta {
+      font-size: 3.4em;
+  }
+  #cta{
+      position: absolute;
+      top: 77%;
+      left: 5%;
+      right: 50%;
+      width: 90%;
+      height: 6.5%;
+      font-family: serif;
+      color: white;
+      font-size: 2.4em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 4% 0% 3.5% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #medida{
+      font-size: 3em;
+      top: 115%;
+      
+  }
+  #sabes{
+      position: absolute;
+      top: 144%;
+      left: 12.5%;
+      right: 50%;
+      width: 76%;
+      font-family: ui-serif;
+      color: #4a4848;
+      font-size: 1.9em;
+      text-align: center;
+      margin: 0;
+  }
+  #facil{
+      position: absolute;
+      top: 165%;
+      left: 12.5%;
+      right: 50%;
+      width: 76%;
+      font-family: ui-serif;
+      color: #4a4848;
+      font-size: 2.5em;
+      text-align: center;
+      margin: 0;
+  }
+  #cta2{
+      position: absolute;
+      top: 180%;
+      left: 5%;
+      right: 50%;
+      width: 90%;
+      height: 6.5%;
+      font-family: serif;
+      color: white;
+      font-size: 2.4em;
+      text-align: center;
+      margin: 0;
+      transition: all 0.2s;
+      padding: 4% 0% 3.5% 0%;
+      background: black;
+      text-decoration: none;
+      font-family: serif;
+  }
+  #feed-txt{
+      margin: 4% 0% 5% 9.5%;
+      font-size: 2em;
+      color: white;
+      align-self: end;
+      font-weight: 700;
+  }
+  #img-feed{
+      display: none;
+  }
+  .img-feed{
+      display: block;
+      width: 40%;
+  }
+}
+@media screen and (min-width:1024px) and (max-width:1439px)
+{    
+  #desk-gif{
+      display: block;
+      height: 100vh;
+  }
+  #mobi-gif{
+      display: none;
+  }
+  #alta{
+      font-size: 4em;
+  }
+  #cta{
+      font-size: 2.9em;
+      height: 6.5%;
+      padding: 2% 0% 4% 0%;
+      width: 62%;
+      left: 19%;
+  }
+  #copa-cont{
+      height: 100vh;
+  }
+  img{
+      height: 100vh;
+  }
+  #medida{
+      font-size: 3.9em;
+      top: 147%;
+  }
+  #sabes{
+      top: 162%;
+      font-size: 1.9em;
+  }
+  #facil{
+      font-size: 3em;
+      top: 197%;
+  }
+  #cta2{
+      font-size: 2.9em;
+      height: 5%;
+      padding: 2% 0% 4% 0%;
+      width: 62%;
+      left: 19%;
+      top: 220%;
+  }
+  #feed-txt{
+      margin: 4% 0% 4% 6.5%;
+      font-size: 2.5em;
+  }
+  #img-feed{
+      display: block;
+      width: 30%;
+      height: 150vh;
+  }
+  .img-feed{
+      display: block;
+      width: 30%;
+  }
+}
+@media screen and (min-width:1440px){
+  #desk-nav{
+      position: fixed;
+      z-index: 2;
+      display: block;
+  }
+  
+  .h-boxes-container {
+    display: flex;
+     flex-direction: row;
+     height: 40vh;
+     justify-content: stretch;
+ }
+ 
+ .header-box {
+     width: 40%;
+     background-color: #42474F;
+ }
+ 
+ .central-box {
+     width: 20%;
+     background-color: grey;
+     /* height: 260vh; */
+ }
+ 
+ .h-boxes-container .central-box .logo-img { 
+     /* height: 37.6vh; */
+     background-color: grey;
+ }
+ 
+ 
+ .header-box .black-stripe {
+     background-color: Black;
+     color: #DDDDDD;
+     text-align: center;
+     padding: 1%;
+     font-size: 14px;
+     font-weight: bold;
+ }
+ 
+
+ 
+ .header-box .grey-box .gb-menu-1 {
+     display: flex;
+     justify-content: space-between;
+     height: 12vh;
+     padding: 2vh 8%;
+     margin: 0 10%;
+     border-bottom: #DDDDDD 1.5px solid;
+ }
+ 
+ .header-box .grey-box .white-line {
+     padding: 0 20%;
+     color:white;
+     height: 3px;
+ }
+ 
+ .header-box .grey-box .gb-menu-1 {
+     font-size: 4vh;
+ }
+ 
+ .header-box .grey-box .gb-menu-1 .white-text-nav {
+     color: whitesmoke;
+     font-weight: bold;
+     font-size: 12pt;
+ }
+ 
+ 
+ 
+ .header-box .grey-box .gb-menu-1 .right-icons {
+     font-size: 6vh;
+ }
+ 
+ 
+ .header-box .grey-box .gb-menu-2 {
+     display: flex;
+     justify-content: space-around;
+     flex-direction: row;
+     margin: 3vh;
+ }
+ 
+ .header-box .grey-box .gb-menu-2 .nav-link {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-bottom: 2vh;
+ }
+ 
+ 
+ .header-box .grey-box .nav-link {
+     font-size: 1.1em;
+     color: whitesmoke;
+ }
+ 
+ 
+ .header-box .grey-box .nav-icon {
+     font-size: 11vh;
+     color: black;
+     margin-bottom: 1vh;
+ 
+ }
+ 
+ .second-container {
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .second-container .invisible-box {
+     width: 40%;
+ }
+ 
+ .second-container .bartender-button {
+     width: 20%; 
+     background-color: #343F4B;
+     color: #DDDDDD;
+     font-size: 1.1em;
+     text-align: center;
+     padding: 4vh 0;
+     font-weight: bold;
+ }
+  
+  #outis{
+      background-color: #42474F;
+      height: 40vh;
+  } 
+  #mobi-nav{
+      display: none;
+  }
+  #desk-gif{
+      display: block;
+      height: 100vh;
+  }
+  #mobi-gif{
+      display: none;
+  }
+  #alta{
+      font-size: 5.5em;
+  }
+  #cta{
+      font-size: 3.7em;
+      height: 8.5%;
+      width: 56%;
+      left: 23%;
+      padding: 1.5% 0% 3.5% 0%;
+  }
+  #copa-cont{
+      height: 110vh;
+  }
+  img{
+      height: 110vh;
+  }
+  #medida{
+      font-size: 5.5em;
+      top: 147%;
+  }
+  #sabes{
+      font-size: 2.8em;
+      top: 162%;
+  }
+  #facil{
+      top: 197%;
+      font-size: 4.4em;
+  }
+  #feed-txt{
+      margin: 4% 0% 4% 6.5%;
+      font-size: 3.3em;   
+  }
+  #cta2{
+      top: 220%;
+      font-size: 3.7em;
+      height: 8.5%;
+      width: 56%;
+      left: 23%;
+      padding: 1.5% 0% 3.5% 0%;
+  }
+  #img-feed{
+      display: block;
+      width: 30%;
+      height: 75vh;
+  }
+  .img-feed{
+      display: block;
+      width: 30%;
+  }
+}
+@media screen and (min-width:1440px){
+  #alta{
+      font-size: 5.5em;
+  }
+  #cta{
+      font-size: 3.8em;
+      height: 8.5%;
+  }
+  #medida{
+      font-size: 5.5em;
+      top: 147%;
+  }
+  #sabes{
+      font-size: 3.4em;
+      top: 162%;
+  }
+  #facil{
+      font-size: 5.4em;
+      top: 197%;
+  }
+  #cta2{
+      font-size: 3.8em;
+      height: 8.5%;
+      top: 220%;
+  }
+  #feed-txt{
+      font-size: 3.8em;
+  }
+  #feed{
+      height: 235vh;
+  }
+  #feed-cont{
+      height: 250vh;
+  }
+  #img-feed{
+      height: 200vh;
+  }
+  .img-feed{
+      height: 200vh;
+  }
+}
+@media screen and (min-width: 2559px){
+  #alta{
+      font-size: 8.5em;
+  }
+  #cta{
+      font-size: 6.7em;
+      height: 5%;
+  }
+  #medida{
+      font-size: 8.5em;
+      top: 147%;
+  }
+  #sabes{
+      font-size: 5em;
+      top: 170%;
+  }
+  #facil{
+      font-size: 8.4em;
+      top: 197%;
+  }
+  #cta2{
+      top: 220%;
+      font-size: 6.7em;
+      height: 5%;
+  }
+  #feed-txt{
+      font-size: 6.8em;
+  }
+}
