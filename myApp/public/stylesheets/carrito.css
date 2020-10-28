@@ -1,0 +1,129 @@
+* *::after *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: ;
+
+  max-width: 1200px;
+  margin: auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bolsa {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-color: black;
+  padding-bottom: 5px;
+  height: 20vh;
+  background-color: #3f3f3f;
+  color: #fcfcfc;
+}
+
+.bolsa-pedido a {
+  border-radius: 3px;
+  border: 6px solid black;
+  font-size: 18px;
+  color: #fcfcfc;
+  justify-content: center;
+  padding: 5px;
+}
+.bolsa-pedido h1 {
+  font-size: 28px;
+  margin: 10px;
+  color: #fcfcfc;
+}
+.caja-compra .foto {
+  margin-top: 30px;
+}
+.caja-compra {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-color: black;
+  padding-bottom: 5px;
+  height: 70vh;
+}
+.nombre-trago .titulo-trago {
+  color: #3c4858;
+}
+.basurero a {
+  color: #3c4858;
+}
+
+.precio-total {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.volver-continuar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  background-color: #3f3f3f;
+}
+.volver-continuar {
+  flex: 1 1 200px;
+}
+.volver-continuar .volver {
+  border: 6px solid black;
+  font-size: 18px;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fcfcfc;
+  padding: 5px;
+}
+
+.volver-continuar .confirmar {
+  border: 6px solid black;
+  font-size: 18px;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+.precio-total {
+  font-size: 18px;
+  color: #636363;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+.precio-total .total {
+  color: #3c4858;
+}
+
+@media (min-width: 576px) {
+  .caja-compra {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 768px) {
+  .caja-compra {
+    flex: 0 0 42%;
+  }
+}
+@media (min-width: 992px) {
+  .caja-compra {
+    flex: 0 0 28%;
+  }
+}
+@media (min-width: 1200px) {
+  .caja-compra {
+    flex: 0 0 11%;
+  }
+}
