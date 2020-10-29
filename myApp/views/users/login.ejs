@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <LINK REL=StyleSheet HREF="login.css" TYPE= "text/css" media=screen>
-            <LINK REL=StyleSheet HREF="nav.css" TYPE= "text/css">
-            <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-                
-            <title>Rusty Nail</title>
-        </head>
-            <header>
-                <div>
-                   <%- include('partials/nav')%>
-                </div>
+<html lang="en">
 
-                <div class="bar-1"> <a href="#">Llamá al bartender virtual</a></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <LINK REL=StyleSheet HREF="login.css" TYPE="text/css" media=screen>
+  <LINK REL=StyleSheet HREF="nav.css" TYPE="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 
-            </header>
-        <section class=tabla1>
-            <h1 class="center">Ingreso de usuarios</h1>
-                <img src="style/icon-login.jpg" alt="img-login" class=" img-1">       
-            
-                <section class="form-sec">
-                        <form class="form-1">                        
-                                <input type="text" required> 
-                                <label class="lbl-email">
-                                    <span class="text-email">Email</span>                        
-                                </label>
-                        </form>
+  <title>Rusty Nail</title>
+</head>
+<header>
+  <div>
+    <%- include('partials/nav')%>
+  </div>
 
-                        <form class="form-2">
-                                <input type="password" required>
-                                 <label class="lbl-pass">
-                                     <span class="text-pass">Contraseña</span>
-                                 </label>                                        
-                        </form> 
-                        <div class="font-1"> <input type="checkbox" name="" id="remember">Recordar mi usuario</div>                    
-                        <button type="submit" class="submit">Ingresar</button>
-                </section>
-  
-                <section class="sec-boxes">
-                        <form>
-                        <button type="button" class="font-2">¿Olvidaste tu contraseña?</button>   
-                        <button type="button" class="font-2">Registrate</button>                   
-                        </form>
-                    </section>
-            </section>
+  <div class="bar-1"> <a href="#">Llamá al bartender virtual</a></div>
 
-            
-            
-    </html>
+</header>
+<section class=tabla1>
+  <h1 class="center">Ingreso de usuarios</h1>
+  <img src="style/icon-login.jpg" alt="img-login" class=" img-1">
+
+  <section class="form-sec">
+    <form class="form-1">
+      <input type="text" required>
+      <label class="lbl-email">
+        <span class="text-email">Email</span>
+      </label>
+    </form>
+
+    <form class="form-2">
+      <input type="password" required>
+      <label class="lbl-pass">
+        <span class="text-pass">Contraseña</span>
+      </label>
+    </form>
+    <div class="font-1"> <input type="checkbox" name="" id="remember">Recordar mi usuario</div>
+    <button type="submit" class="submit">Ingresar</button>
+  </section>
+
+  <section class="sec-boxes">
+    <form>
+      <button type="button" class="font-2">¿Olvidaste tu contraseña?</button>
+      <button type="button" class="font-2">Registrate</button>
+    </form>
+  </section>
+</section>
+
+
+
+</html>

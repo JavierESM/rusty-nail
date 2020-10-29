@@ -1,7 +1,7 @@
-const carritoController = {
+const carritoControllers= {
   compra: function (req, res) {
     res.render("carrito");
-  }
-}
+  },
+};
 
-module.exports = carritoController;
+module.exports = carritoControllers;
