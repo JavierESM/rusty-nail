@@ -121,11 +121,11 @@ body{
     .grid{
         flex-direction: row;
         justify-content: space-around;
-        height: 250vh;
+        height: 275vh;
         flex-wrap: wrap;
     }
     #title{
-        margin-top: 35%;
+        margin-top: 20%;
         margin-bottom: 10%;
     }
 }

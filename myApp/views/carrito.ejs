@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+
+    <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="/stylesheets/carrito.css">
   <title>Rusty Nail</title>
 </head>
 
 <body>
+  <%- include("./partials/nav") %>  
   <div class="container">
 
 
@@ -31,8 +35,9 @@
 
     <div class="caja-compra">
       <div class="foto">
-        <img src="imagen/mentabronce.png">
+        <img src="images/mentabronce.png">
       </div>
+    
 
 
       <div class="nombre-trago">
@@ -82,13 +87,13 @@
     <div></div>
   </div>
   <div class="volver-continuar">
-    <a href="home" class="volver">VOLVER A PRODUCTOS<i class="fa fa-th-large fa-fw" style="margin-left: 5px;"></i></a>
+    <a href="/menu" class="volver">VOLVER A PRODUCTOS<i class="fa fa-th-large fa-fw" style="margin-left: 5px;"></i></a>
     <a href="checkout" class="confirmar">CONFIRMAR Y CONTINUAR<i class="fa fa-angle-right fa-fw"
         style="margin-left: 5px;" ::before></i></a>
     <div class="clearfix">
 
     </div>
   </div>
-
+  <%- include("./partials/footer") %>  
 
 </body>
