@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+
+    <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="/stylesheets/carrito.css" type="text/css" media=screen> >
   <title>Rusty Nail</title>
 </head>
 
 <body>
+  <%- include("./partials/nav") %>  
   <div class="container">
 
 
@@ -33,6 +37,7 @@
       <div class="foto">
         <img src="images/mentabronce.png">
       </div>
+    
 
 
       <div class="nombre-trago">
@@ -89,6 +94,6 @@
 
     </div>
   </div>
-
+  <%- include("./partials/footer") %>  
 
 </body>
