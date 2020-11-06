@@ -9,17 +9,27 @@
 
 <body>
 
+
+    <form action="/product/listado">
+        <div>
+            <input type="text" name="products">
+            <button type="submit">Buscar</button>
+        </div>
+
+    </form>   
+
     <ul>
         <% listado.forEach(function (listado) { %> 
                
          <li>
              
-            <a href="/product/<%=listado.id%>"> <%= listado.name   %> </a>
+            <a href="/product/<%=listado.id%>"> <%= listado.name%> </a>
         
          </li>
 
         <% }); %> 
     </ul>
+   
     
 </body>
 </html>

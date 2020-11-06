@@ -299,7 +299,6 @@ color: black;}
       font-size: 2em;
   }
   #desk-gif{
-      display: block;
       height: 112vh;
       display: none;
   }
@@ -628,10 +627,9 @@ color: black;}
       width: 40%;
   }
 }
-@media screen and (min-width:1024px) and (max-width:1439px)
-{    
+@media screen and (min-width:1024px) and (max-width:1439px){    
   #desk-gif{
-      display: block;
+      display: block!important;
       height: 100vh;
   }
   #mobi-gif{
@@ -673,14 +671,17 @@ color: black;}
       left: 19%;
       top: 220%;
   }
+  #feed{
+      height: 110vh;
+  }
   #feed-txt{
-      margin: 4% 0% 4% 6.5%;
+      margin: 4% 0% 11% 6.5%;
       font-size: 2.5em;
   }
   #img-feed{
       display: block;
       width: 30%;
-      height: 150vh;
+      height: 75vh;
   }
   .img-feed{
       display: block;

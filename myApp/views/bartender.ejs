@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/bartender.css">
-    <link rel="stylesheet" href="/stylesheets/banner-web.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/bartender.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
 </head>
+
 <body>
-    <main>   
-   
-        <p id="pregunta"> ¿Lorem ipsum dolor sit amet?</p>
-        <div id="grid">
-            <div class="answ-cont">
-                <img src="/images/placeholder-image-wide.png" class="answ-img" >
-        
-                <div class="answ-txt">
-                    <span class="txt">Lorem ipsum dolor sit amet.</span>
-                </div>
-            </div>
-            
-            <div class="answ-cont">
-                <img src="/images/placeholder-image-wide.png" class="answ-img" >    
-            
-            <div class="answ-txt">
-                <span class="txt">Lorem ipsum dolor sit amet.</span>  
-            </div>
+  <%-include('./partials/nav')%>
+  <main>
+
+    <p id="pregunta"> ¿Lorem ipsum dolor sit amet?</p>
+    <div id="grid">
+      <div class="answ-cont">
+        <img src="/images/placeholder-image-wide.png" class="answ-img">
+
+        <div class="answ-txt">
+          <span class="txt">Lorem ipsum dolor sit amet.</span>
         </div>
-            <div class="answ-cont">
-                <img src="/images/placeholder-image-wide.png" class="answ-img">
-                <div class="answ-txt">
-                    <span class="txt">Lorem ipsum dolor sit amet.</span>
-                </div>
-            </div>
-        </div>
-        <div id="q-cont">
-            <ol id="q-list">
-                <li class="list-n">1</li>
-                <li class="list-n">2</li>
-                <li class="list-n">3</li>
-                <li class="list-n">4</li>
-                <li class="list-n">5</li>
-                <li class="list-n">6</li>
-            </ol>
-        </div>    
-        </main>
-    </body>
-    <div">
-    
-      <%- include('partials/footer')%>
-    
       </div>
+
+      <div class="answ-cont">
+        <img src="/images/placeholder-image-wide.png" class="answ-img">
+
+        <div class="answ-txt">
+          <span class="txt">Lorem ipsum dolor sit amet.</span>
+        </div>
+      </div>
+      <div class="answ-cont">
+        <img src="/images/placeholder-image-wide.png" class="answ-img">
+        <div class="answ-txt">
+          <span class="txt">Lorem ipsum dolor sit amet.</span>
+        </div>
+      </div>
+    </div>
+    <div id="q-cont">
+      <ol id="q-list">
+        <li class="list-n">1</li>
+        <li class="list-n">2</li>
+        <li class="list-n">3</li>
+        <li class="list-n">4</li>
+        <li class="list-n">5</li>
+        <li class="list-n">6</li>
+      </ol>
+    </div>
+  </main>
+</body>
+
+<div>
+
+  <%- include('partials/footer')%>
+</div>
+
+</html>

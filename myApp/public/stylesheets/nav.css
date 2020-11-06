@@ -1,3 +1,6 @@
+a {
+    text-decoration: none;
+}
 #desk-nav{
     display: none;
     width: 100%;
@@ -27,6 +30,12 @@
 #nav-menu{
     display: none;
 }
+
+.h-boxes-container .central-box .logo-img .logo-image { 
+    width: 100%;
+    height: -webkit-fill-available;
+    
+    }
 
 #bars-cont:hover > #nav-menu{
     display: flex;
@@ -90,6 +99,7 @@
     justify-content: flex-end;
     align-items: center;
     color: white;
+    margin-right: 8%;
 }
 
 #i-cont > i{
@@ -203,11 +213,14 @@
         background-color: grey;
         /* height: 260vh; */
     }
-    
-    .h-boxes-container .central-box .logo-img { 
-        /* height: 37.6vh; */
-        background-color: grey;
+    .logo-img {
+        height: -webkit-fill-available;
     }
+    .h-boxes-container .central-box .logo-img .logo-image { 
+        width: 100%;
+        height: 100%;
+   }
+    
     
     
     .header-box .black-stripe {
@@ -324,7 +337,10 @@
         height: 40vh;
         justify-content: stretch;
     }
-    
+    .logo-img {
+        height: -webkit-fill-available;
+        width: 100%;
+    }
     .header-box {
         width: 40%;
         background-color: #42474F;
@@ -452,25 +468,21 @@
     #mobi-gif{
         display: none;
     }
+    .logo-img {
+        height: -webkit-fill-available;
+        width: 100%;
+    }
 }
-    @media screen and (min-width:1440px){
-    #desk-nav{
-        position: fixed;
-        z-index: 2;
-        display: block;
-    }
-    #outis{
-        background-color: #42474F;
-        height: 40vh;
-    }    
-    #mobi-nav{
-        display: none;
-    }
-    }
+    
+    
 @media screen and (min-width: 2559px){
     .header-box .grey-box .nav-link {
         font-size: 2.1em;
         color: whitesmoke;
+    }
+    .logo-img {
+        height: -webkit-fill-available;
+        width: 100%;
     }
     .header-box .black-stripe {
         background-color: Black;

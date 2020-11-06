@@ -7,7 +7,7 @@ vista: function(req, res,) {
   },
 
  list: function(req,res){
-     res.render ('products/list',{
+     res.render ('./listado',{
          listado
      })
  }, 

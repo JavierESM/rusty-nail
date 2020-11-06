@@ -1,104 +1,119 @@
-<!DOCTYPE html>
-<html lang="es ">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="/stylesheets/contactos.css">
-  <title>Rusty Nail</title>
-</head>
-
-<body>
-  <header class="container">
-    <div class="contactos">
+<header class="container">
+  <div class="contactos">
+    <div>
+      <p>CONTACTOS</p>
+    </div>
+    <form class="datosparticulares" action="validar html" method="POST">
       <div>
-        <p>CONTACTOS</p>
+        <label for="nombreapellido"></label>
+        <input type="text" name="nombreapellido" id="nombreapellido" placeholder="NOMBRE Y APELLIDO">
       </div>
-      <form class="datosparticulares" action="validar html" method="POST">
-        <div>
-          <label for="nombreapellido"></label>
-          <input type="text" name="nombreapellido" id="nombreapellido" placeholder="NOMBRE Y APELLIDO">
-        </div>
 
-        <div>
-          <label for="email"></label>
-          <input type="email" name="email" id="email" placeholder="EMAIL">
-        </div>
-
-        <div>
-          <label></label>
-          <textarea name="comentarios"
-            placeholder="COMENTARIOS ¿Tienes alguna duda? ¿Que tragos te gustaria ver en la carta?" id="" cols="30"
-            rows="10"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary full" id="submit_contact">ENVIAR</button>
-      </form>
-    </div>
-    <div class="novedades">
-      <p class="barra-virtual">¡Hacete regular de nuestra barra virtual!</p>
-      <p>- Y consegui los siguientes beneficios:</p>
-      <p>-</p>
-      <p>-</p>
-      <p>-</p>
-      <p>-</p>
-      <button type="submit" class="btn btn-primary full" id="submit_contact">
-        QUIERO ENTERARME DE NUEVOS TRAGOS Y PROMOS</button>
-    </div>
-  </header>
-
-
-  <main class="pedidos">
-    <div class="titulos">HACE TU PEDIDO AHORA</div>
-    <article class="hero-imagen">
-      <div class="logo-oficial">
-        <img src="/images/logo-oficial.jpg">
-
+      <div>
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="EMAIL">
       </div>
-    </article>
-    <h1><a href="https://wa.me/54911444444" class="link-tel mg-lg-b" target="_blank" id="track_whatsapp">
-        <i class="fab fa-whatsapp" style="margin-right:5px;"></i>(11) 4444 4444>
-      </a>
-    </h1>
 
-    <div class="titulos">HORARIOS DE ATENCION</div>
-    <div class="titulos">De Lunes a Viernes de 9 a 20 Hs.</div>
+      <div>
+        <label></label>
+        <textarea name="comentarios"
+          placeholder="COMENTARIOS ¿Tienes alguna duda? ¿Que tragos te gustaria ver en la carta?" id="" cols="30"
+          rows="10"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary full" id="submit_contact">ENVIAR</button>
+    </form>
+  </div>
+  <div class="novedades">
+    <p class="barra-virtual">¡Hacete regular de nuestra barra virtual!</p>
+    <p>- Y consegui los siguientes beneficios:</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <button type="submit" class="btn btn-primary full" id="submit_contact">
+      QUIERO ENTERARME DE NUEVOS TRAGOS Y PROMOS</button>
+  </div>
+</header>
+
+
+<main class="pedidos">
+  <div class="titulos">HACE TU PEDIDO AHORA</div>
+  <article class="hero-imagen">
+    <div class="logo-oficial">
+      <img src="/images/logo-oficial.jpg">
 
     </div>
-  </main>
-  <footer class="pie-pagina" <div class="advertencia">
-    <div>ADVERTENCIA</div>
-    <P>ESTE SITIO WEB, SU CONTENIDO Y LAS CUENTAS DE LAS REDES SOCIALES ESTÁN DESTINADAS ÚNICAMENTE A AUDIENCIAS EN
-      EDAD
-      LEGAL PARA BEBER.
+  </article>
+  <h1><a href="https://wa.me/54911444444" class="link-tel mg-lg-b" target="_blank" id="track_whatsapp">
+      <i class="fab fa-whatsapp" style="margin-right:5px;"></i>(11) 4444 4444>
+    </a>
+  </h1>
 
-      El contenido que creamos para este sitio está destinado a entretener e inspirar a otros adultos responsables en
-      edad
-      legal para beber a probar suerte en la preparación de cócteles y aprender más sobre el alcohol y las bebidas
-      espirituosas detrás de las bebidas.
+  <div class="titulos">HORARIOS DE ATENCION</div>
+  <div class="titulos">De Lunes a Viernes de 9 a 20 Hs.</div>
 
-      No abogamos por el consumo excesivo o el abuso de alcohol. Si bien esperamos que pruebe las recetas e ideas que
-      tenemos en este sitio, esperamos que lo haga con responsabilidad. Nuestro contenido no está destinado a promover
-      el
-      abuso del alcohol, el consumo excesivo de alcohol, las novatadas, el trolling o cualquier otra forma de abuso.
+  </div>
+</main>
+<footer class="pie-pagina" <div class="advertencia">
+  <div>ADVERTENCIA</div>
+  <P>ESTE SITIO WEB, SU CONTENIDO Y LAS CUENTAS DE LAS REDES SOCIALES ESTÁN DESTINADAS ÚNICAMENTE A AUDIENCIAS EN
+    EDAD
+    LEGAL PARA BEBER.
 
-      Somos ávidos bartenders y cocineros caseros. A veces utilizamos ingredientes únicos, hierbas y, por supuesto,
-      alcoholes. Tenga en cuenta sus propias circunstancias y su salud antes de probar cualquiera de las recetas o
-      recomendaciones de este sitio. Beba con moderación. No asumimos ninguna responsabilidad sobre el efecto que las
-      bebidas provocan en usted. Cuando se hace de manera responsable, consideramos que beber es una actividad social
-      positiva y valoramos la calidad sobre la cantidad.
+    El contenido que creamos para este sitio está destinado a entretener e inspirar a otros adultos responsables en
+    edad
+    legal para beber a probar suerte en la preparación de cócteles y aprender más sobre el alcohol y las bebidas
+    espirituosas detrás de las bebidas.
 
-      Hacemos nuestro mejor esfuerzo para investigar la información incluida en nuestro contenido, pero puede haber
-      inexactitudes técnicas o errores tipográficos de vez en cuando. Si ve uno, infórmenos. Si encontramos que
-      tenemos un
-      error, la información en este sitio web y las cuentas sociales pueden cambiarse o actualizarse sin previo aviso.
+    No abogamos por el consumo excesivo o el abuso de alcohol. Si bien esperamos que pruebe las recetas e ideas que
+    tenemos en este sitio, esperamos que lo haga con responsabilidad. Nuestro contenido no está destinado a promover
+    el
+    abuso del alcohol, el consumo excesivo de alcohol, las novatadas, el trolling o cualquier otra forma de abuso.
 
-      Antes de usar cualquier contenido, recuerda: No beba si no es mayor de edad y antes de los 18 años. Nunca beba y
-      conduzca. Beber en exceso dañará tu cuerpo y tu mente. Bebe con atención. Busque la ayuda de un profesional si
-      tiene
-      un problema o si cree que podría tener uno.</P>
-    </div>
-  </footer>
+    Somos ávidos bartenders y cocineros caseros. A veces utilizamos ingredientes únicos, hierbas y, por supuesto,
+    alcoholes. Tenga en cuenta sus propias circunstancias y su salud antes de probar cualquiera de las recetas o
+    recomendaciones de este sitio. Beba con moderación. No asumimos ninguna responsabilidad sobre el efecto que las
+    bebidas provocan en usted. Cuando se hace de manera responsable, consideramos que beber es una actividad social
+    positiva y valoramos la calidad sobre la cantidad.
+
+    Hacemos nuestro mejor esfuerzo para investigar la información incluida en nuestro contenido, pero puede haber
+    inexactitudes técnicas o errores tipográficos de vez en cuando. Si ve uno, infórmenos. Si encontramos que
+    tenemos un
+    error, la información en este sitio web y las cuentas sociales pueden cambiarse o actualizarse sin previo aviso.
+
+    Antes de usar cualquier contenido, recuerda: No beba si no es mayor de edad y antes de los 18 años. Nunca beba y
+    conduzca. Beber en exceso dañará tu cuerpo y tu mente. Bebe con atención. Busque la ayuda de un profesional si
+    tiene
+    un problema o si cree que podría tener uno.</P>
+  </div>
+</footer>
+<div class="logo-redes">
+
+  <div class="logo">
+    <a href=" https://web.whatsapp.com/rustynailcocktails" target="_blank" id="track_whatsapp"><i
+        class="fab fa-whatsapp-square"></i></a>
+  </div>
+
+  <div class="logo">
+    <a href="https://es-la.fa-facebook.com/rustynailcocktails" target="_blank" id="track_facebook"><i
+        class="fab fa-facebook"></i></a>
+  </div>
+  <div class="logo">
+    <a href="https://instagram.com/rustynailcocktails" target="_blank" id="track_instagram">
+      <i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="logo">
+    <a href=https://twitter.com/?lang=es" target="_blank" id="track_twitter">
+      <i class="fab fa-twitter"></i></a>
+  </div>
+
+</div>
+
+<footer>
+  <div id="adv-cont">
+    <p id="advertencia">ADVERTENCIA</p>
+    <p style="text-align: center;">Rusty Nail no apoya el consumo de alcohol excesivo ni por parte de menores</p>
+  </div>
   <div class="logo-redes">
 
     <div class="logo">
@@ -120,3 +135,4 @@
     </div>
 
   </div>
+</footer>

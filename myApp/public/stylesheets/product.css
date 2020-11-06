@@ -48,7 +48,7 @@ body{
 }
 .img-tw{ 
     height: 35px;
-    margin-left: 5px;                                                            ;
+    margin-left: 5px;                                                            
 }
 
 .img-face{ 
@@ -78,6 +78,7 @@ body{
     display: flex;
     flex:space-between;
     font-weight: bold;
+    margin-top: 10vh;
  }
 
  .product-rel{ 
@@ -109,6 +110,7 @@ body{
     padding-right: 10px;
     font-size: 15px;
     width: 25%;
+    text-decoration: underline;
  }
 
 #description { 
@@ -195,6 +197,7 @@ body{
      width: 31%;
      padding: 1%;
      text-align: center;
+     font-weight: bold;
      background-color: rgb(95, 206, 130);
      color: white;
      -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
