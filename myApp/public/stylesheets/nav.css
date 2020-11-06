@@ -28,6 +28,12 @@
     display: none;
 }
 
+.h-boxes-container .central-box .logo-img .logo-image { 
+    width: 100%;
+    height: -webkit-fill-available;
+    
+    }
+
 #bars-cont:hover > #nav-menu{
     display: flex;
     flex-direction: column;
