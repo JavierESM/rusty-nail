@@ -28,7 +28,7 @@ body {
 
 .bolsa-pedido a {
   border-radius: 3px;
-  border: 6px solid black;
+  border: 2px solid black;
   font-size: 18px;
   color: #fcfcfc;
   justify-content: center;
@@ -39,6 +39,10 @@ body {
   margin: 10px;
   color: #fcfcfc;
 }
+.bolsa-pedido h2 {
+  margin: 1px;
+}
+
 .caja-compra .foto {
   margin-top: 30px;
 }
@@ -76,10 +80,10 @@ body {
   flex: 1 1 200px;
 }
 .volver-continuar .volver {
-  border: 6px solid black;
+  border: 2px solid black;
   font-size: 18px;
   border-radius: 3px;
-  margin: 10px;
+  margin: 5px;
   text-align: center;
   text-decoration: none;
   color: #fcfcfc;
@@ -87,10 +91,10 @@ body {
 }
 
 .volver-continuar .confirmar {
-  border: 6px solid black;
+  border: 2px solid black;
   font-size: 18px;
   border-radius: 3px;
-  margin: 10px;
+  margin: 5px;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -122,7 +126,7 @@ body {
     flex: 0 0 28%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .caja-compra {
     flex: 0 0 11%;
   }
