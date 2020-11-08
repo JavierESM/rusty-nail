@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Productos</h1>
+
+<body>
+
+
+    <form action="/product/listado">
+        <div>
+            <input type="text" name="products">
+            <button type="submit">Buscar</button>
+        </div>
+
+    </form>   
+
+    <ul>
+        <% listado.forEach(function (listado) { %> 
+               
+         <li>
+             
+            <a href="/product/<%=listado.id%>"> <%= listado.name%> </a>
+        
+         </li>
+
+        <% }); %> 
+    </ul>
+   
+    
+</body>
+</html>
+<div">
+
+  <%- include('partials/footer')%>
+
+  </div>

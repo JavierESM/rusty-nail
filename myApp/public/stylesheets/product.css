@@ -16,9 +16,6 @@
 } 
 
 
-
-
-
 body{ 
 
     background-color:none;
@@ -78,6 +75,7 @@ body{
     display: flex;
     flex:space-between;
     font-weight: bold;
+    margin-top: 10vh;
  }
 
  .product-rel{ 

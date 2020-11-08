@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1>Productos</h1>
+<h1>Usuarios registrados</h1>
 
 <body>
 
-    <ul>
-        <% listado.forEach(function (listado) { %> 
-               
-         <li>
-             
-            <a href="/product/<%=listado.id%>"> <%= listado.name   %> </a>
-        
-         </li>
+    <ul>    
+        <% listadoUsers.forEach(function (listadoUsers) { %>
 
+        <li>
+           <a href="/users/<%=listadoUsers.id%>"> <%=listadoUsers.Email%></a>
+        </li>
+       
         <% }); %> 
     </ul>
-    
+
+
 </body>
 </html>
