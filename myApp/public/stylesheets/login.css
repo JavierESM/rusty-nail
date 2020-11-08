@@ -22,6 +22,10 @@
     width: 80%;
     margin: 2% 10%;
   }
+
+  .form-buttons{ 
+    display: inline-grid;
+  }
   
   .form-1 {
     width: 45%;
@@ -195,7 +199,7 @@
   .font-2 {
     font-size: 18px;
     padding: 8px;    
-    background-color: rgb(95, 206, 130);
+    background-color: #343F4B;
     color: white;
     border-radius: 5px;
   }
@@ -205,15 +209,17 @@
    
     position: relative;
     right: 50px;
-    background-color: rgb(95, 206, 130);
+    background-color:#343F4B;
     color: white;
     border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
     
   }
   
   h1 {
     margin: 2% 0%;
-    color: #333538;
+    color:#343F4B;
     font-size: 35px;
   }
   
@@ -227,11 +233,7 @@
     text-align: center;
   }
   
-  .submit {
-    font-size: 20px;
-    padding: 5px;
-  }
-    
+     
   @media (max-width: 768px) {
   
     .font-1 {
@@ -372,6 +374,7 @@
           height: 50px; 
           right: 10%; 
           margin-left: 15%; 
+          background-color: #acb5be;
       }
 
         .form-2 { 
@@ -386,7 +389,7 @@
         height: 50px; 
         right: 10%; 
         margin-left: 15%; 
-        
+        background-color: #acb5be;
       }
         .form-1 { 
           width: 100%;
