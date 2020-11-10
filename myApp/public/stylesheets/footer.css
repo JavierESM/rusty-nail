@@ -18,7 +18,7 @@ body {
   margin: 0px;
 }
 .novedades {
-  margin: 5%;
+  margin: 1%;
   margin-top: 3%;
   color: #fcfcfc;
   width: 100%;
@@ -71,7 +71,7 @@ header {
 }
 
 .logo-oficial img {
-  width: 155px;
+  width: 100px;
 }
 
 .contactos {
@@ -121,8 +121,8 @@ header {
   display: block;
   border: 1% solid #3e4854;
   letter-spacing: 1%;
-  margin: 5%;
-  padding: 1%;
+  margin: 4%;
+  /*padding: 1%;*/
   align-items: center;
 }
 .comentarios {

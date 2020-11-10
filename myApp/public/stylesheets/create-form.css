@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50vh;
+    align-items: center;
+}
+
+label {
+    color: white;
+    font-size: 1.4em;
+}
+
+.menu-title{
+    color: white;
+    margin-left: 3%;
+    font-size: 2.5em;
+    font-family: serif;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+#entry-cont{
+    width: 95%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: white;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 22%;
+    margin-bottom: 3%;
+}
+.couple{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.data-entry{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
+    height: 10vh;
+}
+.form-input{
+    width: 90%;
+    border-radius: 0;
+    padding: 1.5%;
+    border-width: thin;
+    height: 3vh;
+    font-size: 1em;
+    color: black;
+    font-family: serif;
+}
+#category{
+    width: 93.5%;
+    height: 4.5vh;
+}
+#img {
+    width: 50%;
+    height: 2vh;
+    margin-left: 25.5%;
+}
+#save-prod{
+    align-self: flex-end;
+    margin-top: 3%;
+    width: 73%;
+}
+#save-btn{
+    height: 9vh;
+    width: 59%;
+    font-size: 2em;
+    font-family: serif;
+    background-color: black;
+    color: white;
+    border: white;
+    border-style: solid;
+    border-width: thin;
+} 
