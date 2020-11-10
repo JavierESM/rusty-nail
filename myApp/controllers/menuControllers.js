@@ -35,11 +35,29 @@ const menuControllers = {
     res.render("detail")
   },
   editor: function (req, res) {
-    res.render("edit-form")
+    let idProduct= req.params.id;
+    let resultado= products.find(product => product.id==idProduct)
+    res.render("edit-form", {resultado} )
   },
   edit: function (req, res) {
-    res.redirect ("menu")
+    products.forEach(function(product){
+			
+			if (product.id == req.params.id){
+				product.name = req.body.name
+				product.price = req.body.price
+				product.description = req.body.description
+				product.category = req.body.category
+				product.img = req.files[0].filename
+			} 
+		})
+		
+		let newContentJSON = JSON.stringify(products)
+		
+		fs.writeFileSync(productsFilePath, newContentJSON)
+		res.redirect("/menu")
+        
   },
+
   destroy: function (req, res) {
     res.redirect ("menu")
   }
