@@ -191,8 +191,7 @@
     margin-top: 20px;
     margin-bottom: 5px;
     margin-left: 0;
-    position: relative;
-    right: 176px;
+    
     padding: 8px;
     border-radius: 5px;
   }
@@ -207,8 +206,7 @@
   
   .submit {
    
-    position: relative;
-    right: 50px;
+    
     background-color:#343F4B;
     color: white;
     border-radius: 5px;

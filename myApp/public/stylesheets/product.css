@@ -24,7 +24,7 @@ body{
     justify-content: center;
     width: 100%;                                                                                                                                                                                                                                                                                                                                        
     align-items: center;
-    
+    background-color: #969faa;
     
 }                                                                                                                                                                           
 
@@ -39,6 +39,7 @@ body{
     color: white;
      
 }
+
 
 .img-wtp { 
     height: 35px;
@@ -76,6 +77,7 @@ body{
     flex:space-between;
     font-weight: bold;
     margin-top: 10vh;
+    width: 90%;
  }
 
  .product-rel{ 
@@ -99,16 +101,19 @@ body{
  }
 
  .articles{ 
-    margin-right: 5px;
-    margin-left: 40px;
-    color:  #42474f;
+
+    margin-right: 5px; 
+    margin: 10px;
+    color: #42474f;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-right: #42474f solid 2px;
-    padding-right: 10px;
-    font-size: 15px;
-    width: 25%;
+    padding: 2px;
+    font-size: 20px;
+    width: 30%;
     text-decoration: underline;
- }
+    text-align: center;
+    
+
+    }
 
 #description { 
     margin: 2vh 1%;
@@ -119,9 +124,9 @@ body{
 }
 
  .art-image{ 
-     height: 90%;
-     width: 90%;
-     margin: 2%;
+     height: 80%;
+     width: 70%;
+     margin: 2% 15%;
      
  }
 
@@ -154,14 +159,8 @@ body{
  }
 
  #icons-social{
-    color: rgb(95, 206, 130) ;
-    position:relative;
-    top: 12vh;
-    right: 25%;
-    align-items: center;
-    width:20%;
-    height: 10vh;
-    font-size: 30px;
+    color: black ;
+    font-size: 130px;
 }
  
 
@@ -237,7 +236,7 @@ body{
 
         display: flex;
         width: 90%;
-        flex-direction: column;
+        flex-direction:row; 
         margin: 2% 5%;
         align-items: center;
         
@@ -245,8 +244,8 @@ body{
 
 #text{ 
     text-align: center      ;
-    border: #969faa solid 2px;
-    margin: 5vh;
+    margin: 2vh;
+    
 }
 
 #text-2{ 
@@ -261,7 +260,7 @@ body{
 
 #arrow { 
     position: relative;
-    top: 60px;
+    top: 12vh;
     right: 50%;
     height: 20px;
 }
