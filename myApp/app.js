@@ -28,6 +28,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride('_method'))
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(methodOverride("_method"));
 
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
