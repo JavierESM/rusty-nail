@@ -26,12 +26,13 @@
       </p>
     </div>
     <div class="grid">
+      <% for (var i = 0; i < products.length; i++) { %>
       <div class="shape">
-        <img src="/images/placeholder-image-wide.png" class="prod-img">
+        <img src=<%=products[i].img%>  class="prod-img">
         <div class=tag>
-          <p class="trago">Trago</p>
+          <p class="trago"><%=products[i].name%>  </p>
           <div class="counter">
-            <p class="s">100$</p>
+            <p class="s">$<%=toThousand(products[i].price)%></p>
             <div class="counter-n">
               <p>-</p>
               <p>1</p>
@@ -41,72 +42,9 @@
           </div>
         </div>
       </div>
-      <div class="shape">
-        <img src="/images/placeholder-image-wide.png" class="prod-img">
-        <div class=tag>
-          <p class="trago">Trago</p>
-          <div class="counter">
-            <p class="s">100$</p>
-            <div class="counter-n">
-              <p>-</p>
-              <p>1</p>
-              <p>+</p>
-            </div>
-            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="shape">
-        <img src="/images/placeholder-image-wide.png" class="prod-img">
-        <div class=tag>
-          <p class="trago">Trago</p>
-          <div class="counter">
-            <p class="s">100$</p>
-            <div class="counter-n">
-              <p>-</p>
-              <p>1</p>
-              <p>+</p>
-            </div>
-            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="shape">
-        <img src="/images/placeholder-image-wide.png" class="prod-img">
-        <div class=tag>
-          <p class="trago">Trago</p>
-          <div class="counter">
-            <p class="s">100$</p>
-            <div class="counter-n">
-              <p>-</p>
-              <p>1</p>
-              <p>+</p>
-            </div>
-            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="shape">
-        <img src="/images/placeholder-image-wide.png" class="prod-img">
-        <div class=tag>
-          <p class="trago">Trago</p>
-          <div class="counter">
-            <p class="s">100$</p>
-            <div class="counter-n">
-              <p>-</p>
-              <p>1</p>
-              <p>+</p>
-            </div>
-            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
+      <% } %>
     </div>
-    </div>
-    <%- include("partials/footer") %> 
+    
   </main>
   </body>
   </html>
