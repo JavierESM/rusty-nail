@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
 
-    <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="/stylesheets/carrito.css">
+  <link rel="stylesheet" href="/stylesheets/carrito.css" type="text/css" media=screen> >
   <title>Rusty Nail</title>
 </head>
 
 <body>
-  <%- include("./partials/nav") %>  
+  <%- include("./partials/nav") %>
   <div class="container">
 
 
@@ -25,7 +25,7 @@
         <h2 class="">Mi Carrito</h2>
       </div>
       <div class="bolsa-pedido">
-        <a href="home" class="btm-glost2pull-right">CONTINUAR COMPRANDO<i class="fa fa-cart-plus fa-fw"
+        <a href="menu" class="btm-glost2pull-right">CONTINUAR COMPRANDO<i class="fa fa-cart-plus fa-fw"
             style="margin-left:5px;"></i>
         </a>
 
@@ -33,11 +33,11 @@
 
     </div>
 
-    <div class="caja-compra">
+    <tb class="caja-compra">
       <div class="foto">
-        <img src="images/mentabronce.png">
+        <img src="/images/mentabronce.png">
       </div>
-    
+
 
 
       <div class="nombre-trago">
@@ -75,25 +75,27 @@
 
 
       <div class="basurero">
-        <a href="carrito/quitar/203" class="cart-delete text-muted" data-toggle="tooltip" title
+        <a href="carrito/quitar/:id" class="cart-delete text-muted" data-toggle="tooltip" title
           data-original-title="Quitar del carrito"><i class="fa fa-trash fa-fw fa-2x"></i></a>
       </div>
-    </div>
+    </tb>
   </div>
-  <div class="precio-total">
-    <div class="total">TOTAL $1000 <br> <br><br> </div>
+  <t foot>
+    <div class="precio-total">
+      <div class="total">TOTAL $1000 <br> <br><br> </div>
 
-    <div></div>
-    <div></div>
-  </div>
+      <div></div>
+      <div></div>
+    </div>
+  </t>
   <div class="volver-continuar">
-    <a href="/menu" class="volver">VOLVER A PRODUCTOS<i class="fa fa-th-large fa-fw" style="margin-left: 5px;"></i></a>
+    <a href="menu" class="volver">VOLVER A PRODUCTOS<i class="fa fa-th-large fa-fw" style="margin-left: 5px;"></i></a>
     <a href="checkout" class="confirmar">CONFIRMAR Y CONTINUAR<i class="fa fa-angle-right fa-fw"
         style="margin-left: 5px;" ::before></i></a>
     <div class="clearfix">
 
     </div>
   </div>
-  <%- include("./partials/footer") %>  
+  <%- include("./partials/footer") %>
 
 </body>
