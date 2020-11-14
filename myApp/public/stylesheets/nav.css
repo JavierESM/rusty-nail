@@ -1,6 +1,15 @@
 a {
     text-decoration: none;
 }
+.header-box .grey-box .gb-menu-1 .regular-customer {
+    padding: 0% 1% 1% 1%;
+    text-align: center;
+}
+.header-box .grey-box .gb-menu-1 .cart-icons {
+    width: 40%;
+    text-align: right;
+    padding: 0% 1% 1% 1%;
+}
 #desk-nav{
     display: none;
     width: 100%;
@@ -31,11 +40,11 @@ a {
     display: none;
 }
 
-.h-boxes-container .central-box .logo-img .logo-image { 
-    width: 100%;
-    height: -webkit-fill-available;
+.h-boxes-container .central-box .logo-img .logo-image {
+    background-color: black;
+    height: 30vh;
+} 
     
-    }
 
 #bars-cont:hover > #nav-menu{
     display: flex;
@@ -150,6 +159,10 @@ a {
     #i-cont{
         font-size: 1.2em;
     }
+    .h-boxes-container .central-box .logo-img {
+    background-color: black;
+    height: 30vh;
+}
 }
 @media screen and (min-width: 701) and (max-width:1023) and (orientation: landscape)
 {
@@ -199,13 +212,14 @@ a {
     .h-boxes-container {
         display: flex;
         flex-direction: row;
-        height: 40vh;
+        height: 30vh;
         justify-content: stretch;
     }
     
     .header-box {
         width: 40%;
         background-color: #42474F;
+        height: 30vh
     }
     
     .central-box {
@@ -216,10 +230,10 @@ a {
     .logo-img {
         height: -webkit-fill-available;
     }
-    .h-boxes-container .central-box .logo-img .logo-image { 
-        width: 100%;
-        height: 100%;
-   }
+    .h-boxes-container .central-box .logo-img .logo-image {
+        background-color: black;
+        height: 30vh;
+    }
     
     
     
@@ -239,8 +253,8 @@ a {
     .header-box .grey-box .gb-menu-1 {
         display: flex;
         justify-content: space-between;
-        height: 12vh;
-        padding: 2vh 8%;
+        height: 5vh;
+        padding: 4%;
         margin: 0 10%;
         border-bottom: #DDDDDD 1.5px solid;
     }
@@ -264,7 +278,7 @@ a {
     
     
     .header-box .grey-box .gb-menu-1 .right-icons {
-        font-size: 6vh;
+        font-size: 5vh;
     }
     
     
@@ -290,7 +304,7 @@ a {
     
     
     .header-box .grey-box .nav-icon {
-        font-size: 11vh;
+        font-size: 8vh;
         color: black;
         margin-bottom: 1vh;
     
@@ -321,7 +335,7 @@ a {
     }    
     #outis{
         background-color: #42474F;
-        height: 40vh;
+        height: 30vh;
     }
     #mobi-nav{
         display: none;
@@ -334,11 +348,11 @@ a {
     .h-boxes-container {
         display: flex;
         flex-direction: row;
-        height: 40vh;
+        height: 30vh;
         justify-content: stretch;
     }
     .logo-img {
-        height: -webkit-fill-available;
+        height: 30vh;
         width: 100%;
     }
     .header-box {
@@ -352,9 +366,9 @@ a {
         /* height: 260vh; */
     }
     
-    .h-boxes-container .central-box .logo-img { 
-        /* height: 37.6vh; */
-        background-color: grey;
+    .h-boxes-container .central-box .logo-img {
+        background-color: black;
+        height: 30vh;
     }
     
     
@@ -374,8 +388,8 @@ a {
     .header-box .grey-box .gb-menu-1 {
         display: flex;
         justify-content: space-between;
-        height: 12vh;
-        padding: 2vh 8%;
+        height: 5vh;
+        padding: 4%;
         margin: 0 10%;
         border-bottom: #DDDDDD 1.5px solid;
     }
@@ -399,7 +413,7 @@ a {
     
     
     .header-box .grey-box .gb-menu-1 .right-icons {
-        font-size: 6vh;
+        font-size: 5vh;
     }
     
     
@@ -425,7 +439,7 @@ a {
     
     
     .header-box .grey-box .nav-icon {
-        font-size: 11vh;
+        font-size: 8vh;
         color: black;
         margin-bottom: 1vh;
     
@@ -456,7 +470,7 @@ a {
     } 
     #outis{
         background-color: #42474F;
-        height: 40vh;
+        height: 30vh;
     } 
     #mobi-nav{
         display: none;
@@ -502,6 +516,7 @@ a {
     }
     .header-box .grey-box .gb-menu-1 .right-icons {
         font-size: 1.8em;
+        font-size: 5vh;
     }    
     #desk-nav{
         position: fixed;
@@ -513,6 +528,6 @@ a {
     }    
     #outis{
         background-color: #42474F;
-        height: 40vh;
+        height: 30vh;
     }    
 }
