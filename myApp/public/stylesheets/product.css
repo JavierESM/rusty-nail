@@ -124,9 +124,9 @@ body{
 }
 
  .art-image{ 
-     height: 80%;
-     width: 70%;
-     margin: 2% 15%;
+     height: 70%;
+     width: 60%;
+     margin: 2% 20%;
      
  }
 
@@ -202,13 +202,13 @@ body{
  }
 
  .agregar-c-rel{ 
-     
+    box-sizing: border-box; 
     position: relative;
-    left:33%;    
+    left:16%;    
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 10px;
-    width: 31%;
+    width: 60%;
     padding: 1%;
     align-items: center;
     text-align: center;

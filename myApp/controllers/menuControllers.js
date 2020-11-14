@@ -32,7 +32,9 @@ const menuControllers = {
     res.redirect("menu");
   },
   detail: function (req, res) {
-    res.render("detail");
+    let resultado = products.find((products) => product.id == idProduct);
+    res.render("product", { resultado }); 
+
   },
   editor: function (req, res) {
     let idProduct = req.params.id;
@@ -44,7 +46,7 @@ const menuControllers = {
       if (product.id == req.params.id) {
         product.name = req.body.name;
         product.price = req.body.price;
-        product.description = req.body.description;
+        product.description = req.body.description; 
         product.category = req.body.category;
         product.img = req.files[0].filename;
       }

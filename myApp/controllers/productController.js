@@ -1,4 +1,4 @@
-var listado = require ('../data/listadoDeProductos.json')
+var listado = require ('../data/products.json')
 
 const productController = { 
 
@@ -17,7 +17,7 @@ vista: function(req, res,) {
     })
 
     if (resultado){ 
-       return res.send (resultado)
+       return res.render ("product-detail", {resultado})
         }   
 
         res.send ("No se encuentran productos")

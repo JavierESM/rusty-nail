@@ -33,7 +33,7 @@ app.use(methodOverride("_method"));
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
 app.use("/login", loginRouter);
-app.use("/product", productRouter);
+app.use("/product-detail", productRouter);
 app.use("/register", registerRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
