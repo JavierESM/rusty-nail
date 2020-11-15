@@ -1,1 +1,66 @@
-[{"id":1,"name":"Cafecito Obrero","description":"Intenso, herbal, ideal para después de la cena","img":"/images/placeholder","category":"nuestro","price":500},{"id":2,"name":"Chinita","description":"Dulce, frutal, un toque picante. Acompañado por nudos de pomelo y caramelos de manzana","img":"/images/placeholder","category":"nuestro","price":500},{"id":3,"name":"Mint Julep","description":"Herbal, dulce. Un clásico que merecía mención y versión","img":"/images/placeholder","category":"nuestro","price":500},{"id":4,"name":"Las Flores Sling","description":"Dulce, seco. Para amantes del Gin Tonic y el Tom Collins","img":"/images/placeholder","category":"nuestro","price":500},{"id":5,"name":"Coco Lady","description":"Elegante y sutil sour de coco","img":"/images/placeholder","category":"nuestro","price":500},{"id":6,"name":"Ya Basta!","description":"Fresco, dulce. El aperitivo de lxs que luchan","img":"/images/placeholder","category":"nuestro","price":500},{"id":7,"name":"Ponele Jengibre","description":"Cítrico, dulce, armonioso. Un coctel 24/7","img":"/images/placeholder","category":"nuestro","price":500},{"name":"","price":"","description":"","category":"clasicos","id":8,"img":"img-1605053206023.jpg"},{"name":"caipira","price":"200","description":"","category":"clasicos","id":9,"img":"images/img-1605053066969.jpg"}]
+[
+  {
+    "id": 1,
+    "name": "Cafecito Obrero",
+    "description": "Intenso, herbal, ideal para después de la cena",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "id": 2,
+    "name": "Chinita",
+    "description": "Dulce, frutal, un toque picante. Acompañado por nudos de pomelo y caramelos de manzana",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "id": 3,
+    "name": "Mint Julep",
+    "description": "Herbal, dulce. Un clásico que merecía mención y versión",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "id": 4,
+    "name": "Las Flores Sling",
+    "description": "Dulce, seco. Para amantes del Gin Tonic y el Tom Collins",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "id": 5,
+    "name": "Coco Lady",
+    "description": "Elegante y sutil sour de coco",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "id": 6,
+    "name": "Ya Basta!",
+    "description": "Fresco, dulce. El aperitivo de lxs que luchan",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "id": 7,
+    "name": "Ponele Jengibre",
+    "description": "Cítrico, dulce, armonioso. Un coctel 24/7",
+    "img": "/images/placeholder",
+    "category": "nuestro",
+    "price": 500
+  },
+  {
+    "name": "",
+    "price": "",
+    "description": "",
+    "category": "clasicos",
+    "id": 8,
+    "img": "img-1605053206023.jpg"
+  }
+]
