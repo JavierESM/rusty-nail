@@ -4,7 +4,8 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="/stylesheets/product.css" type="text/css" media=screen>
-            <link rel="stylesheet" href="/stylesheets/nav.css" type="text/css" media=screen>            
+            <link rel="stylesheet" href="/stylesheets/nav.css" type="text/css" media=screen>    
+                  
             <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /> 
             <title>Rusty Nail</title>
@@ -19,16 +20,22 @@
 
      
         
-        <h2 style="text-align: center; margin: 3%; font-size: 60px;">Tequila Sunrise </h2>
+        <h2 style="text-align: center; margin-top: 7%; font-size: 60px;"><%=resultado.name%></h2>
                 
     </section>
+
+   
+
+  
+   
     
-    <article class="art-image-2"><img src="../images/tequila-sunrise.jpeg" class="art-image"> <article class="art-details"> Detalle de producto</article>  </article>
-    <p style="margin-left: 15px;"> Dalmore es un Whisky escocés de la región de Las tierras altas de Escocia. La destilería se encuentra cerca de la población de Alness, Ross-shire y es conocida por la producción de un whisky de estilo refinado y un toque a jerez. La Dalmore fue fundada originariamente por Alexander Mathesen en 1839.</p>
+    <article class="art-image-2"><img src="../images/tequila-sunrise.jpeg" class="art-image"> 
+    <h3> Detalle de producto</h3>
+    <p style="margin-left: 15px; font-size: 5vh; text-align: center;"> <%= resultado.description %></p>
     
     <section class="contenedor-details">
         
-        <article class="precio-details"> Precio $750 </article>
+        <article class="precio-details"> Precio: $<%=resultado.price %> </article>
         <article class="precio-details-2"> Delivery a todo CABA</article>
         <p id="detail">Beber con moderación. Prohibida su venta a menores de 18 años.   </p>
     </section>    
@@ -81,8 +88,14 @@
           
         </section>
 
+<<<<<<< HEAD:myApp/views/product.ejs
     <div>
       <%-include("partials/footer")%>
     </div>
+=======
+        <div>
+            
+        </div>
+>>>>>>> 50549543e8ce0f73f455cf010f2ea57759a94492:myApp/views/product-detail.ejs
 
  </html>

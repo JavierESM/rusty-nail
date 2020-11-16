@@ -1,16 +1,19 @@
 var path = require("path");
-const fs = require("fs");
-const productsFilePath = path.join(__dirname, "../data/products.json");
-let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const fs = require("fs")
+const productsFilePath = path.join(__dirname, '../data/products.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+var toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 
 const menuControllers = {
   menu: function (req, res) {
-    res.render("menu");
+    res.render("menu", {products, toThousand});
   },
   menuNuestros: function (req, res) {
-    res.render("menu", { resultado });
+  
+    res.render("menu", {resultado})
   },
   menuClasicos: function (req, res) {
     res.render("menu", { resultado });
@@ -29,7 +32,9 @@ const menuControllers = {
     res.redirect("menu");
   },
   detail: function (req, res) {
-    res.render("detail");
+    let resultado = products.find((products) => product.id == idProduct);
+    res.render("product", { resultado }); 
+
   },
   editor: function (req, res) {
     let idProduct = req.params.id;
@@ -41,7 +46,7 @@ const menuControllers = {
       if (product.id == req.params.id) {
         product.name = req.body.name;
         product.price = req.body.price;
-        product.description = req.body.description;
+        product.description = req.body.description; 
         product.category = req.body.category;
         product.img = req.files[0].filename;
       }
