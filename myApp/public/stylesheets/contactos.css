@@ -3,19 +3,20 @@
   margin: 0;
   padding: 0;
 }
-/*body {
+body{
   display: flex;
   flex-direction: column;
   margin: 0%;
-  background-color: #3f3f3f;
+  background-color:#898989;
   width: 100%;
-}*/
-
+}
 .container {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   margin: 0px;
+ background-color:#898989;
+margin: 8% 0%;
 }
 .novedades {
   margin: 1%;
@@ -75,7 +76,6 @@ header {
 }
 
 .contactos {
-  background-color: ;
   color: black;
   display: flex;
   /*flex-wrap: wrap;*/
@@ -130,11 +130,10 @@ header {
 }
 
 main .pedidos {
-  background: ;
-  color: #fcfcfc;
+  /*color: #fcfcfc;*/
 }
 main {
-  background-color: black;
+  background-color: black
   border-radius: 1%;
   margin: 1% color;
 }
