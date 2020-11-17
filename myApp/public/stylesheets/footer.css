@@ -1,21 +1,22 @@
-* *::after *::before {
+ * *::after *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body {
+body{
   display: flex;
   flex-direction: column;
   margin: 0%;
-  background-color: #3f3f3f;
+  background-color:#898989;
   width: 100%;
 }
-
 .container {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   margin: 0px;
+ background-color:#898989;
+margin: 8% 0%;
 }
 .novedades {
   margin: 1%;
@@ -44,7 +45,7 @@ header {
   padding: 1 rem;
   display: flex;
   flex-direction: column;
-  margin: 2px;
+  margin: 1px;
 }
 .pie-pagina {
   display: flex;
@@ -75,14 +76,17 @@ header {
 }
 
 .contactos {
+<<<<<<< HEAD
   
+=======
+>>>>>>> b38b4b5dbf5f2277eb1a5b1344eb0e5ad6de7a4a
   color: black;
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   flex-direction: column;
   align-items: left;
   text-align: left;
-  margin: 10px;
+  /* margin: 10px;*/
   padding: 2px;
   width: 100%;
   flex: 1 1 200px;
@@ -130,11 +134,15 @@ header {
 }
 
 main .pedidos {
+<<<<<<< HEAD
  
   color: #fcfcfc;
+=======
+  /*color: #fcfcfc;*/
+>>>>>>> b38b4b5dbf5f2277eb1a5b1344eb0e5ad6de7a4a
 }
 main {
-  background-color: black;
+  background-color: black
   border-radius: 1%;
   margin: 1% color;
 }

@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="es ">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="/stylesheets/contactos.css" media="screen" type="text/css">
-  <title>Rusty Nail</title>
+  <link rel="stylesheet" href="/stylesheets/bartender.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
 </head>
 
-<body>
-  <header class="container">
+<body style="background-color: #898989;">
+  <%-include('./partials/nav')%>
+  <header class="container" style="margin: 8% 0%;">
     <div class="contactos">
       <div>
         <p>CONTACTOS</p>
@@ -50,7 +56,7 @@
   </header>
 
 
-  <main class="pedidos">
+  <main class="pedidos" style="background-color: black;">
     <div class="titulos">HACE TU PEDIDO AHORA</div>
     <article class="hero-imagen">
       <div class="logo-oficial">
@@ -68,9 +74,10 @@
 
     </div>
   </main>
-  <footer class="pie-pagina"> <div class="advertencia">
-    <p>ADVERTENCIA</p>
-    <P>ESTE SITIO WEB, SU CONTENIDO Y LAS CUENTAS DE LAS REDES SOCIALES ESTÁN DESTINADAS ÚNICAMENTE A AUDIENCIAS EN
+  <div class="pie-pagina" style="background-color: black;" <div class="advertencia">
+    <div>ADVERTENCIA</div>
+    <P style="text-align: justify;">ESTE SITIO WEB, SU CONTENIDO Y LAS CUENTAS DE LAS REDES SOCIALES ESTÁN DESTINADAS
+      ÚNICAMENTE A AUDIENCIAS EN
       EDAD
       LEGAL PARA BEBER.
 
@@ -122,3 +129,6 @@
     </div>
 
   </div>
+</body>
+
+</html>

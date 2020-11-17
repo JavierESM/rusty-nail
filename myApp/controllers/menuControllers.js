@@ -68,7 +68,7 @@ const menuControllers = {
     //console.log(newContent)
     fs.writeFileSync(productsFilePath, newContentJSON);
 
-    res.redirect("menu");
+    res.redirect("/menu");
   },
 };
 
