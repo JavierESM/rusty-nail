@@ -3,22 +3,23 @@
   margin: 0;
   padding: 0;
 }
-body {
+body{
   display: flex;
   flex-direction: column;
   margin: 0%;
-  background-color: #3f3f3f;
+  background-color:#898989;
   width: 100%;
 }
-
 .container {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   margin: 0px;
+ background-color:#898989;
+margin: 8% 0%;
 }
 .novedades {
-  margin: 5%;
+  margin: 1%;
   margin-top: 3%;
   color: #fcfcfc;
   width: 100%;
@@ -44,7 +45,7 @@ header {
   padding: 1 rem;
   display: flex;
   flex-direction: column;
-  margin: 2px;
+  margin: 1px;
 }
 .pie-pagina {
   display: flex;
@@ -71,18 +72,17 @@ header {
 }
 
 .logo-oficial img {
-  width: 155px;
+  width: 100px;
 }
 
 .contactos {
-  background-color: ;
   color: black;
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   flex-direction: column;
   align-items: left;
   text-align: left;
-  margin: 10px;
+  /* margin: 10px;*/
   padding: 2px;
   width: 100%;
   flex: 1 1 200px;
@@ -121,8 +121,8 @@ header {
   display: block;
   border: 1% solid #3e4854;
   letter-spacing: 1%;
-  margin: 5%;
-  padding: 1%;
+  margin: 4%;
+  /*padding: 1%;*/
   align-items: center;
 }
 .comentarios {
@@ -130,11 +130,10 @@ header {
 }
 
 main .pedidos {
-  background: ;
-  color: #fcfcfc;
+  /*color: #fcfcfc;*/
 }
 main {
-  background-color: black;
+  background-color: black
   border-radius: 1%;
   margin: 1% color;
 }

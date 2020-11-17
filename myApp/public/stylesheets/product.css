@@ -40,31 +40,23 @@ body{
      
 }
 
+.detalle-producto{ 
 
-.img-wtp { 
-    height: 35px;
-}
-.img-tw{ 
-    height: 35px;
-    margin-left: 5px;                                                            
-}
-
-.img-face{ 
-    height: 35px;
+   display: flex;
+   text-align: center;
+   padding: 2%;
+    
 }
 
-.img-ig{ 
-    height: 35px;;
+.description{ 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
-
-.img-rusty { 
-    height: 112px;
-    position: relative;
-    left: 11%;
-    bottom: 10%;
-}                                                                                                                  ;
-.img-user{ 
-    position: relative;                                                 
+#titulo{ 
+    font-size: 30px;
+    text-decoration: underline;
+    padding: 10px;
 }
 
 .div-1{ 
@@ -124,9 +116,11 @@ body{
 }
 
  .art-image{ 
-     height: 80%;
-     width: 70%;
-     margin: 2% 15%;
+    height: 70%;
+    width: 40%;
+    position: relative;
+    left:30%;
+    margin:10px;
      
  }
 
@@ -144,18 +138,18 @@ body{
  }  
  
  
- .contenedor-details{
-     display: flex;
-     margin-top: 5%; 
-     flex-grow: 40%; 
- }
-
+ #descrip{
+     border-top:2px #42474f;
+     border-bottom: 2px #42474f;
+  }
  #detail{ 
-    width: 44%;
+    width: 30%;
     text-align: center;
-    padding-left: 10%;
-    color: rgb(95, 206, 130) ;
+    font-size: 25px;
     font-weight: bold;
+    position: relative;
+    left: 10%;
+    margin: 10px;
  }
 
  #icons-social{
@@ -163,52 +157,65 @@ body{
     font-size: 130px;
 }
  
+.contenedor-details{
+    display: flex;
+    padding: 10px;
+}
 
  .precio-details{
-     border-top:  rgb(95, 206, 130)solid 3px;
-     border-bottom:  rgb(95, 206, 130) solid 3px;
+     border:  rgb(255, 255, 255)solid 3px;
+     background-color: rgb(255, 255, 255);
      width: 15%;    
+     font-family:sans-serif ;
      margin-left: 10px;
      margin-top: 10px;   
      margin-bottom: 10px;
      padding-top: 10px;
      padding-bottom: 10px;
+     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
  }
 
 
  .precio-details-2{
-    border-top:  rgb(95, 206, 130) solid 3px;
-    border-bottom:  rgb(95, 206, 130) solid 3px;
-    margin-top: 10px;   
+    
+    margin-top: 10px;
     margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
+    font-size: 30px;
+    box-sizing: border-box;
+    height:6vh;
+    position: relative;
+    left: 8%;
 
  }
 
  .agregar-c{ 
-     margin-top: 30px;
-     margin-bottom: 30px;
-     margin-left: 10px;
-     width: 31%;
-     padding: 1%;
-     text-align: center;
-     font-weight: bold;
-     background-color: rgb(95, 206, 130);
-     color: white;
-     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
- }
-
- .agregar-c-rel{ 
-     
-    position: relative;
-    left:33%;    
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 10px;
-    width: 31%;
+    width: 45%;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(95, 206, 130);
+    color: white;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    left: 28%;
+}
+ 
+
+ .agregar-c-rel{ 
+    box-sizing: border-box; 
+    position: relative;
+    left:16%;    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    width: 60%;
     padding: 1%;
     align-items: center;
     text-align: center;
@@ -270,6 +277,16 @@ body{
      color: white;
  }
 
+
+ .subh3{ 
+    
+        display: block;
+        border: solid;
+        background-color: #42474f;
+        margin: 5% 20%;
+        font-size: 30px;
+        text-align: center;
+ }
  .email{ 
      text-align: center;
         height: 40px;
@@ -340,8 +357,7 @@ body{
 
 @media (max-width:425px){   
     .precio-details-2 {
-        border-top: rgb(95, 206, 130) solid 3px;
-        border-bottom: rgb(95, 206, 130) solid 3px;
+       
         margin-top: 10px;
         margin-bottom: 10px;
         padding-top: 10px;
