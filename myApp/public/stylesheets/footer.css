@@ -40,11 +40,11 @@ margin: 8% 0%;
   /* height: 53px;*/
 }
 
-header {
+.container {
   background-color: #898989;
   padding: 1 rem;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   margin: 1px;
 }
 .pie-pagina {
@@ -128,11 +128,8 @@ header {
 .comentarios {
   color: #fcfcfc;
 }
-
-main .pedidos {
-  /*color: #fcfcfc;*/
-}
-main {
+ 
+.pedidos {
   background-color: black
   border-radius: 1%;
   margin: 1% color;
