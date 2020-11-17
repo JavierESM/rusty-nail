@@ -42,7 +42,7 @@ a {
 
 .h-boxes-container .central-box .logo-img .logo-image {
     background-color: black;
-    height: 30vh;
+    height: 34vh;
 } 
     
 
@@ -161,7 +161,7 @@ a {
     }
     .h-boxes-container .central-box .logo-img {
     background-color: black;
-    height: 30vh;
+    height: 34vh;
 }
 }
 @media screen and (min-width: 701) and (max-width:1023) and (orientation: landscape)
@@ -212,7 +212,7 @@ a {
     .h-boxes-container {
         display: flex;
         flex-direction: row;
-        height: 30vh;
+        height: 34vh;
         justify-content: stretch;
     }
     
@@ -232,7 +232,7 @@ a {
     }
     .h-boxes-container .central-box .logo-img .logo-image {
         background-color: black;
-        height: 30vh;
+        height: 34vh;
     }
     
     
@@ -348,7 +348,7 @@ a {
     .h-boxes-container {
         display: flex;
         flex-direction: row;
-        height: 30vh;
+        height: 34vh;
         justify-content: stretch;
     }
     .logo-img {
@@ -368,7 +368,7 @@ a {
     
     .h-boxes-container .central-box .logo-img {
         background-color: black;
-        height: 30vh;
+        height: 34vh;
     }
     
     
