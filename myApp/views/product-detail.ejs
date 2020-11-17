@@ -26,35 +26,23 @@
 
    
 
-  
-   
-    
-    <article class="art-image-2"><img src="../images/tequila-sunrise.jpeg" class="art-image"> 
-    <h3> Detalle de producto</h3>
-    <p style="margin-left: 15px; font-size: 5vh; text-align: center;"> <%= resultado.description %></p>
-    
-    <section class="contenedor-details">
-        
-        <article class="precio-details"> Precio: $<%=resultado.price %> </article>
-        <article class="precio-details-2"> Delivery a todo CABA</article>
-        <p id="detail">Beber con moderación. Prohibida su venta a menores de 18 años.   </p>
-    </section>    
-        
-            
-        <section class="agregar-c">
-
-            <a href="carrito"> Agregar a la bolsa de pedidos</a>
-
+       
+        <section class="detalle-producto">      
+          
+            <img src="../images/tequila-sunrise.jpeg" class="art-image">  
+            <form style="width: 50%;">
+            <div id="titulo">Detalles</div>    
+            <div>Precio: $<%-resultado.price%></div>   
+            <div>Agregar al carrito</div>  
+            </form> 
         </section>
 
+                <section class="product-rel">   
 
-        <section class="product-rel">   
+                <div id="prodrel"> Productos Relacionados </div>
 
-           <div id="prodrel"> Productos Relacionados </div>
-
-           <img src="../images/icon-flecha.png" alt="icon.arrow" id="arrow" >
-
-        </section>
+                <img src="../images/icon-flecha.png" alt="icon.arrow" id="arrow" >
+                </section>
 
         <section class="imag-relacion">
             <article id="text"> <img src="../images/cosmopolitan.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
@@ -89,7 +77,7 @@
         </section>
 
         <div>
-            
+            <%- include("partials/footer")%>
         </div>
 
  </html>
