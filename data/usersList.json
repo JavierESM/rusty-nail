@@ -1,4 +1,4 @@
-[{"id":1,"name":"Eldridge Timlett","email":"etimlett0@google.fr","password":"t9Jivo","category":""},
+[{"id":1,"name":"Eldridge Timlett","email":"etimlett0@google.fr","password":"t9Jivo","category":"", "card":"", "adress":"", "phone-number":""},
 {"id":2,"name":"Marcellina Docharty","email":"mdocharty1@indiatimes.com","password":"H3uC1ab","category":"nunc viverra dapibus nulla"},
 {"id":3,"name":"Lucila Billson","email":"lbillson2@github.io","password":"l5inHSKl","category":"erat curabitur gravida"},
 {"id":4,"name":"Ellie Rahlof","email":"erahlof3@studiopress.com","password":"vEehQ9k4","category":"ultrices mattis odio donec"},

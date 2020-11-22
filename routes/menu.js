@@ -15,9 +15,7 @@ var storage = multer.diskStorage({
 })
 var upload = multer ({storage : storage})
 //<< Display para el menu >>
-router.get("/", menuControllers.menu);
-router.get("/clasicos", menuControllers.menuClasicos)
-router.get("/nuestros", menuControllers.menuNuestros)
+router.get("/:category?", menuControllers.menu);
 //<< Form para menu >>
 router.get("/create", menuControllers.creator);
 //<< Detalle de producto >>
