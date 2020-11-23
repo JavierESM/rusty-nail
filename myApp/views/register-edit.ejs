@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Registrate en Rusty Nail</title>
+  <title>Edita tu perfil</title>
   <link rel="stylesheet" href="stylesheets/register.css" type="text/css" media=screen>
   <link rel="stylesheet" href="stylesheets/nav.css" type="text/css" media=screen>
-  <link rel="stylesheet" href="stylesheets/footer.css" type="text/css" media=screen>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
     <header>
       
     </header>
-            <div id="register-title">Registro</div>
+            <div id="register-title">Editar perfil</div>
+            <section>
+            <img src="/images/icon-login.png">
+            <button>Cargá tu imagen</button>
+            </section>
         <form class="form-registro" action="" Method="POST">
             <div class=inputs>
                 <input type="text" id="name" name="name" placeholder=" NOMBRE Y APELLIDO" class="input"></p>
@@ -25,17 +28,15 @@
                         <input type="password" id="password" name="password" placeholder=" CONTRASEÑA" class="input"></p>
                         <input type="password" id="confirm-password" name="confirm-password" placeholder=" REINGRESAR CONTRASEÑA" class="input"></p>
                     </div>
-                    
+                <div>
+                    <input type="text" id="adress" name="adress" placeholder="Dirección" class="input"></p>
+                    <input type="number" id="phone-number" name="phone-number" placeholder=" Teléfono" class="input"></p>
+                </div>    
                 </div>
             </div>
-            <div class="checkboxes">
-                <p><input type="checkbox" name="age-validator" value="over-18"> Declaro que soy mayor de 18 años.</p>
-                <br>
-                <p><input type="checkbox" name="accept-TOS" value="TOS-accepted"> He leído y acepto los Términos y Condiciones del servicio.</p>
-                <br>
-                <p><input type="checkbox" name="subscribe" value="subscribe" checked> Quiero recibir ofertas y promociones de Rusty Nail en mi e-mail.</p>
-            </div>
-            <div id=register-container><input type="submit" value="REGISTRAR" id="register-button"></div>    
+           
+            <div id=register-container><input type="submit" value="Modificar" id="register-button"></div>    
+            <div id=register-container><input type="submit" value="Cancelar" id="register-button"></div>    
         </form>
    
 </body>
