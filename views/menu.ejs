@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Carta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/stylesheets/menu.css">
+  <link rel="stylesheet" href="/stylesheets/nav.css" type="text/css" media=screen>
+  <link rel="stylesheet" href="/stylesheets/footer.css" type="text/css" media=screen>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+</head>
+
+
+<body>
+
+  <main>
+    <%- include("partials/nav") %>
+    <p id="title">Nuestra carta</p>
+    <div id="secciones">
+      <a href="menu/clasicos" class="selector">
+        LOS CLASICOS
+      </a>
+      <a href="menu/nuestros" class="selector">
+        LOS NUESTROS
+      </a>
+    </div>
+    <div class="grid">
+      <% for (var i = 0; i < resultado.length; i++) { %>
+      <div class="shape">
+        <img src=<%=resultado[i].img%> class="prod-img">
+        <div class=tag>
+          <p class="trago"><%=resultado[i].name%> </p>
+          <div class="counter">
+            <p class="s">$ <%=toThousand(resultado[i].price)%></p>
+            <div class="counter-n">
+              <p>-</p>
+              <p>1</p>
+              <p>+</p>
+            </div>
+
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+
+  </main>
+  
+</body>
+
+</html>

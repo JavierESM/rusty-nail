@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/users.css">
+    <title>Document</title>
+</head>
+<h1>Usuarios registrados: <%=listadoUsers.length%> %> </h1>
+
+<body>
+
+    <div id="container">
+        <% listadoUsers.forEach(function (listadoUsers) { %>
+
+        <div class="user">
+          
+           <a href="/users/<%=listadoUsers.id%>"> </a>
+           <p><%= listadoUsers.name %> </p>
+           <p><%=listadoUsers.email%></p>
+           <p><%=listadoUsers.adress%> </p>
+           <p><%=listadoUsers.phone_number%> </p>
+        </div>
+        <div class="btn-container">
+            <a class="btn" style="text-decoration: none;" href="users/historial/<%=listadoUsers.id%>" class="btn">Historial</a>
+            <form action="/users/<%=listadoUsers.id%>/?_method=delete" method="POST">
+            <button class="btn" style="border: none;" type="submit" class="btn">Eliminar</button>
+        </div>
+    
+        <% }); %> 
+    
+    </div>
+
+</body>
+</html>
