@@ -9,7 +9,7 @@ var loginRouter = require("./routes/login");
 var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
-var contactosRouter = require("./routes/contactos");
+
 var homeRouter = require("./routes/home");
 var registerRouter = require("./routes/register");
 var bartenderRouter = require("./routes/bartender");
@@ -37,7 +37,6 @@ app.use("/product-detail", productRouter);
 app.use("/register", registerRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
-app.use("/contactos", contactosRouter);
 app.use("/menu", menuRouter);
 
 // catch 404 and forward to error handler

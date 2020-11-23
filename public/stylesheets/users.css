@@ -1,0 +1,43 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+    padding: 10%;
+    align-content: center;}
+
+.user{
+    border-style: solid;
+    border-width: medium;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btn{
+    font-size: 2em;
+    background: black;
+    color: white;
+    margin: 0;
+    height: 10vh;
+    width: 100.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}

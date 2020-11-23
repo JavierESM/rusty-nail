@@ -76,10 +76,6 @@ header {
 }
 
 .contactos {
-<<<<<<< HEAD
-  
-=======
->>>>>>> b38b4b5dbf5f2277eb1a5b1344eb0e5ad6de7a4a
   color: black;
   display: flex;
   /*flex-wrap: wrap;*/
@@ -131,20 +127,6 @@ header {
 }
 .comentarios {
   color: #fcfcfc;
-}
-
-main .pedidos {
-<<<<<<< HEAD
- 
-  color: #fcfcfc;
-=======
-  /*color: #fcfcfc;*/
->>>>>>> b38b4b5dbf5f2277eb1a5b1344eb0e5ad6de7a4a
-}
-main {
-  background-color: black
-  border-radius: 1%;
-  margin: 1% color;
 }
 
 .advertencia {
