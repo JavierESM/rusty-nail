@@ -26,7 +26,6 @@ var usersController = {
     
     create: function (req, res, next){
         let errorMail 
-        
         if (users.includes(req.body.email)) {errorMail = true} else {
             users.push({
                 ...req.body,

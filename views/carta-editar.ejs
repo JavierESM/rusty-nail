@@ -28,13 +28,13 @@
       </a>
     </div>
     <div class="grid">
-      <% for (var i = 0; i < products.length; i++) { %>
+      <% for (var i = 0; i < resultado.length; i++) { %>
       <div class="shape">
-        <img src=<%=products[i].img%> class="prod-img">
+        <img src=<%=resultado[i].img%> class="prod-img">
         <div class=tag>
-          <p class="trago"><%=products[i].name%> </p>
+          <p class="trago"><%=resultado[i].name%> </p>
           <div class="counter">
-            <p class="s">$ <%=toThousand(products[i].price)%></p>
+            <p class="s">$ <%=toThousand(resultado[i].price)%></p>
             <div class="counter-n">
               <p>-</p>
               <p>1</p>
@@ -49,7 +49,7 @@
       
       <% } %>
     </div>
-
+    <%- include("partials/footer") %>
   </main>
   
 </body>
