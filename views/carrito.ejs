@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es ">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="/stylesheets/carrito.css" type="text/css" media=screen> >
+  <title>Rusty Nail</title>
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+  <div class="container">
+
+
+    <div class="bolsa" style="margin:4% ;">
+      <div class="bolsa-pedido">
+        <h1 class="">BOLSA DE PEDIDOS</h1>
+      </div>
+      <div class="bolsa-pedido">
+        <h2 class="">Mi Carrito</h2>
+      </div>
+      <div class="bolsa-pedido">
+        <a href="menu" class="btm-glost2pull-right">CONTINUAR COMPRANDO<i class="fa fa-cart-plus fa-fw"
+            style="margin-left:5px;"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <tb class="caja-compra">
+      <div class="foto">
+        <img src="/images/mentabronce.png">
+      </div>
+
+
+
+      <div class="nombre-trago" style="color:gainsboro">
+        <a href="productos/clasicos">
+          <h3 class="titulo-trago" style="color:gainsboro">NOMBRE DEL TRAGO</h3>
+        </a>
+        <div class="descripcion">DESCRIPCION: INGREDIENTES etc etc etc<br>
+          "Beber con moderación. Prohibida su venta
+          a menores de 18
+          años."
+        </div>
+      </div>
+
+
+      <div class="precio1" style="color:gainsboro">
+        <span class="precios-producto" style="color: gainsboro;">"$1000"
+          <sup>
+            <sup>c</sup>
+            /
+            <sub>u</sub>
+          </sup>
+        </span>
+      </div>
+
+
+      <div class="contador-unidades" style="color: gainsboro;">
+        <p class="contador" style="color: gainsboro;">Cant. 1</p>
+      </div>
+
+
+      <div class="sub-total" style="color: gainsboro;">
+        <span class="listade-precio" style="color: gainsboro;">$1000</span>
+
+      </div>
+
+
+      <div class="basurero" style="color: gainsboro;">
+        <a href="carrito/quitar/:id" class="cart-delete text-muted" data-toggle="tooltip" title
+          data-original-title="Quitar del carrito"><i class="fa fa-trash fa-fw fa-2x"></i></a>
+      </div>
+    </tb>
+  </div>
+  <t foot>
+    <div class="precio-total" style="color: gainsboro;">
+      <div class="total" style="color: gainsboro;">TOTAL $1000 <br> <br><br> </div>
+
+      <div></div>
+      <div></div>
+    </div>
+  </t>
+  <div class="volver-continuar">
+
+    <a href="menu" class="volver">VOLVER A PRODUCTOS<i class="fa fa-th-large fa-fw" style="margin-left: 5px;"></i></a>
+    <a href="checkout" class="confirmar">CONFIRMAR Y CONTINUAR<i class="fa fa-angle-right fa-fw"
+        style="margin-left: 5px;" ::before></i></a>
+    <div class="clearfix">
+
+    </div>
+  </div>
+<div><%- include("partials/footer") %></div>
+</body>

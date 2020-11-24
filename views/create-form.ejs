@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/create-form.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  
+<main>
+	<div class="form-cont">
+		<div>
+			<div>
+				<h2 class="menu-title">Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div>
+			<form action="/menu" method="POST" enctype="multipart/form-data">
+				<div id="entry-cont">
+          <div class="couple">
+					<div class="data-entry">
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Coco Lady" class="form-input">
+          </div>
+					<div class="data-entry">
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="$500" class="form-input">
+          </div>
+        </div>
+          <div class="couple">
+          <div class="data-entry">
+              <label for="description" class="form-label">Descripción:</label>
+              <textarea name="description" id="description" class="form-input"></textarea>
+					</div>
+					<div class="data-entry">
+						<label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="clasicos">Clasicos</option>
+							<option value="nuestros">Nuestros</option>
+						</select>
+          </div>
+        </div>
+        <div class="couple">
+          <div class="data-entry">
+            <input type="file" id="img" class="form-input" name="img"> 
+          </div>
+        </div>
+        <div id="save-prod">
+          <button type="submit" class="save-btn">Guardar producto</button>
+        </div>
+      </div>
+			</form>
+		</div>
+
+	</div>
+</main>
+
+</body>
+</html>

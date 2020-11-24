@@ -1,0 +1,409 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family:  serif;
+    box-sizing: border-box;
+}
+
+.ban-1{
+   
+    background-color: #42474f;
+    width: 105%;
+    height: 18vh;
+    display: flex;
+    border-bottom:gray solid 2px ;
+    
+} 
+
+
+body{ 
+
+    background-color:none;
+    margin: 0%;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;                                                                                                                                                                                                                                                                                                                                        
+    align-items: center;
+    background-color: #969faa;
+    
+}                                                                                                                                                                           
+
+
+.bar-1{                                                                                                                                                                         
+    background-color: lightblue;                                                                                                                                                                                                                                                                                                                                                                                                                       
+    height: auto;
+    margin: 0 40%;
+    margin-bottom: 5%;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+     
+}
+
+.detalle-producto{ 
+
+   display: flex;
+   text-align: center;
+   padding: 2%;
+    
+}
+
+.description{ 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+#titulo{ 
+    font-size: 30px;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.div-1{ 
+    position: relative;
+    left: 230px;
+}
+
+.product-sec { 
+    display: flex;
+    flex:space-between;
+    font-weight: bold;
+    margin-top: 10vh;
+    width: 90%;
+ }
+
+ .product-rel{ 
+     text-align: center;
+     display: flex;
+     margin-left: 10px;
+     
+ }
+
+ #prodrel{ 
+    position: relative;
+    left:0% ;
+    color: #42474f;
+    font-weight: bold;
+    font-size: 20px;
+    border-top: #42474f solid 3px;
+    width: 95%;
+    margin: 0% 2%;
+    margin-bottom: 10%;
+    padding-top: 3%;
+ }
+
+ .articles{ 
+
+    margin-right: 5px; 
+    margin: 10px;
+    color: #42474f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2px;
+    font-size: 20px;
+    width: 30%;
+    text-decoration: underline;
+    text-align: center;
+    
+
+    }
+
+#description { 
+    margin: 2vh 1%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline solid #42474f;
+}
+
+ .art-image{ 
+    height: 70%;
+    width: 40%;
+    position: relative;
+    left:30%;
+    margin:10px;
+     
+ }
+
+
+ .art-details{ 
+     position: relative;
+     font-family: sans-serif;
+     font-weight: bold;
+     text-decoration: underline solid #42474f;
+     color: #42474f;
+     margin: 1%;
+     margin-left: 10px;
+     margin-bottom: 2%;
+     font-size: 20px;
+ }  
+ 
+ 
+ #descrip{
+     border-top:2px #42474f;
+     border-bottom: 2px #42474f;
+  }
+ #detail{ 
+    width: 30%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: 10%;
+    margin: 10px;
+ }
+
+ #icons-social{
+    color: black ;
+    font-size: 130px;
+}
+ 
+.contenedor-details{
+    display: flex;
+    padding: 10px;
+}
+
+ .precio-details{
+     border:  rgb(255, 255, 255)solid 3px;
+     background-color: rgb(255, 255, 255);
+     width: 15%;    
+     font-family:sans-serif ;
+     margin-left: 10px;
+     margin-top: 10px;   
+     margin-bottom: 10px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+ }
+
+
+ .precio-details-2{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 30px;
+    box-sizing: border-box;
+    height:6vh;
+    position: relative;
+    left: 8%;
+
+ }
+
+ .agregar-c{ 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    width: 45%;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(95, 206, 130);
+    color: white;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    left: 28%;
+}
+ 
+
+ .agregar-c-rel{ 
+    box-sizing: border-box; 
+    position: relative;
+    left:16%;    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    width: 60%;
+    padding: 1%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(95, 206, 130);
+    color: white;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+ .novedades{
+
+    margin-left: 0px;
+    margin-top: 5%;
+    background-color:#969faa ;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px            ;
+    
+
+ }
+
+.imag-relacion{ 
+
+        display: flex;
+        width: 90%;
+        flex-direction:row; 
+        margin: 2% 5%;
+        align-items: center;
+        
+}
+
+#text{ 
+    text-align: center      ;
+    margin: 2vh;
+    
+}
+
+#text-2{ 
+    font-family: sans-serif ;
+    color: #42474f; 
+    font-size: 15px;
+    text-align: center;
+    border-bottom: #42474f solid 2px;
+    width: 80%;
+    font-weight: bold;
+    }
+
+#arrow { 
+    position: relative;
+    top: 12vh;
+    right: 50%;
+    height: 20px;
+}
+
+ .novedades-2{ 
+     background-color:#969faa ;
+     color: white;
+ }
+
+
+ .subh3{ 
+    
+        display: block;
+        border: solid;
+        background-color: #42474f;
+        margin: 5% 20%;
+        font-size: 30px;
+        text-align: center;
+ }
+ .email{ 
+     text-align: center;
+        height: 40px;
+     margin-top: 15px;
+ }
+
+ .submit { 
+     background-color:rgb(95, 206, 130) ;
+     color: #ffffff;
+     height: 40px;
+     padding: 1%;
+ }
+
+ .i-resp{ 
+    height: 100vh; 
+    width: 70%; 
+    margin-top: 10px"
+
+ }
+
+ @media (min-width:425px){ 
+     .product-sec {
+        width: 100%;
+        font-size: 13px;
+        height: 8vh;
+    }
+      
+ }
+
+ @media (max-width:425px){ 
+     .articles {       
+            margin-right: 5px;
+            margin-left: 15px;
+            height: 6vh;
+            color: #42474f;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-right: #42474f solid 2px;
+            padding-right: 10px;
+            font-size: 12px;
+ }
+ }
+
+ @media (max-width:425px){ 
+    #detail{
+        width: 35%;
+        text-align: left;
+        padding-left: 2%;
+        color: rgb(95, 206, 130);
+        font-weight: bold;
+        font-size: 15px;
+        left: 5%;
+        height: 20vh;
+        position: relative;
+    }
+   }
+   @media (max-width:425px){   
+    #icons-social {
+        color: rgb(95, 206, 130);
+        position: relative;
+        top: 26vh;
+        right: 25%;
+        align-items: left;
+        width: 45%;
+        height: 10vh;
+        font-size: 25px;
+}
+}
+
+@media (max-width:425px){   
+    .precio-details-2 {
+       
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 2%;
+        width: 60%;
+    }
+}
+
+@media (max-width:425px){
+    .i-resp{
+        height: 80vh;
+        width: 98%;
+        margin-top: 2px;
+    }
+}
+@media (max-width:425px){
+    .imag-relacion {
+        display: flex;
+        width: 98%;
+        flex-direction: column;
+        margin: 2% 2%;
+        align-items: center;
+}
+}
+
+@media (max-width: 375px){
+ #icons-social {
+    color: rgb(95, 206, 130);
+    position: relative;
+    top: 19vh;
+    right: 3%;
+    align-items: left;
+    width: 13%;
+    height: 10vh;
+    font-size: 26px;
+}}
+
+@media (max-width: 375px){  
+.novedades {
+    margin-left: 0px;
+    margin-top: 5%;
+    background-color: #969faa;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px;
+    width: 105%;
+}
+}
