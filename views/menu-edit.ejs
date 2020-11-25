@@ -6,24 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <link rel="stylesheet" href="/stylesheets/menu.css">
-  <link rel="stylesheet" href="/stylesheets/nav.css" type="text/css" media=screen>
-  <link rel="stylesheet" href="/stylesheets/footer.css" type="text/css" media=screen>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
 </head>
 
 
-<body>
+<body style="background-color: grey;">
 
   <main>
-    <%- include("partials/nav") %>
     <p id="title">Nuestra carta</p>
     <div id="secciones">
-      <a href="menu/clasicos" class="selector">
+      <a href="menu/clasicos" class="selector" style="text-decoration: none; color:white;">
         LOS CLASICOS
       </a>
-      <a href="menu/nuestros" class="selector">
+      <a href="menu/nuestros" class="selector" style="text-decoration: none; color:white;">
         LOS NUESTROS
       </a>
     </div>
@@ -44,7 +41,7 @@
             <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
           </div>
         </div>
-        <a  id= "editar" href="/<%=products[i].id%>/edit"> Editar produto </a>
+        <a  class= "editar" href="/<%=products[i].id%>/edit"> Editar produto </a>
       </div>
       
       <% } %>

@@ -14,9 +14,6 @@ var storage = multer.diskStorage({
   }
 })
 var upload = multer ({storage : storage})
-
-//<< Display para el menu >>
-router.get("/:category?", menuControllers.menu);
 //<< Form para menu >>
 router.get("/create", menuControllers.creator);
 //<< Editor carta >>

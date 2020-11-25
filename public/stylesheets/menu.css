@@ -109,10 +109,11 @@ body{
     text-align: center;
     width: 25%;
 }
-#editar {
+.editar {
     font-size: 4.7vh;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
+    text-decoration: none;
     margin: 0;
     height: 15vh;
     width: 100.5%;

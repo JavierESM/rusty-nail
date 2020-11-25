@@ -22,7 +22,7 @@ const menuControllers = {
     res.render("create-form");
   },
   menuEdit: function(req, res) {
-    res.render("carta-editar", {products, toThousand})
+    res.render("menu-edit", {products, toThousand})
   },
   create: function (req, res, next) {
     products.push({

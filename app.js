@@ -11,7 +11,6 @@ var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
 
 var homeRouter = require("./routes/home");
-var registerRouter = require("./routes/register");
 var bartenderRouter = require("./routes/bartender");
 
 var app = express();
@@ -34,7 +33,6 @@ app.use("/", homeRouter);
 app.use("/users", usersRouter);
 app.use("/login", loginRouter);
 app.use("/product-detail", productRouter);
-app.use("/register", registerRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
 app.use("/menu", menuRouter);
