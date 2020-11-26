@@ -3,7 +3,8 @@ const { editor } = require('../controllers/usersControllers');
 const usersController = require('../controllers/usersControllers');
 var router = express.Router();
 var controller = require('../controllers/usersControllers')
-const multer = require("multer")
+const multer = require("multer");
+const {check, validationResult, body} = require("express-validator")
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/images')
@@ -16,9 +17,11 @@ var upload = multer ({storage : storage})
 router.get('/', usersController.lista);
 router.get("/panel-de-control", usersController.panel)
 router.get("/registro", usersController.creator)
+router.get("/login", usersController.login)
 router.get("/:id", usersController.detail);
 router.get("/:id/edit", usersController.editor)
 router.post("/", upload.any(), usersController.create)
+router.post("/login", [check("email").isEmail()], usersController.processLogin)
 router.put("/:id", upload.any(), usersController.edit)
 router.delete("/:id", usersController.destroy)
 module.exports = router;

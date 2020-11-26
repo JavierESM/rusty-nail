@@ -5,7 +5,6 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var methodOverride = require ("method-override");
 var usersRouter = require("./routes/users");
-var loginRouter = require("./routes/login");
 var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
@@ -25,13 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride('_method'))
+app.use(session({secret: "Rusty-cookie"}))
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
-app.use("/login", loginRouter);
 app.use("/product-detail", productRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);

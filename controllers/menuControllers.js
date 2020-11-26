@@ -22,7 +22,14 @@ const menuControllers = {
     res.render("create-form");
   },
   menuEdit: function(req, res) {
-    res.render("menu-edit", {products, toThousand})
+    let query = req.params.category
+    if (query) {
+    resultado = products.filter(producto => producto.category == query);
+    }
+    else {
+      resultado = [...products]
+    }
+    res.render("menu-edit", {products, toThousand, query})
   },
   create: function (req, res, next) {
     products.push({

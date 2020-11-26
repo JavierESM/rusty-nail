@@ -5,6 +5,7 @@ const usersFilePath = path.join(__dirname, '../data/usersList.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const {check, validationResult, body} = require("express-validator")
 
 
 
@@ -15,13 +16,45 @@ var usersController = {
     lista: function (req,res){ 
         res.render ('users/users', {listadoUsers:users})
     }, 
-    vista: function (req,res){ 
-        res.render ('register')
-    }, 
+    processLogin: function (req, res){
+        let errors = validationResult(req)
+        
+        if (errors.isEmpty()) {
+            let usersJSON = fs.readFileSync("usersList.json", {
+                encoding : "UTF-8"
+            })
+        let users; 
+        if (usersJSON == ""){
+            users = []
+        } else {
+            users = JSON.parse(usersJSON)}
+        } 
+        else for (let i = 0; i < users.length; i++) {
+            if (users[i].email == req.body.email) {
+                if (bcrypt.compareSync(req.body.password, users[i].password)){
+                    usuarioALoguearse = users[i]
+                    break
+                }
+            }
+        }
+        if (usuarioALoguearse == undefined) {
+            return res.render("login", {
+                errors:[{msg:"Credenciales invalidas"}]})}
+
+        if (usuarioALoguearse.category == "admin") {
+            req.session.AdminLogueado = usuarioALoguearse
+        } else req.session.UsuarioLogueado =  usuarioALoguearse;
+        res.render("Exito")
+    },
+    
+    login: function (req, res){
+        res.render("login")
+    },
     
     panel: function (req,res) {
         res.render ("control-panel")
     }, 
+   
     creator: function (req,res) {
         res.render ("register")
     }, 
@@ -32,7 +65,7 @@ var usersController = {
         if (users.includes(req.body.email)) {errorMail = true} else {
             users.push({
                 ...req.body,
-                password: bcrypt.hashsync(req.body.password, 11), 
+                password: bcrypt.hashSync(req.body.password, 11), 
                 id: users[users.length - 1].id + 1,
                 category: "user"
             });
@@ -48,24 +81,23 @@ var usersController = {
         editor: function (req, res) {
             let idUser = req.params.id;
             let resultado = users.find((user) => user.id == idUser);
-            res.render("edit-user-form", {resultado});
+            res.render("edit-user", {resultado});
         },
         edit: function (req, res) {
             users.forEach(function (user) {
                 if (user.id == req.params.id) {
-                    user.name = req.body.name;
+                    user.name = req.body.name
                     user.email = req.body.email
-                    user.password = bcrypt.hashSync(req.body.password, 11);
+                    user.password = bcrypt.hashSync(req.body.password, 11)
                     user.card = req.body.card
                     user.adress = req.body.adress
                     user.phone_number = req.body.phone_number
-                    
                 }
             }
             )
             let newContentJSON = JSON.stringify(users);
             fs.writeFileSync(usersFilePath, newContentJSON);
-            res.redirect("/users")
+            res.redirect("/menu")
         },
         destroy: function (req, res) {
             let userId = req.params.id;
