@@ -9,14 +9,14 @@ var toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const menuControllers = {
   menu: function (req, res) {
-    res.render("menu", {products, toThousand});
-  },
-  menuNuestros: function (req, res) {
-  
-    res.render("menu", {resultado})
-  },
-  menuClasicos: function (req, res) {
-    res.render("menu", { resultado });
+    let query = req.params.category
+    if (query) {
+    resultado = products.filter(producto => producto.category == query);
+    }
+    else {
+      resultado = [...products]
+    }
+    res.render("menu", {resultado, toThousand, query}); 
   },
   creator: function (req, res) {
     res.render("create-form");

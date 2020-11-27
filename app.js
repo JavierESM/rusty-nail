@@ -3,13 +3,13 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var methodOverride = require ("method-override");
+var methodOverride = require("method-override");
 var usersRouter = require("./routes/users");
 var loginRouter = require("./routes/login");
 var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
-var contactosRouter = require("./routes/contactos");
+
 var homeRouter = require("./routes/home");
 var registerRouter = require("./routes/register");
 var bartenderRouter = require("./routes/bartender");
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(methodOverride('_method'))
+app.use(methodOverride("_method"));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
@@ -37,7 +37,7 @@ app.use("/product-detail", productRouter);
 app.use("/register", registerRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
-app.use("/contactos", contactosRouter);
+
 app.use("/menu", menuRouter);
 
 // catch 404 and forward to error handler

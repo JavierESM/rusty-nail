@@ -3,7 +3,7 @@ var listado = require ('../data/products.json')
 const productController = { 
 
 vista: function(req, res,) {
-    res.render('product');
+    res.render("product-detail");
   },
 
  list: function(req,res){

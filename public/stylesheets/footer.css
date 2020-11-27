@@ -1,13 +1,13 @@
- * *::after *::before {
+* *::after *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
+body {
   display: flex;
   flex-direction: column;
   margin: 0%;
-  background-color:#898989;
+  background-color: #898989;
   width: 100%;
 }
 .container {
@@ -15,8 +15,8 @@ body{
   flex-flow: row wrap;
   width: 100%;
   margin: 0px;
- background-color:#898989;
-margin: 8% 0%;
+  background-color: #898989;
+  margin: 8% 0%;
 }
 .novedades {
   margin: 1%;
@@ -127,12 +127,6 @@ margin: 8% 0%;
 }
 .comentarios {
   color: #fcfcfc;
-}
- 
-.pedidos {
-  background-color: black
-  border-radius: 1%;
-  margin: 1% color;
 }
 
 .advertencia {
