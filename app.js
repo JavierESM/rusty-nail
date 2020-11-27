@@ -37,7 +37,10 @@ app.use("/product-detail", productRouter);
 app.use("/register", registerRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
+ 
 
+ 
+ 
 app.use("/menu", menuRouter);
 
 // catch 404 and forward to error handler

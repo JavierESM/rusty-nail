@@ -21,6 +21,9 @@ const menuControllers = {
   creator: function (req, res) {
     res.render("create-form");
   },
+  menuEdit: function(req, res) {
+    res.render("carta-editar", {products, toThousand})
+  },
   create: function (req, res, next) {
     products.push({
       ...req.body,
@@ -29,17 +32,17 @@ const menuControllers = {
     });
     products = JSON.stringify(products);
     fs.writeFileSync(productsFilePath, products);
-    res.redirect("menu");
+    res.redirect("/");
   },
   detail: function (req, res) {
-    let resultado = products.find((products) => product.id == idProduct);
+    let resultado = products.find((product) => product.id == idProduct);
     res.render("product", { resultado }); 
 
   },
   editor: function (req, res) {
     let idProduct = req.params.id;
     let resultado = products.find((product) => product.id == idProduct);
-    res.render("edit-form", { resultado });
+    res.render("edit-form", {resultado});
   },
   edit: function (req, res) {
     products.forEach(function (product) {
@@ -48,9 +51,12 @@ const menuControllers = {
         product.price = req.body.price;
         product.description = req.body.description; 
         product.category = req.body.category;
-        product.img = req.files[0].filename;
+        if (typeof filename == undefined){
+        product.img = "images/" + "placeholder";
+      } else {
+        product.img = "images/" + req.files[0].filename;
       }
-    });
+    }});
 
     let newContentJSON = JSON.stringify(products);
 
@@ -65,7 +71,6 @@ const menuControllers = {
       return producto.id != productId;
     });
     newContentJSON = JSON.stringify(newContent);
-    //console.log(newContent)
     fs.writeFileSync(productsFilePath, newContentJSON);
 
     res.redirect("/menu");
