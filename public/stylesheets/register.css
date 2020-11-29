@@ -5,51 +5,26 @@
     box-sizing: border-box;
     font-family: Serif;
 }
-.gb-menu-1 .gb-menu-2 {
-    display: flex;
-    justify-content: space-between;
-    height: 10vh!important;
-    padding: 4%;
-    margin: 0 10%;
-    border-bottom: #DDDDDD 1.5px solid;
+
+.gb-menu-1, .gb-menu-2 {
+    box-sizing: content-box;
 }
 
-
-.body {
+body {
     background-color: #969faa;
 }
 
 
-.navigation {
-    display:flex;
-    padding: 2%;
-    justify-content: space-between;
-    text-align: center;
-    background-color: #343F4B;
-    color: white;
-    font-size: 30px;
-}
-.navigation #nav-title {
-    font-size: 20px;
-    margin: auto 8%;
-}
-.navigation .hamburger {
-    font-size: 20px;
-}
-.navigation .right-icons {
-    font-size: 30px;
-}
-
 #register-title {
-    margin-top: 10vh;
-    padding: 25px;
-    padding: 50px 0;
-    text-align: center; 
+    padding: 3%0;
+    text-align: center;
     font-size: 38px;
     font-size: 58px;
     font-weight: bold;
     color: #3F3F3F;
     background-color: #969FAA;
+    height: 10vh;
+    margin-bottom: 5%;
 }
 .form-registro {
     padding: 10px 8% 5px 8%;
@@ -59,8 +34,13 @@
 
 .form-registro .inputs {
     
-    padding: auto 5%;
-    margin-bottom: 25px;
+    margin-bottom: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    box-sizing: border-box;
 }
 
 .form-registro .inputs .input {
@@ -159,6 +139,20 @@
         margin: 10px 24.5%;
         align-content: left;
         
+    }
+    .form-registro #register-button {
+        padding: 2% 3% 4% 3%;
+    text-align: center;
+    border: solid 0px;
+    /* padding: 3% 8%; */
+    margin: 5%;
+    margin: 3%;
+    background-color: #47525E;
+    color: #FDFDFD;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 8vh;
+    width: 28%;
     }
     
 }
