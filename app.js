@@ -8,6 +8,7 @@ var usersRouter = require("./routes/users");
 var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
+const session = require("express-session")
 
 var homeRouter = require("./routes/home");
 var bartenderRouter = require("./routes/bartender");

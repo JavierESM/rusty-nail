@@ -5,7 +5,14 @@
     box-sizing: border-box;
     font-family: Serif;
 }
-
+.gb-menu-1 .gb-menu-2 {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh!important;
+    padding: 4%;
+    margin: 0 10%;
+    border-bottom: #DDDDDD 1.5px solid;
+}
 
 
 .body {
@@ -153,4 +160,5 @@
         align-content: left;
         
     }
+    
 }

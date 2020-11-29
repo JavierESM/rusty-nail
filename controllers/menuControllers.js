@@ -58,8 +58,9 @@ const menuControllers = {
         product.price = req.body.price;
         product.description = req.body.description; 
         product.category = req.body.category;
-        if (typeof filename == undefined){
-        product.img = "images/" + "placeholder";
+        console.log(req.files)
+        if (typeof req.files != []){
+        product.img = "images/placeholder";
       } else {
         product.img = "images/" + req.files[0].filename;
       }
