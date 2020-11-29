@@ -23,8 +23,12 @@ router.get("/login", usersController.login)
 router.get("/bienvenido", usersController.welcome)
 router.get("/:id", usersController.detail);
 router.get("/:id/edit", usersController.editor)
-router.post("/", upload.any(), usersController.create)
-router.post("/login-process", [check("email").isEmail()], usersController.processLogin)
+router.post("/", upload.any(),[check("email").isEmail().withMessage("Por favor, introducí un email válido"), 
+check("password").isLength({min : 8, max : 25}).withMessage("Tu contraseña debe tener entre 8 y 25 caracteres"), 
+check("password").isHash, check("password")], usersController.create)
+router.post("/login-process", [
+check("email").isEmail().withMessage("Por favor, introducí un email válido")]
+, usersController.processLogin)
 router.put("/:id", upload.any(), usersController.edit)
 router.delete("/:id", usersController.destroy)
 module.exports = router;
