@@ -1,18 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Serif;
 }
-.gb-menu-1 .gb-menu-2 {
-    display: flex;
-    justify-content: space-between;
-    height: 10vh!important;
-    padding: 4%;
-    margin: 0 10%;
-    border-bottom: #DDDDDD 1.5px solid;
-}
+
 
 
 .body {
@@ -51,10 +43,16 @@
     color: #3F3F3F;
     background-color: #969FAA;
 }
+h1 {
+    font-family: serif;
+    margin: 10%;
+    text-align: center;
+}
 .form-registro {
     padding: 10px 8% 5px 8%;
     text-align: right;
     background-color: #969FAA;
+    height: 100vh;
 }
 
 .form-registro .inputs {
@@ -160,5 +158,4 @@
         align-content: left;
         
     }
-    
 }

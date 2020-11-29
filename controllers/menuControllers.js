@@ -22,7 +22,14 @@ const menuControllers = {
     res.render("create-form");
   },
   menuEdit: function(req, res) {
-    res.render("menu-edit", {products, toThousand})
+    let query = req.params.category
+    if (query) {
+    resultado = products.filter(producto => producto.category == query);
+    }
+    else {
+      resultado = [...products]
+    }
+    res.render("menu-edit", {products, toThousand, query})
   },
   create: function (req, res, next) {
     products.push({
@@ -51,8 +58,9 @@ const menuControllers = {
         product.price = req.body.price;
         product.description = req.body.description; 
         product.category = req.body.category;
-        if (typeof filename == undefined){
-        product.img = "images/" + "placeholder";
+        console.log(req.files)
+        if (typeof req.files != []){
+        product.img = "images/placeholder";
       } else {
         product.img = "images/" + req.files[0].filename;
       }

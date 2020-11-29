@@ -27,7 +27,7 @@
     <div class="grid">
       <% for (var i = 0; i < products.length; i++) { %>
       <div class="shape">
-        <img src=<%=products[i].img%> class="prod-img">
+        <img src="/<%=products[i].img%>" class="prod-img">
         <div class=tag>
           <p class="trago"><%=products[i].name%> </p>
           <div class="counter">
@@ -41,7 +41,7 @@
             <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
           </div>
         </div>
-        <a  class= "editar" href="/<%=products[i].id%>/edit"> Editar produto </a>
+        <a  class= "editar" href="<%=products[i].id%>/edit"> Editar produto </a>
       </div>
       
       <% } %>
