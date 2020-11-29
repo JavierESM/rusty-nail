@@ -8,38 +8,35 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 
-
-
 var usersController = { 
     
     lista: function (req,res){ 
         res.render ('users/users', {listadoUsers:users})
     }, 
     vista: function (req,res){ 
-        res.render ('register')
+        res.render ('registro')
     }, 
     
     panel: function (req,res) {
         res.render ("control-panel")
     }, 
     creator: function (req,res) {
-        res.render ("register")
+        res.render ("registro")
     }, 
     
     create: function (req, res, next){
-        let errorMail 
-        
-        if (users.includes(req.body.email)) {errorMail = true} else {
+                     
             users.push({
                 ...req.body,
-                password: bcrypt.hashsync(req.body.password, 11), 
+                id:users[user.length-1].id+1,
+                password: bcrypt.hashSync(req.body.password, 11), 
                 id: users[users.length - 1].id + 1,
                 category: "user"
             });
             users = JSON.stringify(users);
             fs.writeFileSync(usersFilePath, users);
-            res.redirect("menu", {errorMail});
-        }},
+            res.redirect("menu");
+        },
         detail: function (req, res) {
             let idUser = req.params.id
             let resultado = users.find((user) => user.id == idUser);

@@ -19,6 +19,7 @@
   }
   .form-sec {
     justify-content: center;
+    display: list-item;
     width: 80%;
     margin: 2% 10%;
   }
@@ -224,6 +225,7 @@
 
   .icon-log{ 
     height: 15vh;
+    width: 8%;
     margin-top: 10vh;
   }
 
