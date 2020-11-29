@@ -11,68 +11,73 @@ const {check, validationResult, body} = require("express-validator")
 
 
 
+
 var usersController = { 
     
     lista: function (req,res){ 
         res.render ('users/users', {listadoUsers:users})
     }, 
     processLogin: function (req, res){
-        let errors = validationResult(req)
-        
+        let errors = validationResult (req)
+
         if (errors.isEmpty()) {
-            let usersJSON = fs.readFileSync("usersList.json", {
-                encoding : "UTF-8"
-            })
+        let usersJSON = fs.readFileSync(usersFilePath, {
+            encoding : "utf-8"
+        })
         let users; 
-        if (usersJSON == ""){
+        if (usersJSON == "") {
             users = []
         } else {
-            users = JSON.parse(usersJSON)}
-        } 
-        else for (let i = 0; i < users.length; i++) {
-            if (users[i].email == req.body.email) {
-                if (bcrypt.compareSync(req.body.password, users[i].password)){
-                    usuarioALoguearse = users[i]
-                    break
-                }
-            }
+           users = JSON.parse(usersJSON)
         }
-        if (usuarioALoguearse == undefined) {
-            return res.render("login", {
-                errors:[{msg:"Credenciales invalidas"}]})}
-
-        if (usuarioALoguearse.category == "admin") {
-            req.session.AdminLogueado = usuarioALoguearse
-        } else req.session.UsuarioLogueado =  usuarioALoguearse;
-        res.render("Exito")
+         for (let i = 0; i < users.length; i++) {
+             if (users[i].email == req.body.email) {
+                 if(bcrypt.compareSync(req.body.password, users[i].password)) {
+                     var usuarioALoguearse = users[i]
+                     break
+                 }
+             }
+         }
+         if (usuarioALoguearse == undefined) {
+             return res.render("users/login", {errors : [{
+                 msg : "Credenciales inválidas"
+             }]})
+         }
+         req.session.usuarioLogueado = usuarioALoguearse
+         console.log(usuarioALoguearse)
+         res.render("Exito")
+        }
+        else 
+            return res.render("login", {errors: errors.errors})
+        
     },
     
     login: function (req, res){
-        res.render("login")
+        res.render("users/login")
     },
     
     panel: function (req,res) {
         res.render ("control-panel")
     }, 
+    welcome: function (req, res) {
+        res.render("bienvenido")
+    },
    
     creator: function (req,res) {
         res.render ("register")
     }, 
     
     create: function (req, res, next){
-        let errorMail 
-        
-        if (users.includes(req.body.email)) {errorMail = true} else {
-            users.push({
-                ...req.body,
-                password: bcrypt.hashSync(req.body.password, 11), 
-                id: users[users.length - 1].id + 1,
-                category: "user"
-            });
-            users = JSON.stringify(users);
-            fs.writeFileSync(usersFilePath, users);
-            res.redirect("menu", {errorMail});
-        }},
+        users.push({
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 11), 
+            id: users[users.length - 1].id + 1,
+            category: "user"
+        });
+        users = JSON.stringify(users);
+        fs.writeFileSync(usersFilePath, users);
+        res.redirect("users/bienvenido");
+    },
         detail: function (req, res) {
             let idUser = req.params.id
             let resultado = users.find((user) => user.id == idUser);

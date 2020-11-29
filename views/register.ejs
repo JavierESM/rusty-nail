@@ -13,9 +13,9 @@
 <body>
    
       <%- include("./partials/nav") %> 
-    
-            <div id="register-title">Registro</div>
-        <form class="form-registro" action="register.html" Method="POST">
+    <div style="margin-top: 15%;">
+            <p id="register-title">Registro</p>
+        <form class="form-registro" action="/users" Method="POST">
             <div class=inputs>
                 <input type="text" id="name" name="name" placeholder=" NOMBRE Y APELLIDO" class="input"></p>
                 <input type="email" id="email" name="email" placeholder=" E-MAIL" class="input input-email"></p>
@@ -26,7 +26,7 @@
                     </div>
                     
                 </div>
-            </div>
+            
             <div class="checkboxes">
                 <p><input type="checkbox" name="age-validator" value="over-18"> Declaro que soy mayor de 18 años.</p>
                 <br>
@@ -36,6 +36,7 @@
             </div>
             <div id=register-container><input type="submit" value="REGISTRAR" id="register-button"></div>    
         </form>
+    </div>
     <footer class="footer">
     </footer>
 </body>

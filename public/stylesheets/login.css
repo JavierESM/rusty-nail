@@ -1,559 +1,161 @@
+.gb-menu-1, .gb-menu-2 {
+  box-sizing: content-box;
+}
 * {
-    padding: 0%;
-    margin: 0%;
-    font-family: Serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #969faa;
-    margin: 0%;
-    height: 100vh;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-  }
-  
-  .sec-boxes {
-    margin-top: 5px;
-  }
-  .form-sec {
-    justify-content: center;
-    width: 80%;
-    margin: 2% 10%;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Serif;
+}
 
-  .form-buttons{ 
-    display: inline-grid;
-  }
-  
-  .form-1 {
-    width: 45%;
-    height: 50px;
-    max-width: 400px;
-    position: relative;
-    overflow: hidden; 
-    margin-left: 25%;
-    margin-right: 30%;
-    margin-bottom: 15px;
-    font-size: 25px;
-    left: -50px;
-  }
-  
-  .form-1 input {
-    width: 45%;
-    height: 100%;
-    background: whitesmoke;
-    color: grey;
-    padding-top: 20px;
-    padding-left: 1%;
-    border: white;
-    outline: 0px;
-    margin-left: 7%;
-    margin-right: 30%;
-    font-size: 20px;
-  }
-  
-  .form-1 .lbl-email {
-    position: absolute;
-    bottom: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    border-bottom: 1px solid grey;
-    margin-left: 15%;
-  }
-  
-  .form-1 .lbl-email:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 100%;
-    border-bottom: 3px solid #42474f;
-    transform: translateX(-200%);
-    transition: all 0.3s ease;
-  }
-  
-  .text-email {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    transition: all 0.3s ease;
-    color: #42474f;
-  }
-  
-  .form-1 input:focus + .lbl-email .text-email,
-  .form-1 input:valid + .lbl-email .text-email {
-    transform: translateY(-150%);
-    font-size: 14px;
-    color: #42474f;
-  }
-  
-  .form-1 input:focus + .lbl-email:after,
-  .form-1 input:valid + .lbl-email:after {
-    transform: translateX(0%);
-  }
-  
-  
-  
-  
-  .form-2 {
-    width: 90%;
-    height: 50px;
-    max-width: 400px;
-    position: relative;
-    overflow: hidden;
-    margin-left: 25%;
-    margin-right: 30%;
-    margin-bottom: 5px;
-    font-size: 25px;
-    left: -50px;
-  }
-  
-  .form-2 input {
-    width: 45%;
-    height: 100%;
-    background: whitesmoke;
-    color: gray;
-    padding-top: 20px;
-    padding-left: 1%;
-    border: none;
-    outline: 0px;
-    margin-left: 7%;
-    margin-right: 30%;
-  }
-  
-  .form-2 .lbl-pass {
-    position: absolute;
-    bottom: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    border-bottom: 1px solid grey;
-    margin-left: 15%;
-  }
-  
-  .form-2 .lbl-pass:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 100%;
-    border-bottom: 3px solid rgb(117, 53, 53);
-    transform: translateX(-200%);
-    transition: all 0.3s ease;
-  }
-  
-  .text-pass {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    transition: all 0.3s ease;
-    color: rgb(117, 53, 53);
-  }
-  
-  .form-2 input:focus + .lbl-pass .text-pass,
-  .form-2 input:valid + .lbl-pass .text-pass {
-    transform: translateY(-150%);
-    font-size: 14px;
-    color: rgb(117, 53, 53);
-  }
-  
-  .form-2 input:focus + .lbl-pass:after,
-  .form-2 input:valid + .lbl-pass:after {
-    transform: translateX(0%);
-  }
-  
-  .center {
+.gb-menu-1, .gb-menu-2 {
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #969faa;
+}
+
+.welcome{
+  font-size: 2.7em;
+    padding: 3%0;
     text-align: center;
-    font-family: serif;
-    margin-top: 15vh;
-  }
-  .img-1 {
-    height: 80px;
-    width: 80px;
-  }
+    /* font-size: 38px; */
+    /* font-size: 58px; */
+    font-weight: bold;
+    color: #3F3F3F;
+    background-color: #969FAA;
+    height: 10vh;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.form-registro {
+  padding: 10px 8% 5px 8%;
+  text-align: right;
+  background-color: #969FAA;
+}
+
+.form-registro .inputs {
   
-  .flex-sec {
-    align-items: center;
-    text-align: center;
-  }
-  
- 
-  
-  .font-1 {
-    font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-left: 0;
-    
-    padding: 8px;
-    border-radius: 5px;
-  }
-  .font-2 {
-    font-size: 18px;
-    padding: 8px;    
-    background-color: #343F4B;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  
-  .submit {
+  margin-bottom: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.form-registro .inputs .input {
+  width: 100%;
+  padding: 1%;
+  margin: 10px auto;
+  border: 1.5px solid #5A6978;
+  background-color: #969FAA;
+  font-size: 1em;
+  color: #3F3F3F;
+}
+
+.form-registro .inputs .input:focus{
+  background-color: #acb5be;
+}
+
+::placeholder {
+  color: #3F3F3F;
+}
+
+
+.form-registro .inputs .input[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.3s 0.3s ease; 
+  opacity: 0;
+}
+
+.form-registro .checkboxes {
+  font-size: 0.88em;
+  color: #343F4B;
+  text-align: left;
+  padding: 20px 0 ;
+}
+
+.form-registro input[type="checkbox"] {
+  vertical-align: text-top;
+}
+
+.form-registro input[type="checkbox"]:checked {
+  background-color: red;
+}
+
+.form-registro #register-container {
+  text-align: center;
+}
+.form-registro #register-button {
+  border-radius: 0px;
+  border: solid 0px;
+  padding: 3% 8%;
+  margin: 5%;
+  margin: 3%;
+  background-color: #47525E;
+  color: #FDFDFD;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-registro #register-button:hover {
+  background-color: #485564;
+}
+
+.footer {
+  background-color: grey;
+}
+
+@media (min-width: 769px){
    
-    
-    background-color:#343F4B;
-    color: white;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 5px;
-    
-  }
-  
-  h1 {
-    margin: 2% 0%;
-    color:#343F4B;
-    font-size: 35px;
-  }
-  
 
-  .icon-log{ 
-    height: 15vh;
-    margin-top: 10vh;
+  .form-registro .paired-inputs {
+      display:flex;
+      flex-direction: column;
+      align-content: space-around;
   }
-
-  .tabla1 {
-    text-align: center;
+  .form-registro .inputs .pass-and-confirm {
+      display:flex;
+      flex-wrap: wrap;
+      align-items: space-between;
   }
-  
-     
-  @media (max-width: 768px) {
-  
-    .font-1 {
-      position: relative;
-      right: 115px;
-    }
-    .submit {
-      position: relative;
-      left: 1px;
-    }
-  
-      
-    h1 {
+  .form-registro .inputs .name-and-surname {
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .form-registro .checkboxes {
+      font-size: 0.88em;
+      color: #343F4B;
       text-align: left;
-      position: relative;
-      margin-top: 10px;
-    }
+      padding: 20px 0 ;
+      margin: 0 5%;
   }
   
-  
-  
-  @media (max-width: 426px) {
-    .form-1 {
-      width: 100%;
-      height: 50px;
-      right: 15%;
-      margin-left: 10%;
-      margin-top: 15%;
-    }
+  .form-registro .inputs .input {
+      width: 51%;
+      display:flex;
   }
   
-  @media (max-width: 425px) {
-      form.form-1 input {
-        width: 100%;
-        height: 100%;
-        background: whitesmoke;
-        color: grey;
-        left: 26px;
-        position: relative;
-      }
-      .img-login {
-        margin-bottom: 20%;
-      }
-    
-      .center {
-        margin-bottom: 10%;
-      }
-  }
-  
-     
-  
-      @media (max-width:769px){
-          h1 {
-              text-align: left;
-              position: relative;
-              margin-top: 10px;
-          
-          }
-      }
-  
-     
+  .form-registro .inputs .input-email {
+      margin: 10px 24.5%;
+      align-content: left;
       
-    @media screen and (max-width: 767px) and (min-width:426px){  
-
-      .form-1 {
-        width: 90%;
-        height: 50px;
-        max-width: 400px;
-        position: relative;
-        overflow: hidden;
-        margin-left: 11%;
-        margin-right: 11%;
-        margin-bottom: 15px;
-        font-size: 25px;
-       }
-       .form-1 input {
-        width: 100%;
-        height: 100%;
-        background: whitesmoke;
-        color: grey;
-        padding-top: 20px;
-        padding-left: 1%;
-        border: white;
-        outline: 0px;
-        margin-left: 14%;
-        margin-right: 0%;
-        font-size: 20px;
-    }
-
-    .form-2 {
-      width: 90%;
-      height: 50px;
-      max-width: 400px;
-      position: relative;
-      overflow: hidden;
-      margin-left: 11%;
-      margin-right: 11%;
-      margin-bottom: 15px;
-      font-size: 25px;
-     }
-     .form-2 input {
-      width: 100%;
-      height: 100%;
-      background: whitesmoke;
-      color: grey;
-      padding-top: 20px;
-      padding-left: 1%;
-      border: white;
-      outline: 0px;
-      margin-left: 14%;
-      margin-right: 0%;
-      font-size: 20px;
   }
-
-
-
-
-    }
-
-
-    @media (max-width:768px){
-          
-          .font-1{
-              position: relative;
-              right: 115px;
-          }
-          .submit{ 
-              position: relative;
-              left: 1px;
-          }
-  
-    } 
-    
-  @media (min-width:768px){
-      
-    form.form-2 input{ 
-          width: 100%;
-          height: 50px; 
-          right: 10%; 
-          margin-left: 15%; 
-          background-color: #acb5be;
-      }
-
-        .form-2 { 
-          width: 100%;
-          height: 50px; 
-          right: 10%; 
-          margin-left: 20%; 
-      }
-
-      form.form-1 input{ 
-        width: 100%;
-        height: 50px; 
-        right: 10%; 
-        margin-left: 15%; 
-        background-color: #acb5be;
-      }
-        .form-1 { 
-          width: 100%;
-          height: 50px; 
-          right: 10%; 
-          margin-left: 20%; 
-      }
-
+  .form-registro #register-button {
+      padding: 2% 3% 4% 3%;
+  text-align: center;
+  border: solid 0px;
+  /* padding: 3% 8%; */
+  margin: 5%;
+  margin: 3%;
+  background-color: #47525E;
+  color: #FDFDFD;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 8vh;
+  width: 28%;
   }
   
-  @media (max-width:426px){
-      .form-1 { 
-          width: 100%;
-          height: 50px; 
-          right: 15%; 
-          margin-left: 10%; 
-          margin-top: 15%;   
-   }
-  }
-  
-  @media (max-width:425px){
-      form.form-1 input{ 
-         
-          width: 100%;
-          height: 100%;
-          background: whitesmoke;
-          color:grey;
-          left: 26px;
-          position: relative;
-      }
-      .img-login {
-          margin-bottom: 20%;
-      }
-  
-      .center{ margin-bottom: 10%;}
-  }
-  
- 
-  
-  @media (max-width:425px){
-      form.form-2 input{ 
-          width: 100%;
-          height: 100%;
-          background: whitesmoke;
-          color:grey;
-          left: 26px;
-          position: relative;
-      }
-      .font-1{ 
-          position: relative;
-          right: 55px;
-      }
-      .form-2 {   
-        width: 100%;
-        height: 50px; 
-        right: 20%; 
-        margin-left: 10%;
-        margin-top: 5%; 
-    }
-    body { margin: 0% 0%;}
-  }
-  
- 
-  @media (min-width: 1024px){
-      section.form-sec{
-          
-          position: relative;
-          left: 6%;
-      }
-  }
-  
-  @media (min-width: 1440px){
-  .form-1 {
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 28%;
-  }
-  .form-2 {
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 28%;
-  }
-  .submit {
-    font-size: 20px;
-    right: 7%;
-
-    }
-  }
-  
-  
-  @media (max-width:320px){
-      form.form-2 input{ 
-          width: 100%;
-          height: 100%;
-          background: whitesmoke;
-          color:grey;
-          left: 20px;
-          position: relative;
-      }
-  }
-  @media (max-width:320px){
-  form.form-1 input{ 
-      width: 100%;
-      height: 100%;
-      background: whitesmoke;
-      color:grey;
-      left: 20px;
-      position: relative;
-  }
-  }
-
-  @media screen and (max-width: 2560px) and (min-width:1440px){
-    .form-1 {
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 34%;}
-
-    .form-2{ 
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 34%;
-
-    }  
-  }
-
-  @media screen and (max-width: 1440px) and (min-width:1024px){
-    .form-1 {
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 28%;}
-
-    .form-2{ 
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 28%;
-
-    }  
-  }
-
-
-  @media screen and (max-width: 1024px) and (min-width:769px){
-    .form-1 {     
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 22%;
-}
-     .form-2 {
-      width: 100%;
-      height: 50px;
-      right: 10%;
-      margin-left: 22%;
-}
-
-    .font-1{ 
-      font-size: 12px;
-      margin-top: 20px;
-      margin-bottom: 5px;
-      margin-left: 0;
-      position: relative;
-      right: 20%;
-    }
 }
