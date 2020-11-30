@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Serif;
+    text-align: center;
+  }
+  
+  .body{
+      background-color:  #969faa;
+  }
+ .div-block{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: solid 1px#5A6978;
+    text-align: center;
+    color: #3F3F3F;
+    width: 50%;
+    position: relative;
+    left: 25%;
+ }
+
+ .button{ 
+     margin: 1%;
+     padding: 2% ;
+     background-color: #47525E;
+     font-size: 15px;
+     font-weight: bold;
+     text-decoration: white;
+     border: solid #47525E ;
+}
