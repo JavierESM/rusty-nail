@@ -1,8 +1,9 @@
-function guestMiddleware (req, res) {
-    if (req.session.usuarioLogueado == undefined) {
+function guestMiddleware (req, res, next) {
+    if (req.session.usuarioLogueado != undefined) {
         next ();
     } else {
-        res.redirect("regulares")
+        let error = "regulares"
+        res.render("middleware-msg", {error})
     }
 }
 module.exports = guestMiddleware
