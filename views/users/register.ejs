@@ -17,7 +17,8 @@
   <% if (typeof errors != "undefined") {%>
     <ol>
       <% for (var i =  0; i < errors.length; i++) {%>
-        <li> <%=errors[i].msg%> </li>
+        <li> <%=errors[0].email.msg%> </li>
+        <li> <%=errors[0].password.msg%> </li>
       <% } %> 
     </ol>
   <% } %>

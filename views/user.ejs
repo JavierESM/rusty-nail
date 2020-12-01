@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registrate en Rusty Nail</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="/stylesheets/users-detalle.css" type="text/css" media=screen>
+        <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+  </head>
   
-  <title>Registrate en Rusty Nail</title>
-  <link rel="stylesheet" href="/stylesheets/edit-user.css" type="text/css" media=screen>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-</head>
-<body>
-    <p id="welcome">Bienvenido, persona!</p>
-    <h3>Tu informacion</h3>
-    <p>Juancito Ejemplo</p>
-    <p>ejemplo@gmail.com</p>
-    <p>contraseña</p>
-    <p>direccion</p>
-    <p>tarjeta</p>
-    <p>telefono</p>
-    <a href="/users/<%=resultado.id%>/edit"> Editar tu informacion </a>
-</body>
+  <body class="body">
+      <h2 style="margin: 1%">Bienvenido, <%=resultado.name%>!</h2>
+      <h3 style="margin: 1%"> Tu información: </h3>
+      <div class="div-block"><%=resultado.name %></div>
+      <div class="div-block">Email: <%=resultado.email%> </div>
+      <div class="div-block">Contraseña: </div>
+      <div class="div-block">Dirección:<%=resultado.adress%></div>
+      <div class="div-block">Tarjeta:</div>
+      <div class="div-block">Teléfono:</div>
+      <button type="submit" class="button">
+      <a href="/users/<%=resultado.id%>/edit"> Editar tu informacion </a>
+      </button>
+  </body>
+
+</html>
