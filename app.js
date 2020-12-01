@@ -9,6 +9,9 @@ var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
 const session = require("express-session")
+var cookieMW = require("./middlewares/cookieMW")
+var flash = require("connect-flash")
+
 
 var homeRouter = require("./routes/home");
 var bartenderRouter = require("./routes/bartender");
@@ -25,10 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride('_method'))
-app.use(session({secret: "Rusty-cookie"}))
 
+app.use(session({secret: "Rusty-cookie"}))
+app.use(cookieMW)
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
+app.use(flash())
 
 app.use("/", homeRouter);
 app.use("/users", usersRouter);

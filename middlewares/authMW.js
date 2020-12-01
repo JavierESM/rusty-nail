@@ -1,8 +1,9 @@
-function authMiddleware (req, res) {
+function authMiddleware (req, res, next) {
     if (req.session.usuarioLogueado == undefined) {
         next ();
     } else {
-        res.redirect("invitados")
+        let error = "invitados"
+        res.render("middleware-msg", {error})
     }
 }
 module.exports = authMiddleware

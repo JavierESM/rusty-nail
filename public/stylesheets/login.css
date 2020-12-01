@@ -93,7 +93,7 @@ body {
 .form-registro #register-container {
   text-align: center;
 }
-.form-registro #register-button {
+.form-registro .register-button {
   border-radius: 0px;
   border: solid 0px;
   padding: 3% 8%;
@@ -105,7 +105,7 @@ body {
   font-weight: bold;
 }
 
-.form-registro #register-button:hover {
+.form-registro .register-button:hover {
   background-color: #485564;
 }
 
@@ -148,7 +148,7 @@ body {
       align-content: left;
       
   }
-  .form-registro #register-button {
+  .form-registro .register-button {
       padding: 2% 3% 4% 3%;
   text-align: center;
   border: solid 0px;

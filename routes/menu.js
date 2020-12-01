@@ -14,16 +14,20 @@ var storage = multer.diskStorage({
   }
 })
 var upload = multer ({storage : storage})
+const guestMiddleware = require("../middlewares/guestMW")
+const authMiddleware = require ("../middlewares/authMW")
+const adminMiddleware = require("../middlewares/adminMW")
+
 //<< Form para menu >>
-router.get("/create", menuControllers.creator);
+router.get("/create", adminMiddleware, menuControllers.creator);
 //<< Editor carta >>
-router.get("/editar", menuControllers.menuEdit)
+router.get("/editar", adminMiddleware, menuControllers.menuEdit)
 //<< Display para el menu >>
 router.get("/:category?", menuControllers.menu);
 //<< Detalle de producto >>
 router.get("/:id", menuControllers.detail);
 //<< Form para editar >>
-router.get("/:id/edit", menuControllers.editor)
+router.get("/:id/edit", adminMiddleware, menuControllers.editor)
 //<< Accion de crear >>
 router.post("/", upload.any(), menuControllers.create);
 //<< Accion de editar >>
