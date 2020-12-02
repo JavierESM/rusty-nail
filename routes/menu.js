@@ -22,10 +22,11 @@ const adminMiddleware = require("../middlewares/adminMW")
 router.get("/create", adminMiddleware, menuControllers.creator);
 //<< Editor carta >>
 router.get("/editar", adminMiddleware, menuControllers.menuEdit)
-//<< Display para el menu >>
-router.get("/:category?", menuControllers.menu);
 //<< Detalle de producto >>
 router.get("/:id", menuControllers.detail);
+//<< Display para el menu >>
+router.get("/:category?", menuControllers.menu);
+
 //<< Form para editar >>
 router.get("/:id/edit", adminMiddleware, menuControllers.editor)
 //<< Accion de crear >>

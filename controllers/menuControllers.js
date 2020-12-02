@@ -42,14 +42,12 @@ const menuControllers = {
     res.redirect("/");
   },
     detail: function(req,res){
-    let resultado = listado.find(function(producto){
-        return producto.id == req.params.id
-    })
-    if (resultado){ 
-       return res.render ("product-detail", {resultado})
-        }   
-        res.send ("No se encuentran productos")
-    },
+    let idProduct = req.params.id;  
+    let resultado = products.find((product)=> product.id == idProduct);
+      if (resultado){ 
+       return res.render ("products/product-detail", {resultado})
+        }},
+     
 
     editor: function (req,res) {
     let idProduct = req.params.id;
