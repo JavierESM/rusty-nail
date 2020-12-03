@@ -84,11 +84,11 @@ body{
     left:0% ;
     color: #42474f;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     border-top: #42474f solid 3px;
     width: 95%;
     margin: 0% 2%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     padding-top: 3%;
  }
 
@@ -198,7 +198,7 @@ body{
     text-align: center;
     font-weight: bold;
     font-size: 25px;
-    background-color: rgb(95, 206, 130);
+    background-color:  #3e4854;
     color: white;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -219,7 +219,7 @@ body{
     padding: 1%;
     align-items: center;
     text-align: center;
-    background-color: rgb(95, 206, 130);
+    background-color:  #3e4854;
     color: white;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -294,7 +294,7 @@ body{
  }
 
  .submit { 
-     background-color:rgb(95, 206, 130) ;
+     background-color: #3e4854 ;
      color: #ffffff;
      height: 40px;
      padding: 1%;
