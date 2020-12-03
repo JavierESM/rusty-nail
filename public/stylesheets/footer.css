@@ -1,13 +1,13 @@
- * *::after *::before {
+* *::after *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
+body {
   display: flex;
   flex-direction: column;
   margin: 0%;
-  background-color:#898989;
+  background-color: #898989;
   width: 100%;
 }
 .container {
@@ -15,8 +15,8 @@ body{
   flex-flow: row wrap;
   width: 100%;
   margin: 0px;
- background-color:#898989;
-margin: 8% 0%;
+  background-color: #898989;
+  margin: 8% 0%;
 }
 .novedades {
   margin: 1%;
@@ -40,11 +40,11 @@ margin: 8% 0%;
   /* height: 53px;*/
 }
 
-header {
+.container {
   background-color: #898989;
   padding: 1 rem;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   margin: 1px;
 }
 .pie-pagina {

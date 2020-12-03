@@ -25,3 +25,4 @@ check("email").isEmail().withMessage("Por favor, introducí un email válido")]
 router.put("/:id", usersController.edit)
 router.delete("/:id", usersController.destroy)
 module.exports = router;
+

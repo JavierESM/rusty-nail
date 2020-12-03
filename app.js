@@ -3,7 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var methodOverride = require ("method-override");
+var methodOverride = require("method-override");
 var usersRouter = require("./routes/users");
 var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(methodOverride('_method'))
+app.use(methodOverride("_method"));
 
 app.use(session({secret: "Rusty-cookie"}))
 app.use(cookieMW)
@@ -40,6 +40,10 @@ app.use("/users", usersRouter);
 app.use("/product-detail", productRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
+ 
+
+ 
+ 
 app.use("/menu", menuRouter);
 
 // catch 404 and forward to error handler
