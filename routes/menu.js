@@ -26,6 +26,9 @@ router.get("/editar", adminMiddleware, menuControllers.menuEdit)
 router.get("/cocktails/:category?", menuControllers.menu);
 //<< Detalle de producto >>
 router.get("/:id", menuControllers.detail);
+//<< Display para el menu >>
+router.get("/:category?", menuControllers.menu);
+
 //<< Form para editar >>
 router.get("/:id/edit", adminMiddleware, menuControllers.editor)
 //<< Accion de crear >>

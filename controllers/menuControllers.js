@@ -41,17 +41,20 @@ const menuControllers = {
     fs.writeFileSync(productsFilePath, products);
     res.redirect("/");
   },
-  detail: function (req, res) {
-    let idProduct = req.params.id
-    let resultado = products.find((product) => product.id == idProduct);
-    res.render("product-detail", {resultado}); 
+    detail: function(req,res){
+    let idProduct = req.params.id;  
+    let resultado = products.find((product)=> product.id == idProduct);
+      if (resultado){ 
+       return res.render ("products/product-detail", {resultado})
+        }},
+     
 
-  },
-  editor: function (req, res) {
+    editor: function (req,res) {
     let idProduct = req.params.id;
     let resultado = products.find((product) => product.id == idProduct);
     res.render("edit-form", {resultado});
   },
+  
   edit: function (req, res) {
     products.forEach(function (product) {
       if (product.id == req.params.id) {

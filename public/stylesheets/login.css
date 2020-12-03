@@ -36,8 +36,9 @@ body {
 }
 .form-registro {
   padding: 10px 8% 5px 8%;
-  text-align: right;
+  text-align: left;
   background-color: #969FAA;
+  display: block;
 }
 
 .form-registro .inputs {
@@ -96,7 +97,7 @@ body {
 .form-registro .register-button {
   border-radius: 0px;
   border: solid 0px;
-  padding: 3% 8%;
+  padding: 3% 4%;
   margin: 5%;
   margin: 3%;
   background-color: #47525E;
@@ -149,18 +150,17 @@ body {
       
   }
   .form-registro .register-button {
-      padding: 2% 3% 4% 3%;
-  text-align: center;
-  border: solid 0px;
-  /* padding: 3% 8%; */
-  margin: 5%;
-  margin: 3%;
-  background-color: #47525E;
-  color: #FDFDFD;
-  font-size: 1.5em;
-  font-weight: bold;
-  height: 8vh;
-  width: 28%;
+    text-align: center;
+    border: solid 0px;
+    box-sizing: border-box;
+    padding: 3%;
+    margin: 3%;
+    background-color: #47525E;
+    color: #FDFDFD;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 8vh;
+    width: 22%;
+}
   }
   
-}

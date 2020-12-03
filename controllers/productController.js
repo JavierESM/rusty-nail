@@ -11,7 +11,7 @@ vista: function(req, res,) {
          listado
      })
  }, 
- detalle: function(req,res){
+ detail: function(req,res){
     let resultado = listado.find(function(producto){
         return producto.id == req.params.id
     })
