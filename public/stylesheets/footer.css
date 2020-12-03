@@ -1,78 +1,14 @@
- * *::after *::before {
+ *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
-  display: flex;
-  flex-direction: column;
-  margin: 0%;
-  background-color:#898989;
-  width: 100%;
+.form{ 
+  text-align: center;
 }
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 0px;
- background-color:#898989;
-margin: 8% 0%;
-}
-.novedades {
-  margin: 1%;
-  margin-top: 3%;
-  color: #fcfcfc;
-  width: 100%;
-  flex: 1 1 200px;
-}
-.novedades button {
-  background-color: #3e4854;
-  color: #fcfcfc;
-  border-radius: 1%;
-  margin: 5%;
-  /*padding: 7.5px 15px;*/
-  display: block;
-  /*height: 50px;*/
-}
-.barra-virtual {
-  font-size: 3vh;
-  margin: 4%;
-  /* height: 53px;*/
-}
-
-header {
-  background-color: #898989;
-  padding: 1 rem;
-  display: flex;
-  flex-direction: column;
-  margin: 1px;
-}
-.pie-pagina {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: #3c4858;
-  padding: 2rem;
-
-  border-radius: 1px;
-  color: #fcfcfc;
-}
-
-.logo-redes {
-  display: flex;
-  padding: 1rem;
-  margin: 2px;
-  background-color: #636363;
-  justify-content: center;
-}
-.logo-redes .logo {
-  flex: 1 1 200px;
-  display: flex;
-  justify-content: center;
-  font-size: 3vh;
-}
-
-.logo-oficial img {
-  width: 100px;
+.logo{
+  color: white;
+  height: 10px;
 }
 
 .contactos {
@@ -81,7 +17,7 @@ header {
   /*flex-wrap: wrap;*/
   flex-direction: column;
   align-items: left;
-  text-align: left;
+  text-align: center;
   /* margin: 10px;*/
   padding: 2px;
   width: 100%;
@@ -93,12 +29,12 @@ header {
 }
 
 .datosparticulares input {
-  /* height: 30px;*/
+  
   width: 90%;
   border-radius: 1%;
   color: #fcfcfc;
   display: block;
-  border: 1% solid #3e4854;
+  border: 2px solid #3e4854;
   letter-spacing: 1%;
   margin: 5%;
 }
@@ -129,14 +65,6 @@ header {
   color: #fcfcfc;
 }
 
-.advertencia {
-  background-color: #3e4854;
-  color: #fcfcfc;
-  border: 2px solid whitesmoke;
-}
-.advertencia .p {
-  text-align: justify;
-}
 .hero-imagen {
   /* height: 150px;*/
   display: flex;
@@ -152,23 +80,7 @@ h1 {
 .logo a {
   color: white;
 }
-main {
-  flex-grow: 1;
-}
-.pedidos .titulos {
-  text-align: center;
-  font-size: 3vh;
-  color: #fcfcfc;
-  /*margin: 10px;*/
-}
 
-.pedidos h1 {
-  text-align: center;
-  /*margin: 10px;*/
-}
-h1 a {
-  color: white;
-}
 
 @media screen and(min-width:1024px) {
   .container {
