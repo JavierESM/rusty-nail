@@ -5,22 +5,10 @@
     box-sizing: border-box;
 }
 
-.ban-1{
-   
-    background-color: #42474f;
-    width: 105%;
-    height: 18vh;
-    display: flex;
-    border-bottom:gray solid 2px ;
-    
-} 
-
-
 body{ 
 
     background-color:none;
-    margin: 0%;
-    height: 100vh;
+    margin: 0%;       
     justify-content: center;
     width: 100%;                                                                                                                                                                                                                                                                                                                                        
     align-items: center;
@@ -28,41 +16,6 @@ body{
     
 }                                                                                                                                                                           
 
-
-.bar-1{                                                                                                                                                                         
-    background-color: lightblue;                                                                                                                                                                                                                                                                                                                                                                                                                       
-    height: auto;
-    margin: 0 40%;
-    margin-bottom: 5%;
-    border-radius: 2px;
-    text-align: center;
-    color: white;
-     
-}
-
-.detalle-producto{ 
-
-   display: flex;
-   text-align: center;
-   padding: 2%;
-    
-}
-
-.description{ 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-}
-#titulo{ 
-    font-size: 30px;
-    text-decoration: underline;
-    padding: 10px;
-}
-
-.div-1{ 
-    position: relative;
-    left: 230px;
-}
 
 .product-sec { 
     display: flex;
