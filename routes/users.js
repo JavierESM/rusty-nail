@@ -9,7 +9,7 @@ const idMiddleware = require("../middlewares/idMW")
 
 const authMiddleware = require ("../middlewares/authMW")
 const adminMiddleware = require("../middlewares/adminMW")
-
+const userValidationMiddleware = require("../middlewares/userValidationMW")
 
 router.get('/', adminMiddleware, usersController.lista);
 router.get("/panel-de-control", adminMiddleware, usersController.panel)
@@ -18,9 +18,7 @@ router.get("/login", authMiddleware, usersController.login)
 router.get("/bienvenido", guestMiddleware, usersController.welcome)
 router.get("/:id",  idMiddleware, usersController.detail);
 router.get("/:id/edit", idMiddleware, usersController.editor)
-router.post("/", [check("email").isEmail().withMessage("Por favor, introducí un email válido"), 
-check("password").isLength({min : 8, max : 25}).withMessage("Tu contraseña debe tener entre 8 y 25 caracteres"), 
-check("password").isHash(), check("password")], usersController.create)
+router.post("/", userValidationMiddleware, usersController.create)
 router.post("/login-process", [
 check("email").isEmail().withMessage("Por favor, introducí un email válido")]
 , usersController.processLogin)

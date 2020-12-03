@@ -42,8 +42,9 @@ const menuControllers = {
     res.redirect("/");
   },
   detail: function (req, res) {
+    let idProduct = req.params.id
     let resultado = products.find((product) => product.id == idProduct);
-    res.render("product", { resultado }); 
+    res.render("product-detail", {resultado}); 
 
   },
   editor: function (req, res) {

@@ -23,7 +23,7 @@ router.get("/create", adminMiddleware, menuControllers.creator);
 //<< Editor carta >>
 router.get("/editar", adminMiddleware, menuControllers.menuEdit)
 //<< Display para el menu >>
-router.get("/:category?", menuControllers.menu);
+router.get("/cocktails/:category?", menuControllers.menu);
 //<< Detalle de producto >>
 router.get("/:id", menuControllers.detail);
 //<< Form para editar >>
