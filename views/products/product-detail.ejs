@@ -19,73 +19,65 @@
 
   </div>
 </header>
+<body>
+  <h2 style="text-align: center; margin-top: 10%; font-size: 60px;"><%=resultado.name%></h2>
 
-<h2 style="text-align: center; margin-top: 7%; font-size: 60px;"><%=resultado.name%></h2>
 
-</section>
+  <article class="art-image-2"><img src="../<%=resultado.img%>" class="art-image">
+    <section style="border-top: 5px solid; border-bottom: 5px solid; width: 95%; margin: auto;">
+        <h3 style="font-size: 40px; text-align: center;"> Detalles del cocktail</h3>
+        <p style="font-size: 4vh; text-align: center;padding: 15px;border-bottom: 2px solid;"> <%= resultado.description %></p>
 
-<article class="art-image-2"><img src="../<%=resultado.img%>" class="art-image">
-  <section style="border-top: 5px solid; border-bottom: 5px solid; width: 95%; margin: auto;">
-      <h3 style="font-size: 40px; text-align: center;"> Detalles del cocktail</h3>
-      <p style="font-size: 4vh; text-align: center;padding: 15px;border-bottom: 2px solid;"> <%= resultado.description %></p>
+        <section class="contenedor-details">
 
-      <section class="contenedor-details">
-
-        <button style="background-color: white; height: 6vh; width: 31%; font-size: 30px; margin: 10px;"> Precio: $<%=resultado.price %></button>
-        <article class="precio-details-2">   Delivery a todo CABA</article>
-        <p id="detail">Beber con moderación. Prohibida su venta a menores de 18 años. </p>
+          <button style="background-color: white; height: 6vh; width: 31%; font-size: 30px; margin: 10px;"> Precio: $<%=resultado.price %></button>
+          <article class="precio-details-2">   Delivery a todo CABA</article>
+          <p id="detail">Beber con moderación. Prohibida su venta a menores de 18 años. </p>
+        </section>
       </section>
+
+    <section class="agregar-c">
+
+      <a href="/carrito"> Agregar a la bolsa de pedidos</a>
+
     </section>
 
-  <section class="agregar-c">
 
-    <a href="/carrito"> Agregar a la bolsa de pedidos</a>
+    <section class="product-rel">
 
-  </section>
+      <div id="prodrel"> Productos Relacionados </div>
 
+      <img src="../images/icon-flecha.png" alt="icon.arrow" id="arrow">
 
-  <section class="product-rel">
+    </section>
 
-    <div id="prodrel"> Productos Relacionados </div>
+    <section class="imag-relacion">
+      <article id="text"> <img src="../images/cosmopolitan.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
+      <div id="text-2"> Cosmopolitan $690
+        <section class="agregar-c-rel">
+          <a href="/carrito"> Agregar a la bolsa de pedidos</a>
+        </section>
+      </div>
+      <article id="text"> <img src="../images/Early-summer.jpg" style="height: 90%; width: 90%; margin:5% 5%"> </article>
+      <div id="text-2"> Early Summer $790
+        <section class="agregar-c-rel">
+          <a href="/carrito"> Agregar a la bolsa de pedidos</a>
+        </section>
+      </div>
+      <article id="text"> <img src="../images/early-grey.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
+      <div id="text-2"> Early Grey $700
+        <section class="agregar-c-rel">
+          <a href="/carrito"> Agregar a la bolsa de pedidos</a>
+        </section>
+      </div>
 
-    <img src="../images/icon-flecha.png" alt="icon.arrow" id="arrow">
+    </section>
 
-  </section>
+  
 
-  <section class="imag-relacion">
-    <article id="text"> <img src="../images/cosmopolitan.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
-    <div id="text-2"> Cosmopolitan $690
-      <section class="agregar-c-rel">
-        <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-      </section>
+    <div>
+      <%- include('../partials/footer') %>
     </div>
-    <article id="text"> <img src="../images/Early-summer.jpg" style="height: 90%; width: 90%; margin:5% 5%"> </article>
-    <div id="text-2"> Early Summer $790
-      <section class="agregar-c-rel">
-        <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-      </section>
-    </div>
-    <article id="text"> <img src="../images/early-grey.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
-    <div id="text-2"> Early Grey $700
-      <section class="agregar-c-rel">
-        <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-      </section>
-    </div>
-
-  </section>
-
-  <section class="novedades">
-
-    Enterate de todas las Novedades <br>
-
-    <label placeholder="Email"></label>
-    <input type="email" placeholder="Email" class="email">
-    <button type="submit" class="submit">Suscribirme </button>
-
-  </section>
-
-  <div>
-
-  </div>
+  </body>  
 
 </html>

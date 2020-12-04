@@ -6,13 +6,7 @@ let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const {check, validationResult, body} = require("express-validator")
-var cookie = require("cookie-parser")
-
-
-
-
-
-
+var cookie = require("cookie-parser");
 
 var usersController = { 
     
@@ -34,22 +28,21 @@ var usersController = {
             users = JSON.parse(usersJSON)
             
             for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.cookies.email) {
-                   
-                        var usuarioALoguearse = users[i]
-                        break
-                    
+                if (users[i].email == req.cookies.email || users[i].req.body.email
+                     ) 
+                { var usuarioALoguearse = users[i]
+                        break                    
                 }
             }
             if (usuarioALoguearse == undefined) {
-                return res.redirect("users/login", {errors : [{
+                return res.render("users/login", {errors : [{
                     msg : "Credenciales inválidas"
                 }]})
             } 
             
             req.session.usuarioLogueado = usuarioALoguearse
             if (req.body.recordame != undefined) {
-                res.cookie("recordame", usuarioALoguearse.id, {
+                res.cookie("recordame", usuarioALoguearse.email, {
                     maxAge : 60000 * 10 * 340 * 85
                 })
             }
@@ -58,8 +51,9 @@ var usersController = {
         }
         else 
         {return res.render("users/login", {errors: errors.errors})}
-        
     },
+                
+            
     
     login: function (req, res){
         res.render("users/login", {errors: {}})
@@ -84,6 +78,7 @@ var usersController = {
         users.push({
             email : req.body.email,
             password: bcrypt.hashSync(req.body.password, 11), 
+            confirmPassword: bcrypt.hashSync(req.body.confirmPassword, 11),
             id: users[users.length - 1].id + 1,
             category: "user"
         });

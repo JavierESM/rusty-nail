@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 * *::after *::before {
+=======
+ *{
+>>>>>>> 30ca99279ea7a0b1c5236257777156c18464d699
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 body {
   display: flex;
   flex-direction: column;
@@ -86,19 +91,23 @@ body {
   padding: 2px;
   width: 100%;
   flex: 1 1 200px;
+=======
+.form{ 
+  text-align: center;
+>>>>>>> 30ca99279ea7a0b1c5236257777156c18464d699
 }
-.contactos p {
-  color: #fcfcfc;
-  margin: 5%;
+.logo{
+  
+  height: 10px;
 }
 
 .datosparticulares input {
-  /* height: 30px;*/
+  
   width: 90%;
   border-radius: 1%;
   color: #fcfcfc;
   display: block;
-  border: 1% solid #3e4854;
+  border: 2px solid #3e4854;
   letter-spacing: 1%;
   margin: 5%;
 }
@@ -129,14 +138,6 @@ body {
   color: #fcfcfc;
 }
 
-.advertencia {
-  background-color: #3e4854;
-  color: #fcfcfc;
-  border: 2px solid whitesmoke;
-}
-.advertencia .p {
-  text-align: justify;
-}
 .hero-imagen {
   /* height: 150px;*/
   display: flex;
@@ -152,23 +153,7 @@ h1 {
 .logo a {
   color: white;
 }
-main {
-  flex-grow: 1;
-}
-.pedidos .titulos {
-  text-align: center;
-  font-size: 3vh;
-  color: #fcfcfc;
-  /*margin: 10px;*/
-}
 
-.pedidos h1 {
-  text-align: center;
-  /*margin: 10px;*/
-}
-h1 a {
-  color: white;
-}
 
 @media screen and(min-width:1024px) {
   .container {

@@ -21,7 +21,7 @@ router.get("/:id/edit", idMiddleware, usersController.editor)
 router.post("/", userValidationMiddleware, usersController.create)
 router.post("/login-process", [
 check("email").isEmail().withMessage("Por favor, introducí un email válido")]
-, usersController.processLogin)
+,authMiddleware , usersController.processLogin)
 router.put("/:id", usersController.edit)
 router.delete("/:id", usersController.destroy)
 module.exports = router;
