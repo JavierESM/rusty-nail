@@ -30,11 +30,8 @@ var usersController = {
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == req.cookies.email || users[i].req.body.email
                      ) 
-                {
-                   
-                        var usuarioALoguearse = users[i]
-                        break
-                    
+                { var usuarioALoguearse = users[i]
+                        break                    
                 }
             }
             if (usuarioALoguearse == undefined) {
