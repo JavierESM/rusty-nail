@@ -28,7 +28,8 @@ var usersController = {
             users = JSON.parse(usersJSON)
             
             for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.cookies.email || users[i].req.body.email) 
+                if (users[i].email == req.cookies.email || users[i].req.body.email
+                     ) 
                 {
                    
                         var usuarioALoguearse = users[i]
