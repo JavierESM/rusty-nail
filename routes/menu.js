@@ -20,8 +20,6 @@ const adminMiddleware = require("../middlewares/adminMW")
 
 //<< Form para menu >>
 router.get("/create", adminMiddleware, menuControllers.creator);
-//<< Editor carta >>
-router.get("/editar", adminMiddleware, menuControllers.menuEdit)
 //<< Display para el menu >>
 router.get("/cocktails/:category?", menuControllers.menu);
 //<< Detalle de producto >>

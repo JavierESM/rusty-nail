@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registrate en Rusty Nail</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="/stylesheets/users-detalle.css" type="text/css" media=screen>
+        <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+  </head>
+  
+  <body class="body">
+      <form action="/users/<%=resultado.id%>/?_method=put" method="POST">
+        <h3 style="margin: 1%"> Tu información: </h3>
+
+        <div class="div-block">
+        <input type="text" id="full_name" name="full_name" placeholder="<%=resultado.full_name %>" class="input">
+      </div>
+      <div class="div-block">
+        <input type="text" id="email" name="email" placeholder="<%=resultado.email%>" class="input">
+      </div>
+      <div class="div-block">
+        <input type="text" id="address" name="address" placeholder="<%=resultado.address%>" class="input">
+      </div>
+      <div class="div-block">
+        <input type="tel" id="phone" name="phone" placeholder="<%=resultado.phone %>" class="input">
+      </div>
+      <div class="div-block">
+        <input type="password" id="password" name="password" class="input">
+      </div>
+
+      <button type="submit" class="save-btn">Guardar cambios</button>
+    </form>
+  </body>
+
+</html>
+
+</html>

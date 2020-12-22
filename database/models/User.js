@@ -4,48 +4,49 @@ module.exports = (sequelize, dataTypes) => {
         id : {
             autoIncrement : true, 
             primaryKey : true, 
-            type : dataTypes.INTEGER.NOTNULL
+            type : dataTypes.INTEGER,
+            allowNull : false
         }, 
         role : {
-            type : dataTypes.STRING.NOTNULL
+            type : dataTypes.STRING,
+            allowNull : false
         }, 
         full_name : {
-            type : dataTypes.STRING.NOTNULL
+            type : dataTypes.STRING,
+            allowNull : false
         },
         address : {
-            type : dataTypes.STRING.NOTNULL
+            type : dataTypes.STRING,
+            allowNull : false
         },
         phone : {
-            type : dataTypes.STRING.NOTNULL
+            type : dataTypes.STRING,
+            
         },
         email : {
-            type : dataTypes.STRING.NOTNULL
+            type : dataTypes.STRING,
+            allowNull : false
         }, 
         birthdate : {
             type : dataTypes.DATE
+        }, 
+        password : {
+            type : dataTypes.STRING,
+            allowNull : false 
         }
     }
     const config = {timestamps : false}
+    const User = sequelize.define(alias, cols, config)
+
     User.associate = function(models){
-        User.hasMany(models.Permits,{
-        as : "permits",
-        foreignKey : "permit_id"
-        })
-    }
-    User.associate = function(models){
-        User.hasMany(models.Bills,{
-        as : "bills",
-        foreignKey : "user_id"
-        })
-    }
-    User.associate = function(models){
-        User.belongsTo(models.Shopping_carts,{
+        
+    
+        User.hasMany(models.Shopping_carts,{
         as : "shopping_carts",
         foreignKey : "user_id"
         })
     }
 
     
-    const User = sequelize.define(alias, cols, config)
     return User
 }

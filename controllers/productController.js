@@ -1,4 +1,3 @@
-var listado = require ('../data/products.json')
 
 const productController = { 
 

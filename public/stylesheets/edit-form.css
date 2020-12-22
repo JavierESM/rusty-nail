@@ -27,8 +27,8 @@ label {
 }
 
 #entry-cont{
-    width: 95%;
-    height: 70vh;
+    width: 98%;
+    height: 101vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,14 +36,15 @@ label {
     border: white;
     border-style: solid;
     border-width: thin;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-bottom: 3%;
 }
 .couple{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 95%;
     justify-content: space-around;
+    align-self: center;
 }
 .data-entry{
     display: flex;
@@ -68,6 +69,14 @@ label {
     width: 93.5%;
     height: 4.5vh;
 }
+#flavour{
+    width: 93.5%;
+    height: 4.5vh;
+}
+#fashion{
+    width: 93.5%;
+    height: 4.5vh;
+}
 #img {
     width: 50%;
     height: 2vh;
@@ -80,7 +89,18 @@ label {
 }
 .save-btn{
     height: 9vh;
-    width: 59%;
+    width: 60.8%;
+    font-size: 2em;
+    font-family: serif;
+    background-color: black;
+    color: white;
+    border: white;
+    border-style: solid;
+    border-width: thin;
+}
+.del-btn{
+    height: 9vh;
+    width: 44.3%;
     font-size: 2em;
     font-family: serif;
     background-color: black;

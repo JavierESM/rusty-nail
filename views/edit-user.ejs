@@ -10,23 +10,23 @@
 </head>
 
 <body style="background-color: #969FAA;">
-   
-<h1>Editá tu información</h1>
-    
-            
-        <form class="form-registro" action="/users/<%=resultado.id%>/?_method=put" Method="POST">
-            <div class=inputs>
-                <input type="text" id="name" name="name" placeholder=" NOMBRE Y APELLIDO" class="input"></p>
-                <input type="email" id="email" name="email" placeholder=" E-MAIL" class="input input-email"></p>
-                        <input type="password" id="password" name="password" placeholder=" CONTRASEÑA" class="input"></p>
-                        <input type="adress" id="adress" name="adress" placeholder="DIRECCIÓN Y DEPARTAMENTO" class="input input-adress"></p>
-                        <input type="card" id="card" name="card" placeholder="TARJETA" class="input input-adress"></p>
-                        <input type="phone_number" id="phone_number" name="phone_number" placeholder="TELÉFONO" class="input input-phone_number"></p>
+  
+  <h1>Editá tu información</h1>
+  
+  
+  <form class="form-registro" action="/users/<%=resultado.id%>/?_method=put" Method="POST">
+    <div class=inputs>
+      <input type="text" id="name" name="name" placeholder=" NOMBRE Y APELLIDO" class="input"></p>
+      <input type="email" id="email" name="email" placeholder=" E-MAIL" class="input input-email"></p>
+      <input type="password" id="password" name="password" placeholder=" CONTRASEÑA" class="input"></p>
+      <input type="adress" id="adress" name="adress" placeholder="DIRECCIÓN Y DEPARTAMENTO" class="input input-adress"></p>
+      <input type="card" id="card" name="card" placeholder="TARJETA" class="input input-adress"></p>
+      <input type="phone_number" id="phone_number" name="phone_number" placeholder="TELÉFONO" class="input input-phone_number"></p>
+      
+      
+    </div>
+  </div>
+  <div id=register-container><input type="submit" value="Confirmar" id="register-button"></div>    
+</form>
 
-
-                </div>
-            </div>
-            <div id=register-container><input type="submit" value="Confirmar" id="register-button"></div>    
-        </form>
-    
 </body>

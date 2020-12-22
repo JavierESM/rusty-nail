@@ -20,7 +20,7 @@
     <div class="form-cont">
       <div>
         <div>
-          <h2 class="menu-title">Formulario de creación de productos</h2>
+          <h2 class="menu-title">Formulario de edición de productos</h2>
         </div>
       </div>
       <div>
@@ -48,6 +48,24 @@
                   <option value="nuestros">Nuestros</option>
                 </select>
               </div>
+              <div class="data-entry">
+                <label for="flavour" class="form-label">Sabor:</label>
+                <select name="flavour" id="flavour" class="form-input">
+                  <option value="dulce">Dulce</option>
+                  <option value="citrico">Cítrico</option>
+                  <option value="aperitivo">Aperitivo</option>
+    
+                </select>
+              </div>
+              <div class="data-entry">
+                <label for="fashion" class="form-label">Fashion:</label>
+                <select name="fashion" id="fashion" class="form-input">
+                  <option value="seco">Seco</option>
+                  <option value="frutal">Frutal</option>
+                  <option value="suave">Suave</option>
+                  <option value="intenso">Intenso</option>
+                </select>
+              </div>
             </div>
             <div class="couple">
               <div class="data-entry">
@@ -59,10 +77,10 @@
 
             </div>
         </form>
-        <div>
+        <div style="width: 100%;">
           <form action="/menu/<%=resultado.id%>/?_method=delete" method="POST">
-            <button type="submit" class="save-btn">Eliminar Producto</button>
-
+            <button type="submit" class="del-btn">Eliminar Producto</button>
+            
           </form>
         </div>
 

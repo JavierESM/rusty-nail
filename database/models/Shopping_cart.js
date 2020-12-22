@@ -4,37 +4,37 @@ module.exports = (sequelize, dataTypes) => {
         id : {
             autoIncrement : true, 
             primaryKey : true, 
-            type : dataTypes.INTEGER.NOTNULL
+            type : dataTypes.INTEGER,
+            allowNull : false
         },
 
         quantity : {
-            type : dataTypes.TINYINT.NOTNULL
+            type : dataTypes.TINYINT,
+            allowNull : false
         }, 
         total_price : {
-            type : dataTypes.DECIMAL(8,2).NOTNULL
+            type : dataTypes.DECIMAL(8,2),
+            allowNull : false
         }, 
     }
     const config = {
         timestamps : false
     }
+    const Shopping_cart = sequelize.define(alias, cols, config)
+
     Shopping_cart.associate = function(models){
         Shopping_cart.belongsTo(models.Bills, {
             as : "bills",
             foreignKey : "shopping_cart_id"
         })
-    }
-    Shopping_cart.associate = function(models){
-        Shopping_cart.hasMany(models.Products, {
+        Shopping_cart.belongsTo(models.Products, {
             as : "products",
             foreignKey : "product_id"
         })
-    }
-    Shopping_cart.associate = function(models){
-        Shopping_cart.hasMany(models.Users, {
+        Shopping_cart.belongsTo(models.Users, {
             as : "users",
             foreignKey : "user_id"
         })
     }
-    const Shopping_cart = sequelize.define(alias, cols, config)
     return Shopping_cart
 }

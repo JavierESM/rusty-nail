@@ -10,7 +10,7 @@ let userValidarionMiddleware = [
     check ("password")
         .isLength({min : 8, max : 50})
         .withMessage("Tu contraseña debe tener entre 8 y 25 caracteres"),
-    check("name")
+    check("full_name")
         .isLength({min : 4})
         .withMessage("Este campo es obligatorio")
 ]

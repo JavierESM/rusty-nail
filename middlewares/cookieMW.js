@@ -1,7 +1,5 @@
 var path = require("path");
 const fs = require ('fs');  
-const usersFilePath = path.join(__dirname, '../data/usersList.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 var cookie = require("cookie-parser");
 
 function cookieMiddleware (req, res, next) {

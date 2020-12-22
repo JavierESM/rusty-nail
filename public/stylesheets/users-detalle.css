@@ -22,6 +22,27 @@
     left: 25%;
  }
 
+ .save-btn{
+    margin: 1%;
+    padding: 2%;
+    background-color: #47525E;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: white;
+    border: solid #47525E;
+    color: white;
+ }
+
+ .inputs {
+    
+    margin-bottom: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    box-sizing: border-box;
+}
  .button{ 
      margin: 1%;
      padding: 2% ;

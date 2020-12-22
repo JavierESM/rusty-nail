@@ -29,11 +29,11 @@
     <div class="grid">
       <% for (var i = 0; i < resultado.length; i++) { %>
       <div class="shape">
-        <a href="/menu/<%=resultado[i].id%>"><img src="/<%=resultado[i].img%>" class="prod-img"></a>
+        <a href="/menu/<%=resultado[i].id%>"><img src="images/<%=resultado[i].image%>" class="prod-img"></a>
         <div class=tag>
-          <p class="trago"><%=resultado[i].name%> </p>
+          <p class="trago"><%=resultado[i].drink%> </p>
           <div class="counter">
-            <p class="s">$ <%=toThousand(resultado[i].price)%></p>
+            <p class="s">$ <%=resultado[i].unit_price%></p>
             <div class="counter-n">
               <p>-</p>
               <p>1</p>
