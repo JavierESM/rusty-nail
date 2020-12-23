@@ -163,4 +163,28 @@ body {
     width: 22%;
 }
   }
+
+  #sec-us { 
+    text-align: center;
+    padding: 1%;    
+    margin: 2%;
+    color: white;  
+    position: relative;
+    left: 10%;
+    
+  }
+  #sec-us p{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight:lighter;
+    padding-bottom: 20px;
+    width: 80%;
+  }
   
+  #us-title{ text-align: center;  
+  font-family: 'Bebas Neue', cursive;
+  color: white;
+  font-weight: lighter;
+  margin-top: 20vh;  
+  font-size: 50px;
+  }

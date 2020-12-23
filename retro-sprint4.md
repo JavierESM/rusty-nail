@@ -1,1 +1,0 @@
-Borré un check de password que no tenía condicion para validar
