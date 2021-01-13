@@ -117,6 +117,7 @@ var usersController = {
     },
     edit: function (req, res) {
         db.Users.update({
+          
             full_name: req.body.full_name,
             address: req.body.address,
             phone: req.body.phone,
@@ -126,7 +127,7 @@ var usersController = {
             where: {
                 id: req.params.id
             }
-        }).then(function(){res.redirect("/users")})
+        }).then(function(){res.redirect("/home")})
         .catch(function (errors) {
             console.log(errors)
         })
