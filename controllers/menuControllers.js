@@ -2,7 +2,11 @@
 let db = require("../database/models")
 const { Op } = require('sequelize');
 var toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+const {
+  check,
+  validationResult,
+  body
+} = require("express-validator")
 const menuControllers = {
   menu: function (req, res) {
     let query = req.params.category
@@ -30,6 +34,9 @@ const menuControllers = {
     res.render("create-form");
   },
   create: function (req, res, next) {
+    let errors = validationResult(req)
+        console.log(errors)
+        if (errors.isEmpty()) {
     db.Products.create({
       drink : req.body.name,
       description : req.body.description,
@@ -43,6 +50,14 @@ const menuControllers = {
         console.log(errors)
     })
     res.redirect("/");
+  }
+  else {
+    let resultado = req.params.id
+    res.render("create-form", {
+      errors: errors.errors, resultado  
+  })
+  console.log(errors.errors)
+  }
   },
     detail: function(req,res){
     let busqueda = req.params.id
@@ -52,7 +67,14 @@ const menuControllers = {
       console.log(errors)}
     )
   },
-
+    menuEditar : function(req, res){
+    
+    db.Products.findAll().then(function(resultado){
+      res.render ("menu-edit", {resultado})
+    }).catch(function(errors){
+      console.log(errors)
+    })
+    },
     editor: function (req,res) {
     let busqueda = req.params.id
     db.Products.findByPk(busqueda).then(function(resultado){
@@ -64,6 +86,9 @@ const menuControllers = {
   
   edit: function (req, res) {
     let resultado = req.params.id
+    let errors = validationResult(req)
+        console.log(errors)
+        if (errors.isEmpty()) {
       db.Products.update({
         drink : req.body.name,
         description : req.body.description,
@@ -76,6 +101,14 @@ const menuControllers = {
         where : {id : resultado}
       })
     res.redirect("/menu");
+  }
+    else {
+      let resultado = req.params.id
+      res.render("edit-form", {
+        errors: errors.errors, resultado  
+    })
+    console.log(errors.errors)
+    }
   },
 
   destroy: function (req, res) {

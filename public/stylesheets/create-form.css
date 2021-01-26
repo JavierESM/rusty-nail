@@ -16,6 +16,16 @@ label {
     color: white;
     font-size: 1.4em;
 }
+ul {
+    margin: -2% 1% 4% 5%;
+    font-size: 1.3em;
+}
+
+#errorList{
+    flex-direction: column;
+    place-items: left;
+    list-style: none;
+}
 
 .menu-title{
     color: white;

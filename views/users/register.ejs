@@ -3,52 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <title>Registrate en Rusty Nail</title>
   <link rel="stylesheet" href="/stylesheets/register.css">
   <link rel="stylesheet" href="/stylesheets/nav.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+<script>
+  window.addEventListener("load", function(){
+    let emailField = document.getElementById("email")
+    let passwordField = document.getElementById("password")
+    let scndPasswordField = document.getElementById("confirmPassword")
+    let fullName = document.getElementById("full_name")
+    let address = document.getElementById("address")
+    let form = document.getElementById("form")
+    let errorList = document.getElementById("errorList")
+    emailField.addEventListener("blur", function(e){
+      console.log(errors)
+      fetch("http://localhost:3000/api/register/check?email=" + this.value)
+      .then(
+      res => {
+        if (res.status == 200){
+          errors.push("El email introducido ya pertenece a un usuario")
+          e.stopPropagation()
+          console.log(this.value)
+        } else {
+          console.log("Email bien")
+        }
+      }
+      ).catch(err => {
+        res.send(err)
+      })
+      for (let i = 0; i < errors.length; i++){
+          errorList.innerHTML += "<li>" + errors[i] + "<li>"
+        }
+        errorList.style.display = "flex"
+    })
+    
+    let errors = []
+    form.addEventListener("submit", function(e){
+      
+      let errors = []
+      
+      let emailFieldValue = emailField.value
+      
+      let isEmail = emailFieldValue.includes("@")
+      
+      if (isEmail = false){
+        errors.push("Debes introducir un email valido")
+      }
+      
+      if (emailField.value == ""){
+        errors.push("El email no puede estar vacío")
+      }
+      
+      if (passwordField.value.length < 8) {
+        errors.push("La contraseña debe tener más de 8 caracteres")
+      }
+      
+      if (passwordField.value.length > 25){
+        errors.push("La contraseña no puede tener más de 25 caracteres")
+      }
+      
+      if (passwordField.value != scndPasswordField.value || scndPasswordField.value == ""){
+        errors.push("Debes introducir la misma contraseña dos veces")
+      }
+      
+      let isFullName = fullName.value.includes(" ")
+      
+      if(isFullName = false || fullName.value == "") {
+        errors.push("Debes incluir tanto tu nombre como apellido")
+      }
+      
+      if(address.value == "") {
+        errors.push("Debes incluir tu dirección")
+      }
+      console.log(errors)
+      if (errors.length > 0) {
+        e.preventDefault()
+        for (let i = 0; i < errors.length; i++){
+          errorList.innerHTML += "<li>" + errors[i] + "<li>"
+        }
+        errorList.style.display = "flex"
+      }
+      
+    })
+    
+  })
+</script>
 <body>
   <%- include("../partials/nav") %> 
-
+  
   <div id="register-title">Registro</div>
   <% if (typeof errors != "undefined") {%>
-    <ol>
+    <ul id="ol">
       <% for (var i =  0; i < errors.length; i++) {%>
         <li> <%=errors[i].msg%> </li>
-      <% } %> 
-    </ol>
-  <% } %>
-  
-  <form class="form-registro" method="POST" action="/users">
-    <div class=inputs>
-      <input type="email" id="email" name="email" placeholder=" E-MAIL" class="input input-email">
-      <div class="paired-inputs">
-        <div class="pass-and-confirm">
-          <input type="password" id="password" name="password" placeholder=" CONTRASEÑA" class="input">
-          <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" REINGRESAR CONTRASEÑA"
-            class="input">
-         
-        </div>
-        <div class="name-and-surname">
-          <input type="text" id="full_name" name="full_name" placeholder="NOMBRE Y APELLIDO " class="input">
-        </div>
-        <div class="name-and-surname">
-          <input type="text" id="address" name="address" placeholder="Dirección " class="input">
-        </div>
-      </div>
-    </div>
-    <div class="checkboxes">
-      <input type="checkbox" name="age-validator" value="over-18"> Declaro que soy mayor de 18 años.
+        <% } %> 
+      </ul>
+      <% } %>
       
-      <input type="checkbox" name="accept-TOS" value="TOS-accepted"> He leído y acepto los Términos y Condiciones del
-        servicio.
+
+        <ul id="errorList" style="display: none;">
+          
+        </ul>
+    
       
-      <input type="checkbox" name="subscribe" value="subscribe" checked> Quiero recibir ofertas y promociones de
-        Rusty Nail en mi e-mail.
-    </div>
-    <div id=register-container><input type="submit" value="REGISTRAR" id="register-button"></div>
-  </form>
-</body>
+      <form class="form-registro" method="POST" action="/users" id="form">
+        <div class=inputs>
+          <input type="email" id="email" name="email" placeholder=" E-MAIL" class="input input-email">
+          <p id="email-error"></p>
+          <div class="paired-inputs">
+            <div class="pass-and-confirm">
+              <input type="password" id="password" name="password" placeholder=" CONTRASEÑA" class="input">
+              <p id="pswrd-error"></p>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" REINGRESAR CONTRASEÑA"
+              class="input">
+              <p id="scnd-pswrd-error"></p>  
+              
+            </div>
+            <div class="name-and-surname">
+              <input type="text" id="full_name" name="full_name" placeholder="NOMBRE Y APELLIDO " class="input">
+              <p id="name-error"></p>
+            </div>
+            <div class="name-and-surname">
+              <input type="text" id="address" name="address" placeholder="Dirección " class="input">
+              <p id="adress-error"></p>
+            </div>
+          </div>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" name="age_validator" value="over-18"> Declaro que soy mayor de 18 años.
+          <p id="age-error"></p>
+          <input type="checkbox" name="accept_TOS" value="TOS-accepted"> He leído y acepto los Términos y Condiciones del
+          servicio.
+          <p id="terms-error"></p>
+          <input type="checkbox" name="subscribe" value="subscribe" checked> Quiero recibir ofertas y promociones de
+          Rusty Nail en mi e-mail.
+        </div>
+        <div id=register-container><input type="submit" value="REGISTRAR" id="register-button"></div>
+      </form>
+    </body>
+    

@@ -8,6 +8,7 @@ var usersRouter = require("./routes/users");
 var productRouter = require("./routes/product");
 var carritoRouter = require("./routes/carrito");
 var menuRouter = require("./routes/menu");
+var apiRegisterRouter = require("./routes/api/register")
 const session = require("express-session")
 //var cookieMW = require("./middlewares/cookieMW")
 var flash = require("connect-flash")
@@ -40,12 +41,9 @@ app.use("/users", usersRouter);
 app.use("/product-detail", productRouter);
 app.use("/bartender", bartenderRouter);
 app.use("/carrito", carritoRouter);
-app.use("/historia", historyRouter); 
-
- 
- 
+app.use("/historia", historyRouter);  
 app.use("/menu", menuRouter);
-
+app.use("/api/register", apiRegisterRouter)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

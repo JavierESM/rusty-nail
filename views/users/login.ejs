@@ -12,6 +12,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     
     <title>Rusty Nail</title>
+    <script>
+       window.addEventListener("load", function(){
+    let emailField = document.getElementById("email")
+    let passwordField = document.getElementById("password")
+    let form = document.getElementById("form")
+    form.addEventListener("submit", function(e){
+      let errors = []
+      let emailFieldValue = emailField.value
+      
+      let isEmail = emailFieldValue.includes("@")
+      
+      if (isEmail = false){
+        errors.push("Debes introducir un email valido")
+      }
+      
+      if (emailField.value == ""){
+        errors.push("El email no puede estar vacío")
+      }
+      
+      if (passwordField.value.length < 8) {
+        errors.push("La contraseña debe tener más de 8 caracteres")
+      }
+      
+      if (passwordField.value.length > 25){
+        errors.push("La contraseña no puede tener más de 25 caracteres")
+      }
+      if (errors.length > 0) {
+        e.preventDefault()
+        for (let i = 0; i < errors.length; i++){
+          errorList.innerHTML += "<li>" + errors[i] + "<li>"
+        }
+        errorList.style.display = "flex"
+      }
+    })
+
+  })
+    </script>
   </head>
   <%- include("../partials/nav") %> 
 
@@ -20,13 +57,18 @@
    
   </section>
   <% if (typeof errors != "undefined") {%>
-    <ol>
+    <ul>
       <% for (var i =  0; i < errors.length; i++) {%>
         <li> <%=errors[i].msg%> </li>
       <% } %> 
-    </ol>
+    </ul>
   <% } %>
-  <form class="form-registro" action="/users/login-process" Method="POST">
+        
+
+  <ul id="errorList" style="display: none;">
+          
+  </ul>
+  <form class="form-registro" action="/users/login-process" Method="POST" id="form">
     <div class=inputs>
       <input type="text" id="email" name="email" placeholder=" E-MAIL" class="input input-email"></p>
       <div class="pass-and-confirm">

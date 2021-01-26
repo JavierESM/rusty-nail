@@ -33,26 +33,45 @@ var usersController = {
             
             db.Users.findOne({ where: {email: req.cookies.email ? req.cookies.email : req.body.email}
                }).then(user => {
-                var usuarioALoguearse = user   
-                if (usuarioALoguearse == undefined) {
+                var usuarioProceso = user
+                if (usuarioProceso == null) {
                     return res.render("users/login", {
                         errors: [{
-                            msg: "Credenciales inválidas"
+                            msg: "Este mail no corresponde a ningún usuario"
                         }]
                     })
                 }
-                req.session.usuarioLogueado = usuarioALoguearse
-                // if (req.body.recordame != undefined) {
-                //     res.cookie("recordame", usuarioALoguearse.email, {
-                //         maxAge: 60000 * 10 * 340 * 85
-                //     })
-                    console.log(usuarioALoguearse)
-                    res.render("users/exito")
-                }).catch(function (errors) {
+                var comparison = bcrypt.compareSync(req.body.password, usuarioProceso.password)   
+                
+                if (comparison) {
+                    var usuarioALoguearse = usuarioProceso 
+                    req.session.usuarioLogueado = usuarioALoguearse
+                    if (req.body.recordame != undefined) {
+                         res.cookie("recordame", usuarioALoguearse.email, {
+                             maxAge: 60000 * 10 * 340 * 85
+                         })}
+                        console.log(usuarioALoguearse)
+                        res.render("users/exito")
+                   
+                } else {            
+                console.log(errors)
+                return res.render("users/login", {
+                    errors: [{
+                        msg: "La contraseña y el mail no corresponden"
+                    }]
+                })
+              }
+            }).catch(function (errors) {
                 console.log(errors)
             })
 
-        }
+        } else {
+            
+            res.render("users/login", {
+              errors: errors.errors
+          })
+          console.log(errors.errors)
+          }
     },
 
 
@@ -79,8 +98,22 @@ var usersController = {
     },
 
     create: function (req, res, next) {
+        if (req.body.age_validator == null || req.body.accept_TOS == null) {
+            return res.render("users/register", {
+                errors: [{
+                    msg: "Debes ser mayor a 18 y aceptar los Términos y Condiciones"
+                }]
+            })
+        }
+        else {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
+
+            if (req.body.password == req.body.confirmPassword){
+            db.Users.findOne({ where: {email: req.body.email}
+            }).then(user => {
+            let usuarioRepetido = user
+            if (usuarioRepetido == null){
             db.Users.create({
                 full_name: req.body.full_name,
                 birthdate: null,
@@ -90,17 +123,34 @@ var usersController = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 11),
                 confirmPassword: bcrypt.hashSync(req.body.confirmPassword, 11)
-            }).then(function(){res.redirect("/bienvenido")})
+            }).then(function(){res.redirect("/exito")})
             .catch(function (errors) {
                 console.log(errors)
             })
-           
+        } else {
+            return res.render("users/register", {
+                errors: [{
+                    msg: "El mail introducido ya está en uso"
+                }]
+            })
+        }
+        }).catch(function (errors) {
+            console.log(errors)
+        })
         } else {
             res.render("users/register", {
                 errors: errors.errors
             })
             console.log(errors.errors)
+        }}
+        else {
+            return res.render("users/register", {
+                errors: [{
+                    msg: "Debes introducir la misma contraseña"
+                }]
+            })
         }
+    }
     },
   
     detail: function (req, res) {

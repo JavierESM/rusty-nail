@@ -10,6 +10,7 @@ const idMiddleware = require("../middlewares/idMW")
 const authMiddleware = require ("../middlewares/authMW")
 const adminMiddleware = require("../middlewares/adminMW")
 const userValidationMiddleware = require("../middlewares/userValidationMW")
+const userLoginMW = require("../middlewares/userLoginMW")
 
 router.get('/', adminMiddleware, usersController.lista);
 router.get("/panel-de-control", adminMiddleware, usersController.panel)
@@ -19,9 +20,7 @@ router.get("/bienvenido", guestMiddleware, usersController.welcome)
 router.get("/:id", idMiddleware, usersController.detail);
 router.get("/:id/edit", idMiddleware, usersController.editor)
 router.post("/", userValidationMiddleware, usersController.create)
-router.post("/login-process", [
-check("email").isEmail().withMessage("Por favor, introducí un email válido")]
-,authMiddleware , usersController.processLogin)
+router.post("/login-process", userLoginMW, authMiddleware, usersController.processLogin)
 router.put("/:id", usersController.edit)
 router.delete("/:id", usersController.destroy)
 module.exports = router;

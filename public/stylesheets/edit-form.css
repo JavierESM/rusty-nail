@@ -11,7 +11,16 @@ form {
     height: 50vh;
     align-items: center;
 }
+ul {
+    margin: -2% 1% 4% 5%;
+    font-size: 1.3em;
+}
 
+#errorList{
+    flex-direction: column;
+    place-items: left;
+    list-style: none;
+}
 label {
     color: white;
     font-size: 1.4em;
