@@ -161,30 +161,4 @@ h1 {
   font-size: 3vh;
 }
 
-#submit_contact{
-    text-align: center; 
-    border: solid 0px;
-    box-sizing: border-box;
-    padding: 1%;
-    margin: 3%;
-    background-color: #47525E;
-    color: #FDFDFD;
-    font-size: 1.5em;
-    font-weight: bold;
-    height: 12vh;
-    width: 22%;
-  }
 
-  #btn-register{ 
-    text-align: center;
-    border: solid 0px;
-    box-sizing: border-box;
-    padding: 1%;
-    margin: 3%;
-    background-color: #47525E;
-    color: #FDFDFD;
-    font-size: 1.5em;
-    font-weight: bold;
-    height: 12vh;
-    width: 22%;
-  }
