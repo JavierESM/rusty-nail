@@ -56,7 +56,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-items: center;
-    margin: 1%;
+    margin: 5%;
     width: 100%;
 }
 #q-list{
