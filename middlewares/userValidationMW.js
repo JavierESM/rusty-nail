@@ -11,9 +11,7 @@ let userValidationMiddleware = [
         .isLength({min : 8, max : 50})
         .withMessage("Tu contraseña debe tener entre 8 y 25 caracteres")
         .isAlphanumeric()
-        .matches(
-            /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,
-          ),
+        .withMessage("Tu contraseña debe incluir tanto caracteres como números"),
     check("full_name")
         .isLength({min : 5})
         .withMessage("Debes llenar el formulario con tu nombre completo")

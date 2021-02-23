@@ -17,28 +17,21 @@
   <main>
     <p id="title">Nuestra carta</p>
     <div id="secciones">
-      <a href="menu/clasicos" class="selector" style="text-decoration: none; color:white;">
+      <a href="/menu/clasicos" class="selector" style="text-decoration: none; color:white;">
         LOS CLASICOS
       </a>
-      <a href="menu/nuestros" class="selector" style="text-decoration: none; color:white;">
+      <a href="/menu/nuestros" class="selector" style="text-decoration: none; color:white;">
         LOS NUESTROS
       </a>
     </div>
     <div class="grid">
       <% for (var i = 0; i < resultado.length; i++) { %>
       <div class="shape">
-        <img src="/<%=resultado[i].img%>" class="prod-img">
+        <img src="/images/<%=resultado[i].image%>" class="prod-img">
         <div class=tag>
           <p class="trago"><%=resultado[i].drink%> </p>
           <div class="counter">
-            <p class="s">$ <%=resultado[i].price%></p>
-            <div class="counter-n">
-              <p>-</p>
-              <p>1</p>
-              <p>+</p>
-            </div>
-
-            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+           
           </div>
         </div>
         <a  class= "editar" href="<%=resultado[i].id%>/edit"> Editar produto </a>

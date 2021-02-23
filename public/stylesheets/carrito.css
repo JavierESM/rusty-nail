@@ -1,12 +1,205 @@
 *{
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.bolsa {
+  display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-color: black;
+    
+    height: 25vh;
+    background-color: #3f3f3f;
+    color: #fcfcfc;
+}
+#registrarse-btn {
+  width: 41%!important;
+  height: 5vh;
+  margin: 1%;
+  padding: 1% 1% 2.5% 1%;
+  background-color: #3e4854;
+  color: white;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.bolsa-pedido a {
+  border-radius: 3px;
+  border: 2px solid black;
+  font-size: 18px;
+  color: #fcfcfc;
+  justify-content: center;
+  padding: 5px;
+}
+.bolsa-pedido h1 {
+  font-size: 28px;
+  margin: 10px;
+  color: #fcfcfc;
+}
+.bolsa-pedido h2 {
+  margin: 1px;
+}
+
+#img {
+  height: 40vh;
+}
+.caja-compra {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-color: black;
+  padding-bottom: 5px;
+  height: 70vh;
+  margin: 1% 1% 40% 1%;
+}
+.nombre-trago .titulo-trago {
+  color: black;
+    margin: 5% 1% 5% 1%;
+    text-align: center;
+    font-size: 1.7em;
+}
+.basurero a {
+  color: #3c4858;
+}
+
+.precio-total {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.descripcion {
+  padding-bottom: 9.3%;
+  text-align: center;
+  margin: 13% 1% 1% 1%;
+}
+#stuff-cont{
+    height: 24vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+#num-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: baseline;
+}
+.volver-continuar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  background-color: #3f3f3f;
+}
+.volver-continuar {
+  flex: 1 1 200px;
+}
+.volver-continuar .volver {
+  border: 2px solid black;
+  font-size: 18px;
+  border-radius: 3px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fcfcfc;
+  padding: 5px;
+}
+
+.volver-continuar .confirmar {
+  border: 2px solid black;
+  font-size: 18px;
+  border-radius: 3px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+.precio-total {
+  font-size: 18px;
+  color: #636363;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+.precio-total .total {
+  color: #3c4858;
+}
+#desc-cont{
+  width: 100%;
+  height: 51vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (min-width: 576px) {
+  .caja-compra {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 768px) {
+  .caja-compra {
+    flex: 0 0 42%;
+  }
+}
+@media (min-width: 992px) {
+  .caja-compra {
+    flex: 0 0 28%;
+  }
+}
+
+
+
+@media screen and  (min-width: 1024px) {
+.container {
+  display: flex;
+  flex-direction: column;
+}
+#num-cont{
+  display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 60%;
+    align-items: baseline;
+    font-size: 1.5em;
+}
+#act-description{
+  text-align: center;
+}
+#descripcion{
+  text-align: center;
+}
+#desc-cont {
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 42%;
+}
+#stuff-cont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#trash{
+  font-size: 3em;
+  padding: 10% 8% 10% 1%;
 }
 
 .bolsa {
@@ -38,8 +231,8 @@
   margin: 1px;
 }
 
-.caja-compra .foto {
-  margin-top: 30px;
+#img {
+  height: 50vh;
 }
 .caja-compra {
   display: flex;
@@ -49,9 +242,13 @@
   border-color: black;
   padding-bottom: 5px;
   height: 70vh;
+  margin: 1% 1% 10% 1%;
 }
 .nombre-trago .titulo-trago {
-  color: #3c4858;
+  color: black;
+    margin: 5% 1% 15% 1%;
+    text-align: center;
+    font-size: 2.7em;
 }
 .basurero a {
   color: #3c4858;
@@ -61,6 +258,11 @@
   display: flex;
   flex-flow: row wrap;
   text-align: center;
+}
+
+.descripcion{
+  padding-bottom: 9.3%;
+    font-size: 1.5em;
 }
 
 .volver-continuar {
@@ -121,8 +323,5 @@
     flex: 0 0 28%;
   }
 }
-@media (min-width: 1024px) {
-  .caja-compra {
-    flex: 0 0 11%;
-  }
+
 }

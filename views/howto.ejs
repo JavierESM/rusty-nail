@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Carta</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="/stylesheets/menu.css">
-  <link rel="stylesheet" href="/stylesheets/howto.css" type="text/css" media=screen>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-    crossorigin="anonymous" />
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="/stylesheets/login.css" TYPE="text/css" media=screen>
+      <LINK REL=StyleSheet HREF="/stylesheets/howto.css" TYPE="text/css" media=screen>
 
+        <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+        <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        
+    <title>Rusty Nail</title>
+</head>
 <body>
-  
+    <%-include('partials/nav') %>
+    <h1 id="us-title">¿Como comprar con Rusty Nail?</h1>
+    <section id="sec-us">
+        <ol style="width: 79%;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 35vh;">
+        <li>Primero, podes pasarte por nuestra carta para ver todos nuestros tragos. <br> Si no sabes cual es para vos, podes recibir ayuda de nuestro bartender virtual</li>
+        <li>Luego, elegi cuanto queres y sumalo a tu carrito. <br> Es necesario que te registres para poder recibir tus tragos</li>
+        <li>Elegí tu medio de pago y listo! Nuestra barra se ocupa del resto. <br> Solo queda disfrutar de la mejor coctelería sin salir de tu casa</li>
+      </ol>
+    </section>
 </body>
 
-<%- include("partials/footer") %>
+<footer> <%-include('partials/footer') %> </footer>
+</html>

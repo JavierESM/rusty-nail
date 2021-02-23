@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-* *::after *::before {
-=======
- *{
->>>>>>> 30ca99279ea7a0b1c5236257777156c18464d699
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-<<<<<<< HEAD
+
 body {
   display: flex;
   flex-direction: column;
@@ -22,6 +13,16 @@ body {
   margin: 0px;
   background-color: #898989;
   margin: 8% 0%;
+}
+#registrarse-btn{
+  width: 20%;
+  height: 5vh;
+  margin: 1%;
+  padding: 1% 1% 2.5% 1%;
+  background-color: #3e4854;
+  color: white;
+  font-size: 1.2em;
+  vertical-align: middle;
 }
 .novedades {
   margin: 1%;
@@ -91,10 +92,6 @@ body {
   padding: 2px;
   width: 100%;
   flex: 1 1 200px;
-=======
-.form{ 
-  text-align: center;
->>>>>>> 30ca99279ea7a0b1c5236257777156c18464d699
 }
 .logo{
   

@@ -1,26 +1,20 @@
+const db = require("../database/models")
 
+const { Op } = require('sequelize');
+const { menu } = require("./menuControllers");
+var toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productController = { 
 
-vista: function(req, res,) {
-    res.render("product-detail");
-  },
-
- list: function(req,res){
+ list: function(req, res, next){
      res.render ('./listado',{
          listado
      })
  }, 
- detail: function(req,res){
-    let resultado = listado.find(function(producto){
-        return producto.id == req.params.id
-    })
-
-    if (resultado){ 
-       return res.render ("product-detail", {resultado})
-        }   
-
-        res.send ("No se encuentran productos")
-
+ async detail (req, res, next) {
+     let id = req.params.id 
+     let resultado = await db.Products.findByPk(id)  
+     res.render(resultado, toThousand)     
+  
     }
 }
 

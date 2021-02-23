@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
            primaryKey : true,
            type : dataTypes.INTEGER.UNSIGNED
         },
-        day_bought : {
+        date_bought : {
            type : dataTypes.DATE,
            allowNull : false
         },
@@ -24,12 +24,12 @@ module.exports = (sequelize, dataTypes) => {
             as : "payment_methods",
             foreignKey : "payment_method_id"
         })
-    }
     
-    Bill.associate = function(models){
-    Bill.hasMany(models.Shopping_carts, {
-    as : "shopping_carts",
-    foreignKey : "shopping_cart_id"
+    
+    
+    Bill.belongsTo(models.Users, {
+    as : "users",
+    foreignKey : "user_id"
     })
     }
     return Bill

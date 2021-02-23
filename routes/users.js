@@ -16,7 +16,7 @@ router.get('/', adminMiddleware, usersController.lista);
 router.get("/panel-de-control", adminMiddleware, usersController.panel)
 router.get("/registro", authMiddleware , usersController.creator)
 router.get("/login", authMiddleware, usersController.login)
-router.get("/bienvenido", guestMiddleware, usersController.welcome)
+router.get("/exito", usersController.welcome)
 router.get("/:id", idMiddleware, usersController.detail);
 router.get("/:id/edit", idMiddleware, usersController.editor)
 router.post("/", userValidationMiddleware, usersController.create)

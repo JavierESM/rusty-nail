@@ -27,9 +27,10 @@ date_bought DATE NOT NULL,
 total_price DECIMAL(8,2) NOT NULL, 
 payment_method_id INT NOT NULL, 
 shopping_cart_id INT NOT NULL,
+user_id INT NOT NULL,
 PRIMARY KEY (id),
 FOREIGN KEY (payment_method_id) REFERENCES payment_methods(id) ON UPDATE CASCADE ON DELETE CASCADE,
-FOREIGN KEY (shopping_cart_id) REFERENCES shopping_carts(id) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 CREATE TABLE payment_methods (
 id INT NOT NULL AUTO_INCREMENT,
@@ -80,5 +81,12 @@ INSERT INTO users (id, full_name, birthdate, address, phone, email, `role`, `pas
 values (DEFAULT, 'javier mirasson', '2000-04-04', 'montevideo 756', 01111224567, 'javier@digital.com', 'cliente', 12345678 );
 INSERT INTO users (id, full_name, birthdate, address, phone, email, `role`, `password`)
 values (DEFAULT, 'alejandro profesor', '1985-05-05', 'jujuy 2233', 01111223543, 'alejandro@digital.com', 'admin', 12345678 );
+INSERT INTO users (id, full_name, birthdate, address, phone, email, `role`, `password`)
+values (DEFAULT, 'javier mirasson', '2000-04-04', 'montevideo 756', 01111224567, 'javierestebanmrin@gmail.com', 'admin', "rojo1234" );
+UPDATE USERS SET `ROLE` = "admin" where email = "javierejemplo@gmail.com";
+
+SELECT * FROM bills;
+
+INSERT INTO `Bills` (`id`,`date_bought`,`total_price`,`shopping_cart_id`, payment_method_id) VALUES (DEFAULT, '2000-04-04', 3880, 12, 1)
 
 

@@ -8,7 +8,7 @@ let productValidationMiddleware = [
         .isLength({max : 25})
         .withMessage("El nombre del producto no debe tener mas de 16 caracteres"),
     check ("price")
-        .isLength({min : 8, max : 50})
+        .isLength({max : 50})
         .withMessage("El producto debe tener un precio")
         .isNumeric()
         .withMessage("El precio solo puede tener números")

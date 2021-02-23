@@ -2,8 +2,42 @@
 <html lang="en">
 
 <head>
+  <script>
+    window.addEventListener("load", function(){
+
+      let valor = document.getElementById("quantity")
+      let plus = document.getElementById("plus")
+      let realQuantity = document.getElementById("realQuantity")
+      let form = document.getElementById("form")
+      let minus = document.getElementById("minus")
+      let error = document.getElementById("error")
+      console.log(valor.value)
+      plus.addEventListener("click", function(){
+        if (valor.value < 30){
+        valor.value++
+        realQuantity.value = valor.value
+        }
+      })
+      minus.addEventListener("click", function(){
+        if (valor.value > 0){
+        valor.value--
+        realQuantity.value = valor.value
+
+        }
+      })
+      form.addEventListener("submit", function(e){
+        if (valor.value.length == 0 || valor.value == 0) {
+        e.preventDefault()
+        error.style.display = "block"
+        }
+      })
+    })
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/carrito.css" type="text/css" media=screen>
+  <link rel="stylesheet" href="/stylesheets/footer.css" type="text/css" media=screen>
+
   <link rel="stylesheet" href="/stylesheets/product.css" type="text/css" media=screen>
   <link rel="stylesheet" href="/stylesheets/nav.css" type="text/css" media=screen>
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
@@ -20,64 +54,52 @@
   </div>
 </header>
 <body>
-  <h2 style="text-align: center; margin-top: 10%; font-size: 60px;"><%=resultado.drink%></h2>
+  <tb class="caja-compra">
+    <div class="foto">
+      <img src="/images/<%=resultado.image%>" id="img">
+      <div class=tag>
+        <p class="trago"><%=resultado.drink%> </p>
+        <div class="counter">
+          <p class="s">$ <%=resultado.unit_price%></p>
+          <div class="counter-n">
+            <p id="minus">-</p>
+            <input type="number" id="quantity" name="quantity" min="0" placeholder="0">
+            <p id="plus">+</p>
+          </div>
 
-
-  <article class="art-image-2"><img src="../<%=resultado.img%>" class="art-image">
-    <section style="border-top: 5px solid; border-bottom: 5px solid; width: 95%; margin: auto;">
-        <h3 style="font-size: 40px; text-align: center;"> Detalles del cocktail</h3>
-        <p style="font-size: 4vh; text-align: center;padding: 15px;border-bottom: 2px solid;"> <%= resultado.description %></p>
-
-        <section class="contenedor-details">
-
-          <button style="background-color: white; height: 6vh; width: 31%; font-size: 30px; margin: 10px;"> Precio: $<%=resultado.price %></button>
-          <article class="precio-details-2">   Delivery a todo CABA</article>
-          <p id="detail">Beber con moderación. Prohibida su venta a menores de 18 años. </p>
-        </section>
-      </section>
-
-    <section class="agregar-c">
-
-      <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-
-    </section>
-
-
-    <section class="product-rel">
-
-      <div id="prodrel"> Productos Relacionados </div>
-
-      <img src="../images/icon-flecha.png" alt="icon.arrow" id="arrow">
-
-    </section>
-
-    <section class="imag-relacion">
-      <article id="text"> <img src="../images/cosmopolitan.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
-      <div id="text-2"> Cosmopolitan $690
-        <section class="agregar-c-rel">
-          <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-        </section>
+          <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
       </div>
-      <article id="text"> <img src="../images/Early-summer.jpg" style="height: 90%; width: 90%; margin:5% 5%"> </article>
-      <div id="text-2"> Early Summer $790
-        <section class="agregar-c-rel">
-          <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-        </section>
-      </div>
-      <article id="text"> <img src="../images/early-grey.jpg" style="height: 90%; width: 90%; margin:5% 5%"></article>
-      <div id="text-2"> Early Grey $700
-        <section class="agregar-c-rel">
-          <a href="/carrito"> Agregar a la bolsa de pedidos</a>
-        </section>
-      </div>
-
-    </section>
-
-  
-
-    <div>
-      <%- include('../partials/footer') %>
     </div>
+
+
+
+    <div class="nombre-trago">
+
+     
+      <div class="descripcion"><p>DESCRIPCION:</p> <p><%= resultado.description  -%></p> <br>
+      </div>
+    
+      <form action="/cart/<%= resultado.id %> " method="POST" id="form" style="width: 104%;" novalidate>
+        <input type="number" id="realQuantity" name="realQuantity" min="0" placeholder="0" style="display: none;">
+        <div id="btn-cont">
+          <p id="error" style="display: none;">¡Tenes que aclarar cuantos tragos!</p>
+        <button type="submit" id="btn">
+        
+        <p style="font-family: sans-serif;">¡AGREGALO A TU PEDIDO!</p>
+      </button>
+    </div>
+      </form>
+
+      <div class="contador-unidades" style="color: gainsboro;">
+      <p class="contador" style="color: gainsboro;" id="quantity"><%= resultado.quantity -%> </p>
+    </div>
+  </div>
+
+   </tb>
+
+   <%- include("../partials/footer") %>
+  
   </body>  
 
 </html>

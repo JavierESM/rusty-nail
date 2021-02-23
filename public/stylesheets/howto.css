@@ -1,0 +1,10 @@
+#sec-us{
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+@media screen and (min-width:600px){
+    #sec-us{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}

@@ -6,9 +6,14 @@ var logger = require("morgan");
 var methodOverride = require("method-override");
 var usersRouter = require("./routes/users");
 var productRouter = require("./routes/product");
-var carritoRouter = require("./routes/carrito");
+var cartRouter = require("./routes/cart")
 var menuRouter = require("./routes/menu");
+var questionsRouter = require("./routes/questions")
 var apiRegisterRouter = require("./routes/api/register")
+var apiUsersRouter = require("./routes/api/users")
+var apiProductsRouter = require("./routes/api/products")
+
+const cors = require("cors")
 const session = require("express-session")
 //var cookieMW = require("./middlewares/cookieMW")
 var flash = require("connect-flash")
@@ -31,23 +36,38 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 app.use(session({secret: "Rusty-cookie"}))
+app.use((req, res, next) => {
+if (req.session.usuarioLogueado) {
+  res.locals.loggedIn = true
+  res.locals.userId = req.session.usuarioLogueado.id
+} else {loggedIn = false} 
+next()
+})
 //app.use(cookieMW)
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 app.use(flash())
 
+app.use(cors())
+
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
 app.use("/product-detail", productRouter);
 app.use("/bartender", bartenderRouter);
-app.use("/carrito", carritoRouter);
 app.use("/historia", historyRouter);  
 app.use("/menu", menuRouter);
+app.use("/cart", cartRouter);
+app.use("/questions", questionsRouter)
 app.use("/api/register", apiRegisterRouter)
+app.use("/api/users", apiUsersRouter)
+app.use("/api/products", apiProductsRouter)
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler
 app.use(function (err, req, res, next) {

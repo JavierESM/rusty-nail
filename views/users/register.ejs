@@ -19,29 +19,35 @@
     let address = document.getElementById("address")
     let form = document.getElementById("form")
     let errorList = document.getElementById("errorList")
+    let errors = []
     emailField.addEventListener("blur", function(e){
-      console.log(errors)
+      
+      let errors = []
       fetch("http://localhost:3000/api/register/check?email=" + this.value)
       .then(
       res => {
         if (res.status == 200){
           errors.push("El email introducido ya pertenece a un usuario")
-          e.stopPropagation()
-          console.log(this.value)
-        } else {
-          console.log("Email bien")
-        }
-      }
-      ).catch(err => {
-        res.send(err)
-      })
+          errorList.innerHTML = ""
+
       for (let i = 0; i < errors.length; i++){
           errorList.innerHTML += "<li>" + errors[i] + "<li>"
         }
         errorList.style.display = "flex"
+          console.log(this.value)
+        } else {
+          console.log("Email bien")
+        }
+
+      }
+      ).catch(err => {
+        res.send(err)
+      })
+      
+      
     })
     
-    let errors = []
+  
     form.addEventListener("submit", function(e){
       
       let errors = []

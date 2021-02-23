@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    window.addEventListener("load", function (){
+   let total = document.getElementById("total-num")
+   let totalInput = document.getElementById("total_price")
+   totalInput.value = total.value
+   let error = document.getElementById("error")
+   let payment = document.getElementById("payment_method")
+   let credit = document.getElementById("credit")
+   let cash = document.getElementById("cash")
+   let comprar = document.getElementById("comprar")
+   credit.addEventListener("click", function(){
+       this.style.backgroundColor = "white"
+       this.style.color = "black"
+       cash.style.backgroundColor = "black"
+       cash.style.color = "white"
+       payment.value = 3
+       console.log(payment.value)
+   })
+   cash.addEventListener("click", function(){
+       this.style.backgroundColor = "white"
+       this.style.color = "black"
+       credit.style.backgroundColor = "black"
+       credit.style.color = "white"
+       payment.value = 1
+       console.log(payment.value)
+   })
+   comprar.addEventListener("submit", function(e){
+       if (payment.value.length == 0) {
+       e.preventDefault()
+       }
+       error.style.display = "block"
+   })
+})
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+  <link rel="stylesheet" href="/stylesheets/checkout.css" TYPE="text/css" MEDIA=screen>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+    <title>Checkout</title>
+</head>
+<body>
+<%- include("./partials/nav") %>
+
+<h1>Checkout</h1>
+<ul id="list">
+<% resultado[0].forEach(function(resultado){ %>
+    
+    
+        <li><%=resultado.quantity%> x <%=resultado.products.drink%></li> 
+   
+
+<% }) %>
+</ul>
+  <div id="price-holder" style="    display: flex;
+  justify-content: center;
+  align-items: baseline;">
+   <p id="total">Total: $</p> <input value="<%= resultado[1] %>" readonly id="total-num">
+</div>
+<h2>¿Como querés pagar?</h2>
+<div id="btn-payment-cont">
+<p class="btn-payment" id="credit">Crédito</p>
+<p class="btn-payment" id="cash">Efectivo</p>
+</div>
+<p id="error" style="display: none;
+text-align: center;
+margin: 4% 1% 1% 1%;">¡Ténes que elegir un medio de pago!</p>
+<form action="/cart/checkout" method="POST" id="comprar">
+    <input type="number" id="total_price" name="total_price" style="display: none;">
+    <input type="number" id="payment_method" name="payment_method" style="display: none;">    
+    <div id="submit-btn-cont">
+    <button type="submit" id="submit-btn">Comprar</button>
+</div>
+</form>
+
+<%- include("./partials/footer") %>
+    
+</body>
+</html>

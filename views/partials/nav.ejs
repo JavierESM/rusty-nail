@@ -16,12 +16,12 @@
                 </div>
                 <div class="gb-menu-2">
                     <div class="nav-link">
-                        <a style="text-decoration: none;" href="menu"><i class="fas fa-glass-martini-alt nav-icon"></i></a>
+                        <a style="text-decoration: none;" href="/menu"><i class="fas fa-glass-martini-alt nav-icon"></i></a>
                         <span class="white-text-nav">Nuestra carta</span>
                     </div>
                     <div class="nav-link">
                         <i class="fas fa-glass-cheers nav-icon"></i>
-                        <span>Nuestra historia</span>
+                        <a href="/questions/historia" style="text-decoration: none;"><span>Nuestra historia</span></a>
                     </div>
                 </div>   
             </nav>
@@ -40,21 +40,30 @@
                 <div class="gb-menu-1">
                     <div class="regular-customer">
                         <a style="text-decoration: none;" href="/users/login"><i class="fas fa-user right-icons user-icon" style="color: black;"></i></a> 
+                        <% if (loggedIn == false) {%> 
                         <a style="text-decoration: none;" href="/users/login"><span class="white-text-nav">Soy regular</span></a>
+                        <% } else { %>
+                        <a style="text-decoration: none;" href="/users/<%=userId%>"><span class="white-text-nav"> Tu perfil </span></a>
+                        <% } %> 
                     </div>
-                    <div class="cart-icons">
-                        <a style="text-decoration: none;" href=""><i class="fas fa-wine-bottle right-icons" style="color: black;"></i></a>
-                        <i class="far fa-comment right-icons"></i>
+                    <div class="cart-icons" id="cart-cont">
+                        <a style="text-decoration: none;" href="/cart" id="cart-icon">
+                        <i class="fa fa-shopping-cart cart" style="    color: black; align-self: flex-end;display: flex;align-self: center;justify-self: center;width: 60%;"></i>
+                        <p style="margin: 0; font-size: 0.7em;">Carrito</p>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="gb-menu-2">
                     <div class="nav-link">
                         <i class="fas fa-wine-glass-alt nav-icon"></i>
+                        <a href="/questions/howto" style="text-decoration: none;">
                         <span>¿Cómo comprar?</span>
+                    </a>
                     </div>
                     <div class="nav-link">
                         <i class="fas fa-glass-whiskey nav-icon"></i>
-                        <a style="text-decoration: none;" href="/contactos"><span>Contactate</span></a>
+                        <a style="text-decoration: none;" href="https://api.whatsapp.com/send?phone=1140303456"><span>Contactate</span></a>
                     </div>
                 </div>   
             </nav>
@@ -63,7 +72,7 @@
     <div class="second-container">
         <div class="invisible-box"></div>
         <div class="bartender-button">
-            <a style="text-decoration: none;" href="bartender" id="llama">Llamá al bartender</a>
+            <a style="text-decoration: none;" href="/bartender" id="llama">Llamá al bartender</a>
         </div>
         <div class="invisible-box"></div>
     </div>
@@ -75,17 +84,22 @@
                 <i class="fas fa-bars bars" style="color: white;"></i>
                 <div id="nav-menu">
                     <a style="text-decoration: none;" href="/menu" class="nav-link">CARTA</a>
-                    <a style="text-decoration: none;" href="#" class="nav-link">CONTACTO</a>
+                    <a style="text-decoration: none;" href="https://api.whatsapp.com/send?phone=1140303456" class="nav-link">CONTACTO</a>
                     <a style="text-decoration: none;" href="/bartender" class="nav-link">BARTENDER VIRTUAL</a>
-                    <a style="text-decoration: none;" href="/register" class="nav-link">REGISTRATE</a>
-                    <a style="text-decoration: none;" href="/historia" class="nav-link">NUESTRA HISTORIA</a>
+                    <a style="text-decoration: none;" href="/users/registro" class="nav-link">REGISTRATE</a>
+                    <a style="text-decoration: none;" href="/questions/historia" class="nav-link">NUESTRA HISTORIA</a>
                 </div>
             </div>
             <p id="logo">RUSTY NAIL</p>
         </div>
         <div id="i-cont">
-            <i class="fas fa-user-alt user"></i>
-            <i class="fas fa-shopping-bag bag"></i>
+            <% if (loggedIn == false) {%> 
+            <a href="/users/login"><i class="fas fa-user-alt user" style="margin: -50%;"></i></a>
+            <a href="/cart" style="text-decoration: none;"><i class="fas fa-shopping-bag bag"></i></a>
+            <%} else {%> 
+            <a style="text-decoration: none;" href="/users/<%=userId%>"><i class="fas fa-user-alt user" style="margin: -50%;"></i></a>
+            <a href="/cart" style="text-decoration: none;"><i class="fas fa-shopping-bag bag"></i></a>
+            <% } %> 
         </div>
     </nav>
 </header>

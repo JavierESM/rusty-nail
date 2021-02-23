@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/footer.css" TYPE="text/css" MEDIA=screen>
+  <link rel="stylesheet" href="/stylesheets/nav.css" TYPE="text/css" MEDIA=screen>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="/stylesheets/carrito.css" type="text/css" media=screen> 
+  <title>Rusty Nail</title>
+  
+</head>
+<body>
+
+    <%- include("./partials/nav") %>
+    
+    
+    <div class="container">
+      <div class="bolsa" style="margin:4% ;">
+        <div class="bolsa-pedido">
+          <h1 class="">BOLSA DE PEDIDOS</h1>
+        </div>
+
+        </div>
+
+      </div>
+   <% for (var i = 0; i < carrito.length; i++) { %>
+            
+      
+     
+
+  
+      
+      <tb class="caja-compra">
+        <div class="foto">
+          <img src="/images/<%=carrito[i].products.image%>" id="img">
+        </div>
+
+
+      <div id="desc-cont">
+        <div class="nombre-trago">
+          <a href="/menu/cocktail/<%=carrito[i].products.id%>%>">
+            <h3 class="titulo-trago"><%= carrito[i].products.drink  -%> </h3>
+          </a>
+          <div class="descripcion"><p id="descripcion">DESCRIPCION:</p><br> <p id="act-description"><%= carrito[i].products.description  -%> </p>
+          </div>
+        </div>
+
+<div id="stuff-cont">
+  <div id="num-cont">
+          <div class="contador-unidades" style="color: gainsboro;">
+          <p class="contador" style="color: gainsboro;" id="quantity">x<%= carrito[i].quantity -%> </p>
+        </div>
+      
+
+        <div class="sub-total" style="color: gainsboro;">
+          <span class="listade-precio" style="color: gainsboro;" id="price"><%= carrito[i].products.unit_price -%></span>
+          <sup>
+            <sup>c</sup>
+            /
+            <sub>u</sub>
+          </sup>
+        </div>
+      
+
+
+        <div class="sub-total" style="color: gainsboro;" id="sub-total">
+          <span class="listade-precio" style="color: gainsboro;">Total: $<%=  carrito[i].total_price -%></span>
+
+        </div>
+
+      </div>
+        <div class="basurero" style="color: gainsboro;">
+          <form action="/cart/<%=carrito[i].id%>/?_method=delete" method="POST">
+          <a class="cart-delete text-muted" data-toggle="tooltip" title
+            data-original-title="Quitar del carrito">
+            <button type="submit">
+            <i class="fa fa-trash fa-fw fa-2x" id="trash"></i>
+          </button>
+          </a>
+          </form>
+        </div>
+      </div>
+    </div>
+      </tb>
+    
+      <% } %>
+    </div>
+   
+      <div class="volver-continuar">
+
+        <a href="menu" class="volver">VOLVER A PRODUCTOS<i class="fa fa-th-large fa-fw" style="margin-left: 5px;"></i></a>
+        <a href="/cart/checkout" class="confirmar">CONFIRMAR Y CONTINUAR<i class="fa fa-angle-right fa-fw"
+            style="margin-left: 5px;" ::before></i></a>
+        <div class="clearfix">
+
+        </div>
+      </div>
+      <div><%- include("partials/footer") %></div>
+  </body>
+</html>

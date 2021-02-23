@@ -190,6 +190,7 @@ body {
     font-weight:lighter;
     padding-bottom: 20px;
     width: 80%;
+    text-align: left;
   }
   
   #us-title{ text-align: center;  
@@ -199,3 +200,18 @@ body {
   margin-top: 20vh;  
   font-size: 50px;
   }
+@media screen and (min-width: 1024px) {
+  #ingresar {
+    text-align: center;
+    border: solid 0px;
+    box-sizing: border-box;
+    padding: 3%;
+    margin: 3%;
+    background-color: #47525E;
+    color: #FDFDFD;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 14.5vh;
+    width: 16%;
+}
+}

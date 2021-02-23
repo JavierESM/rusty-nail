@@ -11,6 +11,14 @@
     crossorigin="anonymous" />
 </head>
 <body>
+    <% if (error != "cart") {%> 
+   
     <h1 class="error">¡Ups! Esta página es para <%=error%> </h1>
     <a href="/menu" class="volver"> Por acá volvés a la barra</a>
+    
+    <% } else if (error == "cart") {%>
+    <h1 class="error">¡Ups! Para usar el carrito y poder comprar, tenés que registrarte </h1>
+    <a href="/users/registro" class="volver"> Por acá podes hacerlo</a> 
+    <% } %> 
+
 </body>

@@ -34,9 +34,9 @@
         if (prodPrice.value.length < 1){
           errors.push("Debes introducir un precio para el producto")
         }
-        if (prodPriceValue){
-          errors.push("No debes incluir el signo $ en el precio")
-        }
+        if (containsMoney){
+         errors.push("No debes incluir el signo $ en el precio")
+       }
         if (prodDescription.value.length < 1){
           errors.push("Debes introducir una descripción para el producto")
         }
@@ -103,7 +103,7 @@
           </div>
           <div class="data-entry">
 						<label for="flavour" class="form-label">Sabor:</label>
-						<select name="flavour" id="flavour" class="form-input">
+						<select name="flavour" id="flavour" class="form-input" style="height: 4.5vh;">
 							<option value="dulce">Dulce</option>
               <option value="citrico">Cítrico</option>
               <option value="aperitivo">Aperitivo</option>
@@ -112,7 +112,7 @@
           </div>
           <div class="data-entry">
 						<label for="fashion" class="form-label">Fashion:</label>
-						<select name="fashion" id="fashion" class="form-input">
+						<select name="fashion" id="fashion" class="form-input" style="height: 4.5vh;">
 							<option value="seco">Seco</option>
               <option value="frutal">Frutal</option>
               <option value="suave">Suave</option>

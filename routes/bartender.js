@@ -5,4 +5,6 @@ const bartenderController = require('../controllers/bartenderController');
 
 router.get('/', bartenderController.show)
 
+
+
 module.exports = router;

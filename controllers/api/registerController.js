@@ -2,7 +2,7 @@ const db = require("../../database/models");
 const {
     Op
 } = require('sequelize');
-const registerController = {
+module.exports = {
     check : (req, res, next) => {
         db.Users.findOne({
             where : {
@@ -18,7 +18,7 @@ const registerController = {
             }).catch(err => {
                 res.send(err)
         })
+    
     }
 }
 
-module.exports = registerController

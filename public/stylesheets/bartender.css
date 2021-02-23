@@ -34,6 +34,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: all 0.2s;
+    width: 100%;
 }
 .answ-txt:active{
     color: rgb(20, 20, 20);
@@ -115,8 +116,8 @@ body{
     .answ-cont{
         width: 33%;
     }
-    .answ-txt{
-        width: 80%;
+    .answ-txt {
+        width: 100%;
     }
     .list-n {
         margin: 7%;
@@ -124,5 +125,8 @@ body{
         border-style: solid;
         padding: 3% 5%;
         border-radius: 100%;
+    }
+    main {
+        margin-bottom: 15%;
     }
 }

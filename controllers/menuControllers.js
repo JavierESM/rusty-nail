@@ -10,7 +10,9 @@ const {
 const menuControllers = {
   menu: function (req, res) {
     let query = req.params.category
-    if (query == undefined){
+    let query2 = req.params.flavour
+    console.log(query)
+    if (query == undefined || query2 == undefined){
       db.Products.findAll().then(
        resultado => {
          res.render("menu", {resultado})
@@ -18,16 +20,27 @@ const menuControllers = {
        .catch(function(errors){
        console.log(errors)
      })
-    } else {
+    } else if (query != "nn") {
     db.Products.findAll({ 
        where: { origin : {[Op.like] : `${query}`}}}
     ).then(
       resultado => {
-        res.render("menu", {resultado, toThousand, query})
+        res.render("menu", {resultado, query})
       })
       .catch(function(errors){
       console.log(errors)
     }) }
+    else {
+      db.Products.findAll({ 
+        where: { flavour : {[Op.like] : `${query2}`}}}
+     ).then(
+       resultado => {
+         res.render("menu", {resultado, query2})
+       })
+       .catch(function(errors){
+       console.log(errors)
+     })
+    }
     
   },
   creator: function (req, res) {

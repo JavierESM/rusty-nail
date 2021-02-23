@@ -46,10 +46,15 @@ var usersController = {
                 if (comparison) {
                     var usuarioALoguearse = usuarioProceso 
                     req.session.usuarioLogueado = usuarioALoguearse
+         
+                    res.cookie("id", usuarioALoguearse.id, {
+                        maxAge: 60000 * 10 * 340 * 85
+                    })
                     if (req.body.recordame != undefined) {
                          res.cookie("recordame", usuarioALoguearse.email, {
                              maxAge: 60000 * 10 * 340 * 85
                          })}
+                         
                         console.log(usuarioALoguearse)
                         res.render("users/exito")
                    
@@ -123,7 +128,7 @@ var usersController = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 11),
                 confirmPassword: bcrypt.hashSync(req.body.confirmPassword, 11)
-            }).then(function(){res.redirect("/exito")})
+            }).then(function(){res.redirect("/users/exito")})
             .catch(function (errors) {
                 console.log(errors)
             })
@@ -137,19 +142,20 @@ var usersController = {
         }).catch(function (errors) {
             console.log(errors)
         })
-        } else {
-            res.render("users/register", {
-                errors: errors.errors
-            })
-            console.log(errors.errors)
-        }}
-        else {
+        }else {
             return res.render("users/register", {
                 errors: [{
                     msg: "Debes introducir la misma contraseña"
                 }]
             })
+        }}
+        else {
+            res.render("users/register", {
+                errors: errors.errors
+            })
+            console.log(errors.errors)
         }
+        
     }
     },
   
@@ -177,7 +183,7 @@ var usersController = {
             where: {
                 id: req.params.id
             }
-        }).then(function(){res.redirect("/home")})
+        }).then(function(){res.redirect("../../")})
         .catch(function (errors) {
             console.log(errors)
         })

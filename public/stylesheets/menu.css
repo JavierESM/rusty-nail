@@ -13,6 +13,41 @@ body{
     font-size: 4em;
     text-align: center;
 }
+
+#quantity::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+
+}
+#quantity{
+    border: 0;
+    text-align: center;
+    font-size: 4vh;
+    width: 20%;
+    
+}
+#quantity:focus{
+    outline: none!important;
+    border: none;
+}
+#btn{
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    border: none!important;
+    outline: none!important;
+    width: 96.3%;
+    padding: 3% 3% 4% 3%;
+    text-align: center;
+    border: solid 0px;
+    margin: 5%;
+    margin: 3%;
+    background-color: #343333;
+    color: #FDFDFD;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 14vh;
+    text-align: center;
+}
 #secciones{
     display: flex;
     flex-direction: column;
@@ -61,14 +96,15 @@ body{
     justify-content: center;
     align-self: center;
 }
-.counter{
+.counter {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 1.2em;
 }
 .counter-n{
     display: flex;
@@ -139,11 +175,22 @@ body{
         justify-content: space-around;
         height: 275vh;
         flex-wrap: wrap;
+        align-items: unset;
     }
     #title{
         color: white;
         margin-top: 20%;
         margin-bottom: 10%;
+    }
+    .counter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 1.4em;
     }
 }
 @media screen and (max-width:700px) and (orientation: landscape){
@@ -155,4 +202,5 @@ body{
         font-size: 4em;
         text-align: center;
     }
+    
 }

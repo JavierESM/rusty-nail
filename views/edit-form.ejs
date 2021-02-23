@@ -34,7 +34,7 @@
        if (prodPrice.value.length < 1){
          errors.push("Debes introducir un precio para el producto")
        }
-       if (prodPriceValue){
+       if (containsMoney){
          errors.push("No debes incluir el signo $ en el precio")
        }
        if (prodDescription.value.length < 1){
@@ -60,7 +60,7 @@
  <div class="form-cont">
    <div>
      <div>
-       <h2 class="menu-title">Formulario de creación de productos</h2>
+       <h2 class="menu-title">Formulario de edición de productos</h2>
        <% if (typeof errors != "undefined") {%>
          <ul>
            <% for (var i =  0; i < errors.length; i++) {%>
@@ -77,7 +77,7 @@
      </div>
    </div>
    <div>
-     <form action="/menu" method="POST" enctype="multipart/form-data" id="form">
+     <form action="/menu/<%= resultado.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="form">
           <div id="entry-cont">
             <div class="couple">
               <div class="data-entry">

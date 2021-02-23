@@ -24,7 +24,7 @@ router.get("/create", adminMiddleware, menuControllers.creator);
 router.get("/editar", menuControllers.menuEditar)
 
 //<< Display para el menu >>
-router.get("/cocktails/:category?", menuControllers.menu);
+router.get("/cocktails/:category?/:flavour?", menuControllers.menu);
 //<< Detalle de producto >>
 router.get("/cocktail/:id", menuControllers.detail);
 //<< Display para el menu >>
